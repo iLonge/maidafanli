@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    .agreeContainer{
+      background-color:#fff;
+    }
+    .agreeContainer>ul>li{
+      line-height:3.0rem;
+    }
+
+    #withdrawalHistory{
+      max-height:190px;
+      overflow-y:scroll;
+    }
+    a.withdrawalHistoryTxt{
+      color:#333;
+    }
+    a.withdrawalHistoryTxt:hover{
+      color:#000!important;
+    }
+
+    .withdrawalHistoryTxt:hover .am-icon-angle-right{
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      -webkit-transition: all 300ms;
+      transition: all 300ms;
+    }
+    .agree{
+      background-color:#e8e8e8;
+    }
+    .noagree{
+      background-color:#E60827;
+    }
+    .noagree a:hover{
+      color:#fff;
+    }
+  </style>
+  </head>
+  <body>
+    <!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container am-text-center">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl" style="color:#333;">
+      </a>
+      <span class="am-text-lg" style="margin-left:-15px;">等待审核</span>
+    </div> 
+  </header>
+  <div class="am-container agreeContainer">
+    <ul class="am-list am-text-sm">
+      <li>
+        &nbsp;&nbsp;&nbsp;&nbsp;用户名： <span>马经理</span>  
+      </li>
+      <li>
+        提现金额： <strong>100.00</strong>
+      </li>
+      <li>
+        提现日期： <span>2016-12-12 &nbsp;12:00:01</span>
+      </li>
+     <!--  <li>查看历史记录 <span class="bg1"></span></li> -->
+      <li class="am-panel">
+        <a data-am-collapse="{parent: '#collapase-nav-1', target: '#withdrawalHistory'}" class="am-text-primary am-padding-0 withdrawalHistoryTxt"> 
+            查看历史记录
+            <i class="am-icon-angle-right am-fr am-margin-right"></i>
+        </a>
+        <ul class="am-list am-collapse" id="withdrawalHistory">
+            <li>
+              <span>2016-12-12 12:00:01</span>
+              <span class="am-padding-left" style="color:#000;">100.00</span>
+            </li>
+            <li>
+              <span>2016-12-12 12:00:01</span>
+              <span class="am-padding-left" style="color:#000;">100.00</span>
+            </li>
+            <li>
+              <span>2016-12-12 12:00:01</span>
+              <span class="am-padding-left" style="color:#000;">100.00</span>
+            </li>
+            <li>
+              <span>2016-12-12 12:00:01</span>
+              <span class="am-padding-left" style="color:#000;">100.00</span>
+            </li>
+            <li>
+              <span>2016-12-12 12:00:01</span>
+              <span class="am-padding-left" style="color:#000;">100.00</span>
+            </li>
+            <li>
+              <span>2016-12-12 12:00:01</span>
+              <span class="am-padding-left" style="color:#000;">100.00</span>
+            </li>
+        </ul>
+      </li>
+
+    </ul>
+  </div> 
+  <!-- 底部 -->
+  <div data-am-widget="navbar" class="am-navbar am-cf am-no-layout">
+    <ul class="am-navbar-nav am-cf am-avg-sm-2 am-padding-0">
+      <li style="" class="agree" data-am-modal="{target: '#agree-modal-1'}">
+        <a href="#" class="am-text-danger">
+          同意
+        </a>
+      </li>
+      <li class="noagree" data-am-modal="{target: '#agree-modal-0'}">
+        <a href="#">
+          不同意
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- /底部 -->
+
+  <!-- modal -->
+  <div class="am-modal am-modal-confirm" tabindex="-1" id="agree-modal-1">
+    <div class="am-modal-dialog">
+      <div class="am-modal-hd">提现审核</div>
+      <div class="am-modal-bd">
+        允许该用户通过提现审核
+      </div>
+      <div class="am-modal-footer">
+        <span class="am-modal-btn am-text-danger" data-am-modal-cancel>取消</span>
+        <span class="am-modal-btn am-text-danger" data-am-modal-confirm>确定</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="am-modal am-modal-confirm" tabindex="-1" id="agree-modal-0">
+    <div class="am-modal-dialog">
+      <div class="am-modal-hd">提现审核</div>
+      <div class="am-modal-bd">
+        不允许该用户通过提现审核
+      </div>
+      <div class="am-modal-footer">
+        <span class="am-modal-btn am-text-danger" data-am-modal-cancel>取消</span>
+        <span class="am-modal-btn am-text-danger" data-am-modal-confirm>确定</span>
+      </div>
+    </div>
+  </div>
+  <!-- /modal -->
+ 
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/amazeui.min.js"></script>
+  </body>
+</html>

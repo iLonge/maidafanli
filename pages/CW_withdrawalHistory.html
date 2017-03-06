@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="../..i/favicon.png">
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <link rel="stylesheet" href="../css/mui.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/mui.picker.min.css">
+  <style type="text/css">
+    html{background-color:#efeff4;position:relative;}
+    .am-header{border-bottom:1px solid #ededed;}
+    .earnings{position: absolute;right:1.5rem;color:#333;}
+    .earnings:hover{color:#333;}
+    .backHis{position:absolute;left:1.5rem;color:#333;}
+    .backHis:hover{color:#333;}
+    .listHeader{border-bottom:1px solid #ededed;}
+    .time,.withdrawalType{color:#999;}
+    .withdrawalCount,.withdrawalType{line-height: 42px;height:42px;}
+    .shenheBtn{position:fixed;bottom:2.0rem;}
+  </style>
+</head>
+<body>
+  <!-- 头部 -->
+  <header class="am-header am-cf am-text-center" data-am-widget="header">
+    <a href="#" onclick="history.back(-1);" class="am-fl am-text-sm backHis">返回</a>
+    <span>申请提现列表</span>
+    <a href="CW_earningsRecord.html" class="am-text-sm earnings">收益记录</a>
+  </header>
+  <!-- /头部 -->
+
+  <!-- 提现列表 -->
+   <div class="am-container">
+      <div class="am-g am-text-center">
+        <ul class="am-avg-sm-3 am-text-sm am-padding-vertical-sm">
+          <li>申请时间</li>
+          <li>提现金额</li>
+          <li>状态</li>
+        </ul>
+      </div>
+  </div>
+  <div class="am-g listContent">
+    <ul class="am-list am-text-center am-text-sm listItem">
+      <li>
+        <ul class="am-avg-sm-3">
+          <li class="time am-text-xs">
+            <span class="day">2017-12-12</span><br>
+            <span class="hour">12:00:00</span>
+          </li>
+          <li>
+            <i class="am-icon-rmb withdrawalCount"></i>
+            <strong class="am-text-sm">200.00</strong>
+          </li>
+          <li class="withdrawalType">
+            提现成功
+          </li> 
+        </ul>
+      </li>
+
+      <li>
+        <ul class="am-avg-sm-3">
+          <li class="time am-text-xs">
+            <span class="day">2017-12-12</span><br>
+            <span class="hour">12:00:00</span>
+          </li>
+          <li>
+            <i class="am-icon-rmb withdrawalCount"></i>
+            <strong class="am-text-sm">200.00</strong>
+          </li>
+          <li class="withdrawalType">
+            已退款
+          </li> 
+        </ul>
+      </li>
+    </ul>
+  <!-- /提现列表 -->
+  </div>
+  <!-- btn -->
+    <div class="am-container shenheBtn">
+      <button class="am-btn am-btn-block am-btn-danger">批量通过审核</button>
+    </div>
+  <!-- /btn -->
+</body>
+</html>

@@ -1,0 +1,208 @@
+body{
+	background-color: #f7f7f7;
+}
+
+ul,li {
+	list-style: none;
+}
+
+a{color: #e6e6e6;}
+a.back:link,a.back:visited{
+	text-decoration: none;
+	color:#fff;
+}
+
+
+/*头部*/
+
+.withdrawalRule{
+	line-height:4;
+}
+
+.withdrawal-code-lt{
+	float: left;
+}
+
+.withdrawal-code-title{
+	font-size: 0.8em;
+}
+
+.collection{
+	position: relative;
+}
+
+.pay-code-content .left-line{
+	display: inline-block;
+    width: 10%;
+    height: 1px;
+    right: 60%;
+    top: 50%;
+    position: absolute;
+    background-color: #ededed;
+}
+
+.pay-code-content .right-line{
+	display: inline-block;
+    width: 10%;
+    height: 1px;
+    left: 60%;
+    top: 50%;
+    position: absolute;
+    background-color: #ededed;
+}
+
+.withdrawal-panel{
+	background-color: #fff;
+}
+
+.panel-title{
+	font-size: 1.2em;
+}
+
+.withdrawal-panel-body{
+	background-color: #fff;
+	
+}
+
+.withdrawal-prompt{
+	padding-left:15px;
+}
+
+.withdrawal-content{
+	margin-top:5%; 
+}
+
+.prompt-txt{
+	color:#999;
+}
+.prompt-count{
+	color:#000;
+	padding:0 5px;
+}
+
+#withdrawal{
+	outline: none;
+	height:50px;
+	font-size: 1.5em;
+	border-style: none;
+	text-align: left;
+}
+
+.withdrawal-all{
+	color:#E60827;
+	float:right;
+	display: inline-block;
+	padding-right: 15px;
+}
+
+.promptFriend{
+	padding:0 15px;
+	color: #999;
+	font-size: 0.8em;
+}
+
+
+.withdrawal-btn{
+	margin-top: 10%;
+}
+
+.withdrawal-makeSure,.withdrawal-finish{
+	color: #fff;
+	font-size: 1.2em;
+	background-color:#E60827;
+	border-radius: 25px;
+}
+
+.form-group{
+   position: relative;
+}
+
+.withdrawal-symbol{
+	position: absolute;
+    top: 10%;
+    left: 16%;
+}
+
+
+
+/*提款详情2*/
+
+.withdrawal-content2{
+	display: none;
+	position: relative;
+}
+
+.withdrawal-bg{
+    background-color: #E60827;
+}
+
+.withdrawal-bg-img{
+	padding:3% 20%;
+}
+
+.withdrawal-prompt-success{
+	width:100%;
+	height:auto;
+	color: #fff;
+	background-color: #E60827
+}
+
+.withdrawal-form{
+	width:100%;
+	height:20%;
+	top:45%;
+}
+
+.withdrawal-list{
+	border: 1px solid #eee;
+    background-color: #fff;
+    border:1px solid #eee;
+    margin:2% 3%;
+    padding:1% 3%; 
+}
+
+.withdrawal-list-item{
+	line-height: 2.5;
+    font-size: 1.2em;
+}
+
+.withdrawal-count,
+.withdrawal-method{
+	border-bottom: 1px solid #eee;
+}
+
+.withdrawal-history{
+	float:right;
+	color: #999;
+	text-align: center;
+	font-size: 0.5em;
+	border-radius: 10px;
+	outline: none;
+	background-color: #fff;
+	border:1px solid #eee;
+}
+
+.withdrawal-count-num,
+.withdrawal-method-weixin,
+.withdrawal-allow-all{
+	width: 30%;
+	left:35%;
+}
+
+.withdrawal-allow-all{
+	color:#999;
+}
+
+@media (min-width: 768px) {
+	.container {
+	    width: 768px;
+	}
+} 
+
+.txDetail{
+	position:fixed;bottom:0;left:0;right:0;
+}
+
+#txtable td{
+	border:none;
+}

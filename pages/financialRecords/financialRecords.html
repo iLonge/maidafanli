@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>Amaze UI Examples</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <link rel="stylesheet" href="../../css/mui.min.css">
+  <link rel="stylesheet" href="../../css/app.css">
+  <link rel="stylesheet" href="../../css/mui.picker.min.css"> 
+  <link rel="stylesheet" href="../home/dropload.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    .am-dropdown-flip .am-dropdown-content{
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      top: 100px;
+      left: 50%;
+      box-shadow: 0 0 4px #ddd;
+    }
+    .am-dropdown-content:before, 
+    .am-dropdown-content:after{left:43%;}
+
+    .allType{
+      position:relative;
+    }
+
+    #listItem{
+      position:absolute;
+      margin-right:1.0rem;
+      min-width:105px;
+    }
+
+    .am-dropdown-content>li:hover{
+      color:#dd514c;
+    }
+
+    nav{
+      line-height: 2.5;
+      background-color: #f7f7f7;
+    }
+
+    .time{color:#999;}
+
+    #collapseDate{
+      position:absolute;
+      z-index:900;
+      width:100%;
+      top:84px;
+      background-color:#fff;
+    }
+   /* #financialTable > tbody > tr > td{
+      border-top:0;
+      border-bottom:1px solid #eee;
+    }
+
+    #financialTable>tbody{
+      background-color:#fff;
+    }
+
+    #financialTable > thead > tr > th{
+      border-bottom: 0;
+    }
+
+    #financialTable > thead{
+      background-color:#f7f7f7;
+    }
+
+    #financialTable{
+      background-color: #efeff4;
+    }
+
+    .icon_day{
+      padding-right:0;
+      width:24px;
+      height:24px;
+    }
+
+    #filter{color:#E92C45;border: 1px solid #E92C43;padding: 2px 5px;}
+
+*/
+    .dateInput{border:none;width:6.5rem;height:2.4rem;color:#E92C45;}
+
+    .mui-dtpicker-title{
+        display: none;
+    }
+
+    .am-navbar{border-top:none;}
+    .dialog{
+      position:absolute;
+      top:10.0rem;
+      left:50%;
+      z-index:2000;
+      transform:translate(-50%);
+      -webkit-transform:translate(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color:#fff;
+      display:none;
+    }
+
+  </style>
+</head>
+<body>
+<!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container am-text-center">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl" style="color:#333;">
+      </a>
+      <span class="am-text-lg" style="margin-left:-40px;">财务记录</span>
+    </div> 
+  </header>
+<!-- 时间选择器 -->
+  <!-- <div class="am-g am-margin-top-sm am-text-center">
+    <nav class="scrollspy-nav am-text-sm" data-am-scrollspynav="{offsetTop:59}" data-am-sticky>
+      <div class="am-u-lg-11 am-u-sm-10 am-padding-left">
+        <div class=" dateContent">
+          <img src="../../images/icon-day.png" class="icon_day">
+          
+          <input class="am-text-sm am-text-center dateInput" id="startDate" value="">
+        </div>
+        至
+        <div class=" dateContent">
+          <img src="../../images/icon-day.png" class="icon_day">
+          <input class="am-text-sm am-text-center dateInput" id="endDate" value="">
+          
+        </div>
+        </div>
+      <div class="am-u-lg-1 am-u-sm-2"><span class="am-radius" id="filter">筛选</span></div>
+   </nav>
+  </div> -->
+  <!-- /时间选择器 -->
+
+<!-- 表格 -->
+  <!-- <div class="am-g pay-table" style="height:1000px;">
+    <table class="am-table am-table-hover am-text-center am-text-xs" id="financialTable">
+      <colgroup>
+        <col width="35%">
+        <col width="23%">
+        <col width="42%">
+      </colgroup> 
+      <thead style="background-color:#f7f7f7;" class="am-cf">
+        <tr>
+          <th class="am-text-center">时间<i class="am-icon-caret-down am-margin-left-xs"></i></th>
+          <th class="am-text-center">金额</th>
+          <th class="am-text-center" id="shopTypes">
+            <div class="am-dropdown" data-am-dropdown>
+              <span class="am-dropdown-toggle"><span id="consumeType">全部类型</span><span class="am-icon-caret-down am-margin-left-xs"></span></span>
+              <ul class="am-list am-dropdown-content am-text-center" id="listItem" style="position:absolute;min-width:120px;">
+                <li class="am-padding-xs am-text-danger" id="user_all">全部类型</li>
+                <li class="am-padding-xs" id="user_consume">消费</li>
+                <li class="am-padding-xs" id="user_withdrawal">提现</li>
+                <li class="am-padding-xs" id="user_fl">购物返利</li>
+                <li class="am-padding-xs" id="fensi_fl">粉丝购物返利</li>
+              </ul>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="allTbody">
+        <tr>
+          <td>2012-10-01 05:45</td>
+          <td class="am-text-danger">
+            <i class="am-fl">-</i>
+            <i class="am-icon-rmb am-fl am-margin-left-xs"></i>
+            <span>3.13</span>
+          </td>
+          <td>消费</td>
+        </tr>
+        <tr>
+          <td>2013-10-01 05:45</td>
+          <td>
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-fl am-margin-left-xs"></i>
+            <span>113.13</span>
+          </td>
+          <td>购物返利</td>
+        </tr>
+        <tr>
+          <td>2015-10-01 09:45</td>
+          <td class="am-text-danger">
+            <i class="am-fl">-</i>
+            <i class="am-icon-rmb am-margin-left-xs am-fl"></i>
+            <span>200.00</span>
+          </td>
+          <td>提现</td>
+        </tr>
+        <tr>
+          <td>2015-10-01 09:45</td>
+          <td>
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-margin-left-xs am-fl"></i>
+            <span>200</span>
+          </td>
+          <td>粉丝购物返利</td>
+        </tr>
+      </tbody>
+
+      <tbody id="consumeTbody">
+        <tr>
+          <td>2015-10-01 09:45</td>
+          <td>
+            <i class="am-fl">-</i>
+            <i class="am-icon-rmb am-margin-left-xs am-fl"></i>
+            <span>200</span>
+          </td>
+          <td>消费</td>
+        </tr>
+      </tbody>
+
+      <tbody id="withdrawalTbody">
+        <tr>
+          <td>2012-10-01 05:45</td>
+          <td class="am-text-warning">
+            <i class="am-fl">-</i>
+            <i class="am-icon-rmb am-fl am-margin-left-xs"></i>
+            <span class="monery">3.13</span>
+          </td>
+          <td>提现</td>
+        </tr>
+      </tbody>
+
+      <tbody id="userflTbody">
+        <tr>
+          <td>2015-10-01 09:45</td>
+          <td>
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-margin-left-xs am-fl"></i>
+            <span>200</span>
+          </td>
+          <td>购物返利</td>
+        </tr>
+      </tbody>
+
+      <tbody id="fensiflTbody">
+        <tr>
+          <td>2015-10-01 09:45</td>
+          <td>
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-margin-left-xs am-fl"></i>
+            <span>800</span>
+          </td>
+          <td>粉丝购物返利</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+<!--列表 -->
+  <div class="am-g">
+    <nav class="scrollspy-nav am-text-sm" data-am-scrollspynav="{offsetTop:49}" data-am-sticky>
+      <div class="am-container">
+        <ul class="am-avg-sm-3">
+          <li class="am-text-center"><span id="dateDrop" data-am-collapse="{target: '#collapseDate'}">
+            时间<i class="am-icon-caret-down am-margin-left-xs"></i></span>
+          </li>
+          <li class="am-text-center"><span>金额</span></li>
+          <li class="am-text-center allType">
+            <span class="am-dropdown-toggle"><span id="consumeType">全部类型</span><span class="am-icon-caret-down am-margin-left-xs"></span></span>
+            <ul class="am-list am-dropdown-content am-text-center" id="listItem">
+              <li class="am-padding-xs am-text-danger" id="user_all">全部类型</li>
+              <li class="am-padding-xs" id="user_consume">消费</li>
+              <li class="am-padding-xs" id="user_withdrawal">提现</li>
+              <li class="am-padding-xs" id="user_fl">购物返利</li>
+              <li class="am-padding-xs" id="fensi_fl">粉丝购物返利</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="am-g" style="height:px;">
+    <div class="am-container content">
+      <ul class="am-list lists">
+
+        <li class="am-padding-vertical-xs">
+          <ul class="am-avg-sm-3 am-text-center am-text-sm">
+            <li class="time">2012-10-01 05:45</li>
+            <li class="am-text-danger">
+              <i>+</i>
+              <i class="am-icon-rmb am-margin-left-xs"></i>
+              <span>200</span>
+            </li>
+            <li>粉丝购物返利</li>
+          </ul>
+        </li>
+
+        <li class="am-padding-vertical-xs">
+          <ul class="am-avg-sm-3 am-text-center am-text-sm">
+            <li class="time">2012-10-01 05:45</li>
+            <li class="am-text-danger">
+              <i>+</i>
+              <i class="am-icon-rmb am-margin-left-xs"></i>
+              <span>200</span>
+            </li>
+            <li>粉丝购物返利</li>
+          </ul>
+        </li>
+
+        <li class="am-padding-vertical-xs">
+          <ul class="am-avg-sm-3 am-text-center am-text-sm">
+            <li class="time">2012-10-01 05:45</li>
+            <li class="am-text-danger">
+              <i>+</i>
+              <i class="am-icon-rmb am-margin-left-xs"></i>
+              <span>200</span>
+            </li>
+            <li>粉丝购物返利</li>
+          </ul>
+        </li>
+
+        <li class="am-padding-vertical-xs">
+          <ul class="am-avg-sm-3 am-text-center am-text-sm">
+            <li class="time">2012-10-01 05:45</li>
+            <li class="am-text-danger">
+              <i>+</i>
+              <i class="am-icon-rmb am-margin-left-xs"></i>
+              <span>200</span>
+            </li>
+            <li>粉丝购物返利</li>
+          </ul>
+        </li>
+
+        <li class="am-padding-vertical-xs">
+          <ul class="am-avg-sm-3 am-text-center am-text-sm">
+            <li class="time">2012-10-01 05:45</li>
+            <li class="am-text-danger">
+              <i>+</i>
+              <i class="am-icon-rmb am-margin-left-xs"></i>
+              <span>200</span>
+            </li>
+            <li>粉丝购物返利</li>
+          </ul>
+        </li>
+
+        <li class="am-padding-vertical-xs">
+          <ul class="am-avg-sm-3 am-text-center am-text-sm">
+            <li class="time">2012-10-01 05:45</li>
+            <li class="am-text-danger">
+              <i>+</i>
+              <i class="am-icon-rmb am-margin-left-xs"></i>
+              <span>200</span>
+            </li>
+            <li>粉丝购物返利</li>
+          </ul>
+        </li>
+
+        <li class="am-padding-vertical-xs">
+          <ul class="am-avg-sm-3 am-text-center am-text-sm">
+            <li class="time">2012-10-01 05:45</li>
+            <li class="am-text-danger">
+              <i>+</i>
+              <i class="am-icon-rmb am-margin-left-xs"></i>
+              <span>200</span>
+            </li>
+            <li>粉丝购物返利</li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="am-navbar am-text-sm am-cf hisCount">
+    <div class="am-u-sm-4 am-padding-left-sm">
+      <span >共 <span id="count"></span> 条记录</span>
+    </div>
+    <div class="am-u-sm-8">
+      <span> 共 <i class="am-text-danger am-icon-rmb am-padding-horizontal-xs"></i><span class="am-text-danger" id="totalMonery"></span> </span>
+    </div>
+  </div>
+  <div class="am-radius am-text-xs am-padding-xs dialog">
+    开始时间不能大于结束时间
+  </div>
+
+  <div class="am-g am-padding-bottom-sm am-collapse" id="collapseDate">
+    <ul class="am-list am-text-sm dateContent">
+      <li class="am-cf am-padding-xs">
+        <span>开始时间</span>
+        <input class="am-text-sm am-text-center am-fr dateInput" id="startDate" value="" readonly>
+        <img src="../../images/icon-day.png" width="24" height="26" class="icon_day am-fr">
+      </li>
+      <li class="am-cf am-padding-xs">
+        <span>结束时间</span>
+        <input class="am-text-sm am-text-center am-fr dateInput" id="endDate" value="" readonly>
+        <img src="../../images/icon-day.png" width="24" height="26" class="icon_day am-fr">
+      </li>
+    </ul>
+    <div class="am-container am-margin-vertical">
+      <button class="am-btn am-btn-block am-btn-danger" id="sureBtn">确定</button>
+    </div>
+  </div>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/amazeui.min.js"></script>
+  <script src="../../js/mui.min.js"></script>
+  <script src="../../js/mui.picker.min.js"></script>
+  <script src="../../js/dropload.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      /*
+      * 下拉加载
+      */
+        var itemIndex = 0;
+        var tab1LoadEnd = false;
+        var tab2LoadEnd = false;
+
+        var counter = 0;
+        // 每页展示4个
+        var num = 10;
+        var pageStart = 0,pageEnd = 0;
+
+        // dropload
+        var dropload = $('.content').dropload({
+            scrollArea : window,
+            loadDownFn : function(me){
+              $.ajax({
+                  type: 'GET',
+                  url: 'update.json',
+                  dataType: 'json',
+                  success: function(data){
+                      var result = '';
+                      counter++;
+                      pageEnd = num * counter;
+                      pageStart = pageEnd - num;
+
+                      if(pageStart <= data.data.length){
+                          for(var i = pageStart; i < pageEnd; i++){
+
+                              result +=  '<li class="am-padding-vertical-xs">'
+                                            +'<ul class="am-avg-sm-3 am-text-center am-text-sm">'
+                                              +'<li class="time">'+data.data[i].date+'</li>'
+                                              +'<li class="am-text-danger">'
+                                               +'<i>'+'+'+'</i>'
+                                                +'<i class="am-icon-rmb am-margin-left-xs"></i>'
+                                                +'<span>'+data.data[i].money+'</span>'
+                                              +'</li>'
+                                              +'<li>'+data.data[i].type+'</li>'
+                                            +'</ul>'
+                                          +'</li>';
+
+                              if((i + 1) >= data.data.length){
+                                  // 数据加载完
+                                  tab1LoadEnd = true;
+                                  // 锁定
+                                  me.lock();
+                                  // 无数据
+                                  me.noData();
+                                  break;
+                              }
+                          }
+                          // 为了测试，延迟1秒加载
+                          setTimeout(function(){
+                              $('.lists').eq(itemIndex).append(result);
+                              // 每次数据加载完，必须重置
+                              me.resetload();
+                          },1000);
+                      }
+                  },
+                  error: function(xhr, type){
+                      alert('Ajax error!');
+                      // 即使加载出错，也得重置
+                      me.resetload();
+                  }
+              });
+            }
+        });
+
+
+
+
+      function FormatDate () {
+        var date = new Date();
+        var m = date.getMonth()+1;
+        var d = date.getDate();
+        if(m<9 || d<9){
+          return date.getFullYear()+"-"+ "0" +m +"-"+"0"+d;
+        }else{
+          return date.getFullYear()+"-"+(date.getMonth()+1) +"-"+date.getDate();
+        }
+      }
+
+      $("#startDate,#endDate").attr("value",FormatDate());
+      
+      $(".hisCount").hide();
+      $("#listItem li").on("click",function(){
+        var type = $(this).text();
+        if(type == "全部类型"){
+          $(".hisCount").hide();
+        }else{
+          $(".hisCount").show();
+        }
+      });
+
+      // 收起日期面板
+      $("#collapseDate").on('close.collapse.amui');
+      $("#sureBtn").click(function(){
+        var startDate =  $("#startDate").val();
+        var endDate =  $("#endDate").val();
+        if(startDate <= endDate){
+          $("#startDate,#endDate").text(FormatDate());
+          $("#collapseDate").collapse('close');
+        }else{
+          $(".dialog").show();
+          setTimeout(function() {
+            $(".dialog").hide();
+          }, 1500); 
+        }
+      });
+      
+      // 获取滚动位置
+      $(window).scroll(function(){
+        var scrollTop = $("body").scrollTop();
+        if(scrollTop > 49){
+          $("#collapseDate").css("top",scrollTop+34);
+        }else{
+          $("#collapseDate").css("top",scrollTop+84);
+        }
+      });
+      
+      var listCount = $("#withdrawalTbody>tr").length;
+      $("#count").html(listCount);
+      var monery = 0;
+      $(".monery").each(function(){
+        monery += Number($(this).text());
+        return monery;
+      });
+
+      $("#totalMonery").text(monery);
+      
+      $("#fanliTbody,#consumeTbody,#withdrawalTbody,#userflTbody,#fensiflTbody").hide();
+      $("#consumeType").click(function(){
+        $("#listItem").show();
+      });
+      $("#listItem li").click(function(){
+        var liText = $(this).text();
+        $("#consumeType").text(liText);
+        $("#listItem").hide();
+      });
+
+      $("#user_all").click(function(){
+        $("tbody").hide();
+        $("#allTbody").show();
+        $(this).siblings().removeClass("am-text-danger");
+      });
+
+      $("#user_consume").click(function(){
+        $("tbody").hide();
+        $("#consumeTbody").show();
+        $(this).siblings().removeClass("am-text-danger");
+      });
+
+      $("#user_withdrawal").click(function(){
+        $("tbody").hide();
+        $("#withdrawalTbody").show();
+        $(this).siblings().removeClass("am-text-danger");
+      });
+
+      $("#user_fl").click(function(){
+        $("tbody").hide();
+        $("#userflTbody").show();
+        $(this).siblings().removeClass("am-text-danger");
+      });
+
+      $("#fensi_fl").click(function(){
+        $("tbody").hide();
+        $("#fensiflTbody").show();
+        $(this).siblings().removeClass("am-text-danger");
+      });
+    });
+
+    (function($) {
+      $.init();
+      var dateContents = $('.dateContent>li');
+
+      dateContents.each(function(i, dateContent) {
+        dateContent.addEventListener('tap', function() {
+          var input = this.getElementsByTagName("input")[0];
+          var id = this.getAttribute('id');
+          var options = {
+                  type: "date",beginDate: new Date(2016, 09, 01),endDate: new Date(2200, 01, 01),labels: ['Year', 'Mon', 'Day', 'Hour', 'min'],labels: ""
+                  };
+          var picker = new $.DtPicker(options);     // 首次显示时实例化组件 
+          picker.show(function(rs) {
+            /*
+             * rs.value 拼合后的 value
+             * rs.text 拼合后的 text
+             * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+             * rs.m 月，用法同年
+             * rs.d 日，用法同年0
+             * rs.h 时，用法同年
+             * rs.i 分（minutes 的第二个字母），用法同年
+             */
+            input.setAttribute("value",rs.text); 
+            /* 
+             * 返回 false 可以阻止选择框的关闭
+             * return false;
+             */
+            /*
+             * 释放组件资源，释放后将将不能再操作组件
+             * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+             * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+             * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+             */
+            picker.dispose();
+            // console.log(startDate.innerHTML)
+          });
+        });
+      }, false);
+    })(mui);
+  </script>
+</body>
+</html>

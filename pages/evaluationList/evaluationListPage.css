@@ -1,0 +1,29 @@
+.am-header a:hover{color:#fff;}
+ul,li{list-style: none;}
+.server-evaluation{
+  padding:0;
+  margin:0;
+}
+li>button{
+  background-color: #fff;
+  border:1px solid #ddd;
+  outline:none;
+}
+li>button:hover{
+  background-color: #eaa1a1;
+  border:1px solid #E60827;
+  color:#E60827;
+}
+.activeBtn{background-color:#eaa1a1;border:1px solid #E60827;color:#E60827;}
+.user-evaluat-star>i{
+  color:rgb(245, 230, 31)
+}
+.user-info{overflow:hidden;height:4.0rem;line-height: 1.0;}
+.user-photo{width:4.0rem;}
+.user-name{color:#333;margin-top:0;line-height:2.0rem;}
+.user-evaluat-date{color:#999;margin-bottom:0;line-height:2.0rem;}
+.user-evaluat-star{line-height:4.0rem;}
+.reply{background-color:#f7f7f7;}
+.user-eval-img{width:6.0rem;height:6.0rem;}
+.user-placeholderImg{width:4.0rem;height:4.0rem;background:url(../../images/icon-user.png) no-repeat center;background-size:cover;}
+.user-placeholderImg[src=""]{visibility:hidden;}

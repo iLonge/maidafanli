@@ -1,0 +1,32 @@
+.tel-number,
+.get-yanzhen{
+  height:40px;
+  border:none;
+  outline:none;
+}
+.get-yanzhen-btn{
+  width:100%;
+  height:40px;
+  color:#E60827;
+  border:1px solid #E60827;
+  background-color:#ffffff;
+}
+
+.get-yanzhen-btn:hover{
+ color:#E60827;
+ outline:none!important;
+}
+
+.am-g{
+  width:90%;
+}
+#header{
+	background-color:#E60827!important;
+}
+
+#header a{
+	color:#ffffff;
+}
+.dec{
+	color:#666;
+}

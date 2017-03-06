@@ -1,0 +1,143 @@
+
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{
+	margin:0;
+	padding:0;
+}
+
+body,button,input,select,textarea{
+	font-family:'Microsoft Yahei','Helvetica Neue',Helvetica,STHeiTi,Arial,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+}
+
+address,cite,dfn,em,var{
+	font-style:normal;
+}
+
+ol,ul{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+	outline:none;
+	-webkit-tap-highlight-color:transparent;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+fieldset,img{
+	border:0;
+}
+
+button,input,select,textarea{
+	font:14px/1.6 "Microsoft YaHei";
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+.fl,.left{
+	float:left;
+}
+
+.fr,.right{
+	float:right;
+}
+
+.clearfix:after{
+	content:"";
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+
+.clearfix{
+	zoom:1;
+}
+
+/* 分页 */
+
+.page-totalpage{
+	text-align: right;
+}
+.page-ul{
+	text-align: right;
+	*float: right;
+}
+.page-ul li{
+	display:inline-block;
+	*float: left;
+	_display:inline;
+	_zoom:1;
+	*background:#fff;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.page-ul li.page{
+	display: inline-block;
+	background: #f7f7f7;
+	border: 1px solid #dddddd;
+	font-weight: bold;
+	border-radius: 2px; 
+	color: #556270;
+	cursor: pointer;
+	margin-right: 10px;
+	padding: 0 12px;
+	list-style: none;
+}
+.page-ul li.page:hover{
+	border: 1px solid #43505e;
+	border-radius: 2px;
+	background: #535f6d;
+	color: #fff;
+	background-image: linear-gradient(45deg,#535f6d,#454e59);
+}
+.page-ul li.page-record{
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.jump-page{
+	display:inline-block; 
+	_display:inline;
+	_zoom:1;
+}
+.page-text{
+	width: 30px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 0;
+}
+.page-ul li.active{
+	border: 1px solid #43505e;
+	border-radius: 2px;
+	background: #454e59;
+	background-image: linear-gradient(45deg,#535f6d,#454e59) !important;
+	color: #fff;
+}
+.page-ul li.totalbranch{
+	width: auto;
+	border: none;
+	color: #556270;
+	cursor: auto;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.page-ul li.totalbranch:hover{
+	border: none;
+	color: #556270;
+	background: none;
+}
+
+/* 分页end */
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+    body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+    #golist {display: none;}
+    .BMap_pop{top:190px!important;}
+    @media (max-device-width: 780px){#golist{display: block !important;}}
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=xF5nEKYLWdxwZ2Z0MYKQdtxj&v=1.0"></script>
+  <title>导航示例</title>
+</head>
+<body>
+  
+  <div id="allmap"></div>
+  <input type="hidden" value="108.95309828" id="longitude" />
+  <input type="hidden" value="34.2777999" id="latitude" />
+</body>
+</html>
+<script type="text/javascript">
+  window.onload = function(){
+    var  lng = document.getElementById("longitude").value;
+    var  lat = document.getElementById("latitude").value;
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(lng,lat);
+    map.centerAndZoom(point, 15);
+    map.addControl(new BMap.ZoomControl());          
+    var opts = {
+      width : 380,    // 信息窗口宽度
+      height: 70,     // 信息窗口高度
+      title : "海底捞王府井店"  // 信息窗口标题
+    }
+    var infoWindow = new BMap.InfoWindow("商家地址:陕西省西安市碑林区长安南路10号(点击红点去该店铺)", opts);  // 创建信息窗口对象
+    map.openInfoWindow(infoWindow,point); //开启信息窗口
+
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);              // 将标注添加到地图中
+    marker.addEventListener("click", function(){
+      /*start|end：（必选）
+      {name:string,latlng:Lnglat}
+      opts:
+      mode：导航模式，固定为
+      BMAP_MODE_TRANSIT、BMAP_MODE_DRIVING、
+      BMAP_MODE_WALKING、BMAP_MODE_NAVIGATION
+      分别表示公交、驾车、步行和导航，（必选）
+      region：城市名或县名  当给定region时，认为起点和终点都在同一城市，除非单独给定起点或终点的城市
+      origin_region/destination_region：同上
+      */
+      var start = {
+         name:'启航029'
+      }
+      var end = {
+        name:"陕西高速大厦"
+      }
+      var opts = {
+        mode:BMAP_MODE_DRIVING,
+        region:"西安市"
+      }
+      var ss = new BMap.RouteSearch();
+      ss.routeCall(start,end,opts);
+    });
+
+}
+  //关于状态码
+  //BMAP_STATUS_SUCCESS 检索成功。对应数值“0”。
+  //BMAP_STATUS_CITY_LIST 城市列表。对应数值“1”。
+  //BMAP_STATUS_UNKNOWN_LOCATION  位置结果未知。对应数值“2”。
+  //BMAP_STATUS_UNKNOWN_ROUTE 导航结果未知。对应数值“3”。
+  //BMAP_STATUS_INVALID_KEY 非法密钥。对应数值“4”。
+  //BMAP_STATUS_INVALID_REQUEST 非法请求。对应数值“5”。
+  //BMAP_STATUS_PERMISSION_DENIED 没有权限。对应数值“6”。(自 1.1 新增)
+  //BMAP_STATUS_SERVICE_UNAVAILABLE 服务不可用。对应数值“7”。(自 1.1 
+
+</script>
+
+
+
+
+  

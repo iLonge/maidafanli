@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="买单返,maodanfan">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+  <link rel="stylesheet" href="withdrawal/withdrawal.css"/>
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  
+</head>
+<body>
+  <!-- 头部 -->
+   <header class="am-header am-header-default" data-am-widget="header">
+      <div class="am-u-sm-5">
+        <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl">
+        </a>
+      </div>
+      <div class="am-u-sm-7 am-center">
+        <span class="am-text-default am-margin-left-xxl" style="color:#fff;">提现审核</span>
+      </div>
+  </header>
+
+<!-- 这是提现详情页 2 -->
+  <div class="withdrawal-content2" style="display:block;">
+  <div class="withdrawal-contrl">
+
+    <div class="withdrawal-bg"><img src="../images/img-ing.png" class="am-img-responsive withdrawal-bg-img"></div>
+    <div class="withdrawal-prompt-success am-text-center">
+      <span>提现审核中 ···</span><br>
+      <span class="am-text-xs">请您耐心等待</span>
+    </div>
+     <div class="withdrawal-form">
+       <ul class="withdrawal-list am-text-lg">
+        <li class="am-padding-vertical-sm">
+          提现金额
+          <span class="am-margin-left-sm">￥50</span>
+          <a href="withdrawalhis/withdrawalhis.html"><button class="am-padding-vertical-xs withdrawal-history">提现记录</button></a>
+        </li>
+        <li class="withdrawal-method am-padding-vertical-sm">提现到<span class="withdrawal-method-weixin am-margin-left-xl">微信</span></li>
+        <li class="withdrawal-allow-count am-padding-vertical-sm">可提现金额<span class="withdrawal-allow-all">￥150.26</span></li>
+       </ul>
+      </div>
+
+      <div class="am-container am-margin-top-lg">
+        <button class="am-btn am-btn-danger am-btn-block am-radius">审核中 ···</button>
+      </div>   
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="withdrawal.js"></script>
+</body>
+</html>

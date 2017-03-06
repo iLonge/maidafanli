@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="description" content="买单返-消费即返利，单单返红包"/>
+  <meta name="keywords" content="maidanfan,买单返"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit"/>
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png"/>
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+  <link rel="stylesheet" href="../css/amazeui.css"/>
+<!--   <link rel="stylesheet" href="../pages/home/home.css"/> -->
+  <style type="text/css">
+    nav{
+      background-color: rgba(255,255,255,1);
+    }
+    .allOrders,.waiteEvaluate{
+      height:4.0rem;
+      line-height:4.0rem;
+    }
+    .active{
+      color:#E60827;
+      border-bottom:2px solid #E60827;
+    }
+
+    .evalTitle{
+      border-bottom:1px solid #eee;
+      border-top:1px solid #eee;
+    }
+
+    .des-text{
+      color:#999;
+    }
+
+    .evalContent{
+      overflow: hidden;
+      border-bottom:1px solid #fafafa;
+    }
+
+    .img_placeholder{
+      width:34%;
+      height:80px;
+      border:none;
+      border-radius: 4px;
+      background: url(../images/loading.png) no-repeat;
+      background-size:cover;
+    }
+
+    .orderDetail{
+      position:relative;
+      width:66%;
+      height:80px;
+    }
+
+    .img_placeholder img{
+      width:100%;
+      height:100%;
+    }
+
+    .consumption,
+    .cashback{
+      position:absolute;
+    }
+
+    .consumption{
+      top:0;
+    }
+
+    .cashback{
+      bottom:0;
+    }
+
+    .evalFoot{
+      height:4.0rem;
+      line-height: 4.0rem;
+      vertical-align: middle;
+    }
+
+    .evalBtn{
+      color:#ECB736;
+      margin-top:0.6rem;
+      border:1px solid #ECB736;
+    }
+
+    .evalBtn:hover{
+      color:#ECB736;
+    }
+
+  </style>
+</head>
+<body class="no-js">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container am-text-center">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl">
+      </a>
+      <span class="am-text-lg">订单</span>
+    </div> 
+  </header>
+  <div class="am-g am-margin-top-sm tabs">
+    <nav class="scrollspy-nav" data-am-scrollspynav="{offsetTop:59}" data-am-sticky>
+      <ul class="am-avg-sm-2 am-text-center am-text-sm" id="orderTab">
+        <li class="allOrders active">全部订单</li>
+        <li class="waiteEvaluate">待评价</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="am-g am-cf" id="waiteval">
+    <ul class="am-list">
+      <li>
+        <div class="evalTitle am-text-sm am-padding-sm am-vertical-align">
+          <span class="am-fl am-vertical-align-middle">北屯老火锅旗舰店</span>
+          <span class="am-fr am-vertical-align-middle des-text">待评价</span>
+        </div>
+        <div class="evalContent am-padding-sm">
+          <div class="am-fl am-text-center img_placeholder"> 
+            <img src="../images/p7933-l.jpg" class="am-radius" data-echo="../images/p7933-l.jpg"/>
+          </div>
+          <div class="am-fl am-padding-left-sm orderDetail">
+            <div class="consumption">
+              <span>消费：<i class="am-icon-rmb"></i> </span><span>200.00</span>
+            </div>
+            <div class="cashback">
+              <span>返现：<i class="am-icon-rmb"></i> </span><span>20.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="am-container evalFoot">
+          <span class="am-fr am-btn am-btn-sm am-radius am-padding-horizontal evalBtn">评价</span>
+        </div>
+      </li>
+      <li>
+        <div class="evalTitle am-text-sm am-padding-sm am-vertical-align">
+          <span class="am-fl am-vertical-align-middle">北屯老火锅旗舰店</span>
+          <span class="am-fr am-vertical-align-middle des-text">待评价</span>
+        </div>
+        <div class="evalContent am-padding-sm">
+          <div class="am-fl am-text-center img_placeholder"> 
+            <img src="../images/p7933-l.jpg" class="am-radius" data-echo="../images/p7933-l.jpg"/>
+          </div>
+          <div class="am-fl am-padding-left-sm orderDetail">
+            <div class="consumption">
+              <span>消费：<i class="am-icon-rmb"></i> </span><span>200.00</span>
+            </div>
+            <div class="cashback">
+              <span>返现：<i class="am-icon-rmb"></i> </span><span>20.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="am-container evalFoot">
+          <span class="am-fr am-btn am-btn-sm am-radius am-padding-horizontal evalBtn">评价</span>
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+
+  <div class="am-g am-margin-vertical-sm am-cf" id="finisheval">
+    <ul class="am-list">
+      <li>
+        <div class="evalTitle am-text-sm am-padding-sm am-vertical-align">
+          <span class="am-fl am-vertical-align-middle">北屯易发堂—养发中心</span>
+          <span class="am-fr am-vertical-align-middle des-text">已完成</span>
+        </div>
+        <div class="evalContent am-padding-sm">
+          <div class="am-fl am-text-center img_placeholder"> 
+            <img src="../images/p7933-l.jpg" class="am-radius" data-echo="../images/p7933-l.jpg"/>
+          </div>
+          <div class="am-fl am-padding-left-sm orderDetail">
+            <div class="consumption">
+              <span>消费：<i class="am-icon-rmb"></i> </span><span>200.00</span>
+            </div>
+            <div class="cashback">
+              <span>返现：<i class="am-icon-rmb"></i> </span><span>20.00</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="evalTitle am-text-sm am-padding-sm am-vertical-align">
+          <span class="am-fl am-vertical-align-middle">北屯易发堂—养发中心</span>
+          <span class="am-fr am-vertical-align-middle des-text">已完成</span>
+        </div>
+        <div class="evalContent am-padding-sm">
+          <div class="am-fl am-text-center img_placeholder"> 
+            <img src="../images/p7933-l.jpg" class="am-radius" data-echo="../images/p7933-l.jpg"/>
+          </div>
+          <div class="am-fl am-padding-left-sm orderDetail">
+            <div class="consumption">
+              <span>消费：<i class="am-icon-rmb"></i> </span><span>200.00</span>
+            </div>
+            <div class="cashback">
+              <span>返现：<i class="am-icon-rmb"></i> </span><span>20.00</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="../js/echo.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/amazeui.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#orderTab li").on("click",function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      $("#finisheval").show();
+    });
+
+    $(".waiteEvaluate").on("click",function(){
+      $("#finisheval").hide();
+    });
+
+
+  });
+</script>
+</body>
+</html>

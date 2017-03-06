@@ -1,0 +1,22 @@
+.search-box{
+  position: relative;
+  height:30px; 
+}
+.search-box i{
+  position: absolute;
+  left:5%;
+  top:5%;
+  z-index: 111;
+}
+.search-box input{
+  position: absolute;
+  left:3%;
+  width:80%;
+  height:30px;
+  border:none;outline:none;
+}
+.cancel{
+  padding-right:3%;
+  height:30px;
+  line-height: 30px;
+}

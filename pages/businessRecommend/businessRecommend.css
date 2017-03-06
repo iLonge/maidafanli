@@ -1,0 +1,132 @@
+
+.icon-tel{
+	width:10%;
+	padding-top:5px;
+}
+
+.border-bottom{
+	border-bottom:1px solid #f7f7f7;
+}
+
+.topImg{
+	width:80%;
+}
+
+.step{
+	height:50px;
+}
+
+.step>ul{
+	position:relative;
+}
+
+.step1>div,
+.step2>div,
+.step3>div{
+	position:relative;
+	width:50px;
+	height:50px;
+	background-color:#ddd;
+	z-index:2;
+}
+
+.step1>div>div,
+.step2>div>div,
+.step3>div>div{
+	width:30px;
+	height:30px;
+	top:10px;
+	left:10px;
+	background-color:#5eb95e;
+	position:absolute;
+	color:#fff;
+}
+
+.step2>div>div,
+.step3>div>div{
+	display:none;
+}
+
+.stepBar{
+	width:70%;
+	height:16px;
+	background-color:#ddd;
+	z-index:1;
+	position:absolute;
+	left:50%;
+	top:34%;
+	transform:translate(-50%);
+	-webkit-transform:translate(-50%);
+	overflow:hidden;
+}
+
+.progress1{
+	width:30%;
+	height:8px;
+	background-color:#5eb95e;
+	position:absolute;
+	top:41%;
+	z-index:2;
+	left:18%;
+	display:none;
+}
+
+.progress2{
+	width:28%;
+	height:8px;
+	background-color:#5eb95e;
+	position:absolute;
+	top:41%;
+	z-index:2;
+	right:20%;
+	display:none;
+}
+
+.businessInformation,
+.makeMonery{
+	display:none;
+}
+
+.addressChoose{
+	position:relative;
+	border:1px solid #ddd;
+	height:39px;
+	line-height:39px;
+}
+
+.chooseProvince,
+.chooseCity{
+	color:#999;
+}
+
+#provinceList,
+#cityList{
+	top:26px;
+	height:150px;
+	overflow:scroll;
+}
+
+.am-dropdown-content{
+	min-width:120px;
+}
+
+.left{
+	padding-left:8%;
+}
+
+.businessItem{
+	position:relative;
+}
+
+.businessItem>label{
+	position:absolute;
+}
+
+.businessItem>input{
+	padding-left:30%!important;
+}
+
+.finished-btn{
+	height:45px;
+}
+

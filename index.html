@@ -1,0 +1,318 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  
+  <link rel="icon" type="image/png" href="i/favicon.png">
+  
+
+  <link rel="stylesheet" href="css/amazeui.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="no-js">
+<!--[if lte IE 9]> 
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+  <!-- 顶部 -->
+  <div class="am-g top" style="position:relative;">
+    <div class="am-u-sm-12 am-padding-xs">
+      <div class="am-u-sm-5 am-fl">
+        <img src="images/logo.png" class="am-img-responsive am-fl top-logo">
+      </div>
+       <div class="am-u-sm-7 am-vertical-align" style="padding-right:0;">
+        <span class="am-text-lg am-padding-left-xs am-fr phone-number">4000-998-433</span>
+        <img src="images/icon-tel.png" class="am-img-responsive am-fr am-text-middle top-tel">
+       </div>
+    </div>
+    <!-- 滚动信息 -->
+    <div class="am-cf am-text-center am-text-sm scrollContent">
+      <div class="am-u-sm-2"><img src="images/bulletin.gif" class="bulletin"></div>
+      <!-- 滚动内容 -->
+      <div class="am-u-sm-8 am-padding-right-0 scrollInfo am-text-left" id="scrollContent" style="height:46px;overflow:hidden;">
+        <ul class="am-list">
+          <li class="listItem">用户：<span class="am-padding-right-sm uname">王师傅</span>
+          获得返利(元):<span class="am-padding-left-xs">99.99</span></li>
+          <li class="listItem">用户：<span class="am-padding-right-sm uname">张师傅</span>
+          获得返利(元):<span class="am-padding-left-xs">109.00</span></li>
+          <li class="listItem">用户：<span class="am-padding-right-sm uname">李师傅</span>
+          获得返利(元):<span class="am-padding-left-xs">900.00</span></li>
+        </ul>
+      </div>
+      <!-- /滚动内容 -->
+      <div class="am-u-sm-2 am-padding-right-0">
+        <i class="leftLine"></i>
+        <img src="images/icon-btn-close.png" class="am-margin-left-sm" id="delet"/>
+      </div>
+    </div>
+  </div>
+  <!-- /信息滚动 -->
+<!--个人信息 --> 
+  <div class="am-g personal-info am-padding-vertical-sm">
+    <div class="am-u-sm-4">
+      <img class="am-img-responsive am-circle am-margin-left-sm personal-img" src="images/javascript.jpg"/>
+    </div>
+    <div class="am-u-sm-6 am-margin-top-sm">
+      <span class="am-text-default">我的微信账户名</span><br>
+      <span class="am-text-xs">买单返ID</span><i class="am-text-xs am-margin-horizontal-xs cut-line"></i><span class="am-text-sm am-text-danger">(未激活)</span>
+    </div>
+    <div class="am-u-sm-2 am-margin-top-sm">
+      <span class="am-icon-qrcode am-text-xxl" id="scanCode"></span>
+    </div>        
+  </div>
+ 
+<!--账户余额-->
+
+  <div class="am-g am-margin-top-sm am-padding-vertical-xs">
+    <div class="am-container">
+      <div class="am-u-sm-8 fl zhye list-item">
+        <!-- <img src="images/icon-money.png"/> -->
+        <span class="money"></span>
+        <span class="am-text-sm am-margin-sm m-vertical-align-middle">账户余额</span>
+        <span class="am-icon-rmb am-text-warning"></span>
+        <span class="am-text-sm am-text-warning">350.00</span>
+      </div>
+      <div class="am-u-sm-4 am-fr am-text-right list-item-right">
+        <a class="am-btn am-btn-sm am-padding-horizontal-lg am-text-warning withdrawal-btn" href="pages/withdrawal/withdrawalPage.html"><span class="am-text-warning">提现</span></a>
+      </div>
+    </div>
+  </div>
+<!-- 推广赚钱 粉丝 ,我的收藏-->
+  <ul class="am-list personal-info-lists">
+    <li>
+      <a href="pages/promoteMakemonery/promoteMakemonery.html">
+        <div class="am-container am-text-sm">
+          <div class="am-u-sm-8 list-item">
+            <img src="images/icon-tuiguang.png">
+            <span  class="am-margin-left-sm am-text-sm am-vertical-align-middle list-txt">推广赚钱</span>
+          </div>
+          <div class="am-u-sm-4 list-item-right"> 
+            <i class="am-icon-angle-right am-text-xl am-fr am-vertical-align-middle"></i>
+            <span class="am-fr list-txt">推广码：ID</span>
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li>
+      <a href="pages/promoteMakemonery/promoteMakemonery.html">
+        <div class="am-container am-text-sm">
+          <div class="am-u-sm-9 list-item">
+            <img src="images/icon-user1.png">
+            <span class="am-margin-left-sm am-text-sm am-vertical-align-middle list-txt">粉丝</span>
+          </div>
+          <div class="am-u-sm-3 list-item-right">
+            <i class="am-icon-angle-right am-text-xl am-fr am-vertical-align-middle"></i>   
+            <span class="am-fr list-txt">200</span>  
+          </div>
+        </div>
+      </a>
+    </li>
+    <!-- 中奖机会 -->
+    <li>
+      <a href="#">
+        <div class="am-container am-text-sm">
+          <div class="am-u-sm-9 list-item">
+            <img src="images/icon-integral.png">
+            <span class="am-margin-left-sm am-text-sm am-vertical-align-middle list-txt">积分</span>
+          </div>
+          <div class="am-u-sm-3 list-item-right">
+            <i class="am-icon-angle-right am-text-xl am-fr am-vertical-align-middle"></i>   
+            <span class="am-fr wining">中奖机会</span>  
+          </div>
+        </div>
+      </a>
+    </li>
+    <!-- /中奖机会 -->
+
+    <li>
+      <a href="pages/myCollection/myCollection.html">
+        <div class="am-container am-text-sm">
+          <div class="am-u-sm-9 list-item">
+            <img src="images/icon-like.png">
+            <span class="am-margin-left-sm am-text-sm am-vertical-align-middle list-txt">我的收藏</span>
+          </div>
+          <div class="am-u-sm-3 list-item-right">
+            <i class="am-icon-angle-right am-text-xl am-fr am-vertical-align-middle"></i>   
+            <span class="am-fr list-txt">16</span>  
+          </div>
+        </div>
+      </a>
+    </li>
+  <!-- 我的订单，返利订单 财务记录 -->
+    <li> <a href="pages/myOrders.html">
+        <div class="am-container am-text-sm">
+          <div class="am-u-sm-9 list-item">
+            <img src="images/icon-indent.png">
+            <span class="am-margin-left-sm list-txt">我的订单</span>
+          </div>
+          <div class="am-u-sm-3 list-item-right">
+            <i class="am-icon-angle-right am-text-xl am-fr"></i>
+            <!-- <span class="am-badge am-badge-danger am-round am-fr am-margin-top-sm">3</span> -->
+          </div>
+        </div>
+      </a></li>
+
+      <li> <a href="pages/returnMonery.html">
+        <div class="am-container am-text-sm">
+          <div class="am-u-sm-9 list-item">
+            <img src="images/icon-dingdna.png">
+            <span class="am-margin-left-sm list-txt">返利订单</span>
+          </div>
+          <div class="am-u-sm-3 list-item-right">
+            <i class="am-icon-angle-right am-text-xl am-fr"></i>
+            <span class="am-badge am-badge-danger am-round am-fr am-margin-top-sm">10</span>
+          </div>
+        </div>
+      </a></li>
+    
+    <li><a href="pages/financialRecords/financialRecords.html">
+      <div class="am-container am-text-sm">
+        <div class="am-u-sm-10 list-item">
+          <img src="images/icon-jilu.png">
+          <span class="am-margin-left-sm list-txt">财务记录</span>
+        </div>
+        <div class="am-u-sm-2 list-item-right">
+          <i class="am-icon-angle-right am-text-xl am-fr"></i>
+          <span class="am-fr list-txt">20</span>
+        </div>
+      </div>
+    </a></li>
+
+    <li><a href="#">
+      <div class="am-container am-text-sm">
+        <div class="am-u-sm-10 list-item">
+          <img src="images/icon-red.png">
+          <span class="am-margin-left-sm list-txt">摇一摇红包</span>
+        </div>
+        <div class="am-u-sm-2 list-item-right">
+          <i class="am-icon-angle-right am-text-xl am-fr"></i>
+        </div>
+      </div>
+    </a></li>
+    <!-- 行用卡 -->
+    <li>
+      <a href="pages/creditCard/index.html">
+        <div class="am-container list-item">
+          <div class="am-u-sm-7 list-item">
+            <img src="images/icon-recommended.png">
+            <span class="am-margin-left-sm list-txt am-text-sm am-vertical-align-middle">行用卡办卡</span>
+          </div>
+          <div class="am-u-sm-5 list-item-right">
+            <i class="am-icon-angle-right am-text-xl am-fr am-vertical-align-middle"></i>
+            <span class="am-fr am-text-sm fastTrack">专属秒批通道</span>  
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+<!--底部 -->
+  <div data-am-widget="navbar" class="am-navbar am-cf am-no-layout">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+      <li>
+        <a href="pages/home/home.html">
+          <span class="am-icon-home"></span>
+          <span class="am-navbar-label">首页</span>
+        </a>
+      </li>
+     
+      <li>
+        <a href="pages/nearbyShops/nearbyShops.html">
+          <span class="am-icon-compass"></span>
+          <span class="am-navbar-label">附近</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html" style="color:#E60827;">
+          <span class="am-icon-user"></span>
+          <span class="am-navbar-label">个人中心</span>
+        </a>
+      </li>
+       <li>
+        <a href="pages/businessRecommend/businessRecommend.html">
+          <span class="am-icon-bookmark"></span>
+          <span class="am-navbar-label">商家推荐</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script>
+  /*
+  * 信息滚动 
+  */
+  function g(id){
+    return document.getElementById(id);
+  }  
+  var area = g("scrollContent");
+  area.innerHTML += area.innerHTML;
+  var liH = 46;
+  var speed = 50;
+  var delay = 2000;
+  var timer;
+  area.scrollTop = 0;
+  setTimeout("move()",delay);
+
+
+  function move(){
+      area.scrollTop++;
+      timer = setInterval("scrollUp()",speed);
+    }
+    function scrollUp(){
+      if(area.scrollTop % liH == 0){
+        clearInterval(timer);
+        timer = null;
+        setTimeout("move()",delay);
+      }else{
+        area.scrollTop++;
+        if(area.scrollTop>=area.scrollHeight/2){
+          area.scrollTop = 0;
+        }
+      }
+    }
+
+  $("#delet").on("click",function(){
+    $(".scrollContent").remove();
+  });
+
+  function popMask1(){
+    var cHeight=document.documentElement.clientHeight;
+    var cWidth=document.documentElement.clientWidth;
+
+    var oMask1 = document.createElement("div");
+      oMask1.id = "mask1";
+      oMask1.style.width = cWidth+"px";
+      oMask1.style.height = cHeight+"px";
+      document.body.appendChild(oMask1);
+
+    var omaskContet1 = document.createElement("div");
+      omaskContet1.id = "maskContet1";
+      omaskContet1.style.width = cWidth+"px";
+      omaskContet1.style.height = cHeight+"px";
+      omaskContet1.innerHTML = "<div class='personal-code1'><h1>扫描啊烦得很</h1><img src='assets/images/personal-code.png' class='img-responsive'></div>";
+      omaskContet1.innerHTML = "<div class='personal-code1'><h2 class='personal-code-title1'>扫描啊烦得很</h2><img src='images/personal-code.png' class='img-responsive'></div>";
+      document.body.appendChild(omaskContet1);
+
+      omaskContet1.onclick=function(){
+      document.body.removeChild(oMask1);
+      document.body.removeChild(omaskContet1);
+    }
+  }
+</script>
+</body>
+</html>

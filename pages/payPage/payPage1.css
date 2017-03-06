@@ -1,0 +1,299 @@
+input{
+  border:none;
+  outline:none;
+  display: inline-block;
+  width:70px;
+} 
+body{
+  margin-bottom:50px;
+  background-color:#f7f7f7;
+}
+.header{
+  height:50px;
+  line-height:50px;
+  margin-left:32px;
+  display:flex;
+  display:-webkit-flex;
+}
+
+.storeIcon{
+  width:32px;
+  height:32px;
+  margin-top:9px;
+  vertical-align: middle;
+  background:url(images/icon-store.png) no-repeat transparent;
+  background-size: cover;
+}
+.storeName{
+  height:50px;
+  line-height: 50px;
+  font-weight: 500;
+  font-size:1.8rem;
+  color:#f72e46;
+}
+
+#payMonery{
+  width: 80%;
+  height:40px;
+  margin-top:15px;
+  font-size: 24px;
+  color:#333;
+  border:none;
+  outline: none;
+  float:right;
+  text-align:left;
+}
+
+.inputBox{
+  border:1px solid #dedede;
+  background-color:#fff;
+  height:70px;
+  line-height:70px;
+  text-align: left;
+} 
+ 
+.active{border:1px solid #E60827!important;}
+.errMassage{
+  display: none;
+}
+
+.rmb{
+  color:#333;
+  font-size:18px;
+  padding:10px 0 0 25px;
+}
+
+#isJoin{
+  display:inline-block;
+  width:30px;
+  height:30px;
+  position: absolute;
+  left:20px;
+  text-align:center;
+  line-height:30px;
+  margin-top: 12px;
+  background-size: cover;
+}
+
+#isJoin-txt{
+  color:#999;
+  line-height: 30px;
+  margin-left:45px;
+}
+
+.iconq{
+  display:inline-block;
+  margin-left:24px;
+  width:14px;
+  height:14px;
+  background:url(images/icon-q.png) no-repeat;
+  background-size: cover;
+}
+
+.bg1{
+  background: url(../../images/icon-pay-sale-nor.png);
+}
+
+.bg2{
+  background: url(../../images/icon-pay-sale-sel.png);
+}
+
+.telphoneNumber{
+  width:60%;
+  color:#bebebe;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  display: block;
+  border-radius: 5px;
+}
+
+.telphoneNumber:hover{
+  color:#666;
+}
+
+.thanks{
+  font-size: 1.0rem;
+  color:#bebebe;
+}
+
+.agreeText{
+  font-size: 1.0rem;
+  color:#c0bfbf;
+}
+
+.xieyi{
+  color:#25d2cc;
+}
+
+.xieyi:hover, 
+.xieyi:focus{
+  color:#25d2cc;
+}
+
+.color-switch{
+  height:50px;
+  position: relative;
+}
+.bigswitch{
+  overflow: hidden;
+  height: 38px;
+}
+
+hr{margin-bottom:0;}
+
+#returnMonery{
+  width:55%;
+  height: 49px;
+  line-height:49px;
+  color:#999;
+  font-size: 14px;
+}
+.nojoin{
+  display:none;
+  background-color:#fff;
+}
+
+.nojoinTxt{
+  line-height: 40px;
+}
+
+.nojoinContent{
+  font-size: 1.6rem;
+  color:#333;
+  border:1px solid #dedede;
+}
+
+#nojoinMonery{
+  border:none;
+  outline: none;
+  width:50%;
+  height:40px;
+  padding:5px;
+  padding-right:10px;
+  font-size:1.6rem;
+}
+
+#returnNumber{
+  font-size: 20px;
+}
+
+.balanceContent{
+  display:none;
+  line-height: 55px;
+}
+
+#balance{
+  text-align:right;
+}
+
+#pay{
+  width:250%;
+  height:51px;
+  color:#fff;
+  padding:0;
+  margin:0;
+  font-size: 14px;
+  background-color: #c8c8c8;
+  outline: none;
+}
+
+#pay:hover, 
+#pay:focus{
+  background-color:#E60827;
+}
+
+footer .am-avg-sm-5 > li{
+  width:18%;
+}
+
+.returnBox{
+  display: none;
+}
+
+#return{
+  background-color: #fff;
+}
+
+.pt_info{
+  margin-top:25%;
+}
+
+#mask{
+  position: absolute;
+  z-index: 1111;
+  background-color: #000;
+  top: 0;
+  opacity: .75;
+}
+#maskContet{
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left:0;
+}
+.personal-info{
+  padding:5% 2%;
+  color:red;
+  background-color:#ffffff;
+}
+
+.personal-code{
+  background-color: #fff;
+  padding:10% 5%;
+  border-radius:8px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.returnBox2{
+  display:none;
+}
+
+.am-box-shadow{  
+  -webkit-box-shadow: 0 0 10px rgba(85,85,85,0.75);  
+  -moz-box-shadow: 0 0 10px rgba(85,85,85,0.75);  
+  box-shadow: 0 0 10px rgba(85,85,85,0.75);  
+}  
+
+#mask1{
+  position: absolute;
+  z-index: 1111;
+  background-color: #000;
+  top: 0;
+  opacity: .  5;
+}
+#maskContet1{
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left:0;
+}
+
+.personal-info1{
+  padding:5% 2%;
+  background-color:#ffffff;
+}
+
+.personal-code1{
+  background-color: #fff;
+  padding:3% 5%;
+  border-radius:8px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}

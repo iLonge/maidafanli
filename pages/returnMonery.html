@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../..i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <link rel="stylesheet" href="../css/mui.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/mui.picker.min.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    nav{
+      line-height: 2.5;
+      background-color: rgba(255,255,255,1);
+    }
+  
+    .returnContent,
+    .returnContent nav,
+    .returnContent .am-list>li{
+      background-color:#f7f7f7;
+    }
+
+    #collapseDate .dateContent li{
+      background-color: #fff;
+    }
+
+    .icon_day{
+      padding-right:0;
+      width:24px;
+      height:24px;
+    }
+
+    .dateInput{border:none;width:6.5rem;height:2.4rem;color:#E92C45;}
+
+    .mui-dtpicker-title{
+        display: none;
+    }
+
+    .am-navbar{border-top:none;}
+
+    #filter{color:#E92C45;border: 1px solid #E92C43;padding: 2px 5px;}
+
+    .dialog{
+      position:absolute;
+      top:10.0rem;
+      left:50%;
+      z-index:2000;
+      transform:translate(-50%);
+      -webkit-transform:translate(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color:#fff;
+      display:none;
+    }
+
+    .mui-backdrop{z-index:2000;}
+
+    #collapseDate{position:fixed;top:84px;z-index:2000;background-color:#fff;border-bottom:1px solid #ddd;}
+
+    .am-icon-angle-right{margin-top:0.2rem;}
+  </style>
+</head>
+<body>
+<!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container am-text-center">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xxl am-margin-right-0 am-fl" style="color:#333;">
+      </a>
+      <span class="am-text-lg ">返利订单</span>
+    </div> 
+  </header>
+
+  <div class="am-g returnContent">
+    <nav class="scrollspy-nav am-text-sm" data-am-scrollspynav="{offsetTop:49}" data-am-sticky>
+      <div class="am-container">
+        <ul class="am-list">
+          <li class="am-text-center am-fl" style="width:10%;"><span id="dateDrop" data-am-collapse="{target: '#collapseDate'}">
+            序号</span>
+          </li>
+          <li class="am-text-center am-fl" style="width:25%;"><span>用户</span></li>
+          <li class="am-text-center am-fl" style="width:35%;">
+            <span><span>返利金额</span></span>
+          </li>
+          <li class="am-text-center am-fl" style="width:30%;">
+            <span><span id="dateDrop" data-am-collapse="{target: '#collapseDate'}"> <img src="../images/icon-day.png" width="24" height="26" class="icon_day">时间</span><i class="am-icon-caret-down am-margin-left-xs"></i></span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="am-container am-collapse" id="collapseDate">
+      <ul class="am-list dateContent">
+        <li class="am-padding-vertical-sm am-text-sm">
+          <span>开始时间</span>
+          <i class="am-icon-angle-right am-fr"></i>
+          <input class="am-text-sm am-text-right am-fr dateInput" id="startDate" value="" placeholder="请选择" readonly>
+        </li>
+        <li class="am-padding-vertical-sm am-text-sm">
+          <span>结束时间</span>
+          <i class="am-icon-angle-right am-fr"></i>
+          <input class="am-text-sm am-text-right am-fr dateInput" id="endDate" value="" placeholder="请选择" readonly>
+        </li>
+      </ul>
+      <div class="am-cf am-margin-vertical-lg">
+        <button class="am-btn am-btn-block am-btn-danger" id="sureButton">确定</button>
+      </div>
+    </div>
+  </div>
+  <div class="am-g">
+    <ul class="am-list">
+      <li class="am-padding-vertical-xs">
+        <ul class="am-avg-sm-4 am-text-center am-text-sm">
+          <li class="num" style="width:12%;">1</li>
+          <li class="user" style="width:25%;">马经理</li>
+          <li class="am-text-danger am-cf" style="width:30%;">
+            <i>+</i>
+            <i class="am-icon-rmb am-margin-left-xs"></i>
+            <span>2000.00</span>
+          </li>
+          <li style="width:33%;">2017-12-12 12:00</li>
+        </ul>
+      </li>
+      <li class="am-padding-vertical-xs">
+        <ul class="am-avg-sm-4 am-text-center am-text-sm">
+          <li class="num" style="width:12%;">2</li>
+          <li class="user" style="width:25%;">马经理</li>
+          <li class="am-text-danger am-cf" style="width:30%;">
+            <i>+</i>
+            <i class="am-icon-rmb am-margin-left-xs"></i>
+            <span>123.45</span>
+          </li>
+          <li style="width:33%;">2017-12-12 12:00</li>
+        </ul>
+      </li>
+
+      <li class="am-padding-vertical-xs">
+        <ul class="am-avg-sm-4 am-text-center am-text-sm">
+          <li class="num" style="width:12%;">3</li>
+          <li class="user" style="width:25%;">马经理</li>
+          <li class="am-text-danger am-cf" style="width:30%;">
+            <i>+</i>
+            <i class="am-icon-rmb am-margin-left-xs"></i>
+            <span>2120.00</span>
+          </li>
+          <li style="width:33%;">2017-12-12 12:00</li>
+        </ul>
+      </li>
+      <li class="am-padding-vertical-xs">
+        <ul class="am-avg-sm-4 am-text-center am-text-sm">
+          <li class="num" style="width:12%;">4</li>
+          <li class="user" style="width:25%;">马经理php</li>
+          <li class="am-text-danger" style="width:30%;">
+            <i>+</i>
+            <i class="am-icon-rmb am-margin-left-xs"></i>
+            <span>20000.00</span>
+          </li>
+          <li style="width:33%;">2017-12-12 12:00</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="am-navbar am-text-sm am-cf">
+    <div class="am-u-sm-4 am-padding-left-sm">
+      <span >共 <span id="count"></span> 条记录</span>
+    </div>
+    <div class="am-u-sm-8">
+      <span> 共 <i class="am-text-danger am-icon-rmb am-padding-horizontal-xs"></i><span class="am-text-danger" id="totalMonery"></span> </span>
+    </div>
+  </div>
+
+  <div class="am-radius am-text-xs am-padding-xs dialog">
+    开始时间不能大于结束时间
+  </div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/amazeui.min.js"></script>
+<script src="../js/mui.min.js"></script>
+<script src="../js/mui.picker.min.js"></script>
+<script>
+  function FormatDate () {
+    var date = new Date();
+    var m = date.getMonth()+1;
+    var d = date.getDate();
+    if(m<9 || d<10){
+      return date.getFullYear()+"-"+ "0" +(date.getMonth()+1) +"-"+"0"+date.getDate();
+    }else{
+      return date.getFullYear()+"-"+(date.getMonth()+1) +"-"+date.getDate();
+    }
+  }
+
+  // 收起日期面板
+  $("#dateDrop").on('close.collapse.amui');
+  $("#sureButton").click(function(){
+    var startDate =  $("#startDate").val();
+    var endDate =  $("#endDate").val();
+    if(startDate <= endDate){
+      $("#startDate,#endDate").text(FormatDate());
+      $("#collapseDate").collapse('close');
+    }else{
+      $(".dialog").show();
+      setTimeout(function() {
+        $(".dialog").hide();
+      }, 1500); 
+    }
+  });
+
+  // 获取滚动位置
+  $(window).scroll(function(){
+    var dialog = $(".dialog");
+    var scrollTop = $("body").scrollTop();
+    $(".dialog").css("top",scrollTop+84);
+    if(scrollTop > 49){
+      $("#collapseDate").css("top",36); 
+    }else if(scrollTop <= 49){
+      $("#collapseDate").css("top",84);
+    }
+  });
+
+  (function($) {
+      $.init();
+      var dateContents = $('.dateContent>li');
+      dateContents.each(function(i, dateContent) {
+        dateContent.addEventListener('tap', function() {
+          var input = this.getElementsByTagName("input")[0];
+          var id = this.getAttribute('id');
+          var options = {
+                          type: "date",beginDate: new Date(2016, 09, 01),endDate: new Date(2200, 01, 01),labels: ['Year', 'Mon', 'Day', 'Hour', 'min'],labels: ""
+                        };
+          var picker = new $.DtPicker(options); 
+          picker.show(function(rs) {
+            input.setAttribute("value",rs.text);       
+            picker.dispose();
+          });
+        });
+      }, false);
+    })(mui);
+</script>
+</body>
+</html>

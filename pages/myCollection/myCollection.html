@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="description" content="买单返-消费即返利，单单返红包"/>
+  <meta name="keywords" content="maidanfan,买单返"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit"/>
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png"/>
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+  <link rel="stylesheet" href="../../css/amazeui.css"/>
+  <link rel="stylesheet" href="myCollection.css"/>
+</head>
+<body class="no-js">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container am-text-center am-padding-right-0">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl" style="color:#333;">
+      </a>
+      <span class="am-text-lg">收藏</span>
+      <span class="am-fr" id="edit">编辑</span>
+      <a href="myCollection.html" class="am-fr" id="editFinish">完成</a>
+    </div> 
+  </header>
+<!-- 主体 -->
+
+<!-- 商家列表 -->
+  <div data-am-widget="list_news" class="am-list-news-default am-no-layout">
+    <div class="am-container">
+      <div class="am-list-news-bd">
+        <ul class="am-list" id="merchantsList"> 
+          <li>
+            <div class="am-g" style="display:-webkit-flex;display: flex;justify-content: justify;flex-wrap:nowrap;">
+              <div class="checkWrap am-fl">
+                <label for="checkBox1">
+                  <input type="checkbox" id="checkBox1">
+                  <span class="am-icon-circle-o"></span>
+                </label>
+              </div> 
+              <div class="am-fl" style="width:100%;">
+                <a href="#" style="color:#333;display:block;padding:7px 0;overflow:hidden;">
+                <div class="am-fl am-text-center img_placeholder"> 
+                  <img src="../../images/p7933-l.jpg" class="am-radius" width=100% height=100% data-echo="../../images/p7933-l.jpg"/>
+                </div>
+                <div class="products_info am-fr">
+                  <div class="am-text-truncate" style="line-height:1.6;overflow:hidden;">
+                    <span class="am-text-truncate am-fl products_name">凤鸣春泡馍馆</span>
+                    <span class="am-text-xs am-fr">200m</span>
+                  </div>
+                  <div class="am-text-left am-text-xs am-text-wrap products_address"><i class="am-icon-paper-plane"></i> 陕西省西安市雁塔区长安南路102号</div>
+                  <div class="products_hot am-text-sm">
+                    <span class="am-text-danger am-text-xs am-fl">返<strong class="am-text-lg">7.5</strong>%</span>
+                    <span class="am-text-xs am-fr">
+                       <i class="am-icon-fire am-text-danger"></i>人气168
+                    </span>
+                  </div>
+                </div>
+              </a>
+              </div> 
+            </div>
+          </li>
+
+          <li>
+            <div class="am-g" style="display:-webkit-flex;display: flex;justify-content: justify;flex-wrap:nowrap;">
+              <div class="checkWrap">
+                <label for="checkBox2">
+                  <input type="checkbox" id="checkBox2">
+                  <span class="am-icon-circle-o"></span>
+                </label>
+              </div> 
+              <div class="am-fl am-text-truncate" style="width:100%;">
+                <a href="#" style="color:#333;display:block;padding:7px 0;overflow:hidden;">
+                <div class="am-fl am-text-center img_placeholder"> 
+                  <img src="../../images/p7933-l.jpg" class="am-radius" width=100% height=100% data-echo="../../images/p7933-l.jpg"/>
+                </div>
+                <div class="products_info am-fr">
+                  <div class="am-text-truncate" style="line-height:1.6;overflow:hidden;">
+                    <span class="am-text-truncate am-fl products_name">欧式的复合弓ikioyo和丢过i</span>
+                    <span class="am-text-xs am-fr">200m</span>
+                  </div>
+                  <div class="am-text-truncate am-text-left am-text-xs am-text-wrap products_address"><i class="am-icon-paper-plane"></i> 陕西省西安市雁塔区长安南路102号jd啊及时发货顺丰和收费和塑封好私服hii</div>
+                  <div class="products_hot am-text-sm">
+                    <span class="am-text-danger am-text-xs am-fl">返<strong class="am-text-lg">7.5</strong>%</span>
+                    <span class="am-text-xs am-fr">
+                       <i class="am-icon-fire am-text-danger"></i>人气168
+                    </span>
+                  </div>
+                </div>
+              </a>
+              </div> 
+            </div>
+          </li>  
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="am-container btnDiv">
+    <button class="am-btn am-btn-block am-btn-danger" id="deletMerchants">删除 (<span id="merchantsNum">0</span>)</button>
+  </div>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="../../js/echo.js"></script>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/amazeui.min.js"></script>
+<script type="text/javascript" src="myCollection.js"></script>
+</body>
+</html>

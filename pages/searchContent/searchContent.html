@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <link rel="stylesheet" href="searchContent.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!-- 头部 -->
+  <header class="am-container am-padding-sm">
+    <div class="search-box am-text-sm am-text-center">
+      <i class="am-icon-search am-vertical-align-middle"></i>
+      <input class="am-radius am-padding-left-lg" type="text" id="keyword" placeholder="请输入关键词" autofocus="autofocus"/>
+      <span class="cancel am-fr am-text-sm" onclick="window.location.href='index.html'">取消</span>
+    </div> 
+  </header>
+
+  <div class="am-container am-text-center am-margin-vertical-lg">
+    <span>请输入搜索的相关商品</span>
+  </div>
+  <script src="../../js/jquery.min.js"></script>
+  <script type="text/javascript">
+    $("#keyword").click();
+  </script>
+</body>
+</html>

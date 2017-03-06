@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../..i/favicon.png">
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <link rel="stylesheet" href="../css/mui.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/mui.picker.min.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    #batchRreview{right:1.5rem;]}
+    .tabs{background-color:#fff;border-top:2px solid #ededed;box-sizing:border-box;}
+    .active{border-bottom:2px solid #E60827;box-sizing:border-box;}
+    .timeFilter{background-color:#fff;border-top:1px solid #ededed;border-bottom:1px solid #ededed;}
+    .timeFilter input{border:0;outline:0;width:8.0rem;padding:0;}
+    .zhi,.timeFilter i{line-height:40px;}
+    .zhi{padding-right:0;}
+    .btnGroup{border-top:1px solid #ededed;}
+    .audit1,.audit3{display:none;}
+    .audit2{background: #efeff4;}
+    .floor0,.floor1,.floor2,.floor3{display:inline-block;width:2.5rem; height:1.5rem;line-height:1.5rem;font-size:1.0rem;color:#fff;}
+    .floor1{background-color:#008000;}
+    .floor2{background-color:#FF9900;}
+    .floor3{background-color:#E60827;}
+    .floor0{background-color:#e8e8e8;}
+    .tagleft1{border: 0.75rem solid transparent;border-left: 0.75rem solid #008000; }
+    .tagleft2{border: 0.75rem solid transparent;border-left: 0.75rem solid #FF9900; }
+    .tagleft3{border: 0.75rem solid transparent;border-left: 0.75rem solid #E60827; }
+    .tagleft0{border: 0.75rem solid transparent;border-left: 0.75rem solid #e8e8e8; }
+    .withdrawalHisBtn{border:1px solid #FF9900;color:#FF9900;}
+    .withdrawalFaileBtn{border:1px solid #E60827;color:#E60827;}
+    .withdrawalsuccessBtn{border:1px solid #008000;color:#008000;}
+    .monery{width:5.5rem;font-weight:700;}
+    .dialog{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%);-webkit-transform:translate(-50%);line-height:2;white-space: nowrap;color:#fff;background-color:rgba(0,0,0,.5);}
+  </style>
+</head>
+<body>
+  <!-- 头部 -->
+  <header class="am-header am-cf am-text-center" data-am-widget="header">
+    <span>申请提现列表</span>
+    <span class="am-fr am-text-sm" id="batchRreview">批量审核</span>
+  </header>
+  <!-- /头部 -->
+<nav class="scrollspy-nav" data-am-scrollspynav="{offsetTop: 45}" data-am-sticky>
+  <!-- 顶部切换 -->
+  <div class="am-container am-text-sm tabs">
+    <ul class="am-avg-sm-3 am-text-center">
+      <li class="am-padding-vertical-xs tab1" value="1">全部</li>
+      <li class="am-padding-vertical-xs active tab2" value="2">待审核</li>
+      <li class="am-padding-vertical-xs tab3" value="3">已审核</li>
+    </ul>
+  </div>
+  <!-- /顶部切换 -->
+
+  <!-- 时间筛选 -->
+  <div class="am-container am-text-sm timeFilter">
+    <div class="am-u-sm-5 am-cf am-padding-right-0">
+      <i class="am-icon-caret-down am-margin-left-0 am-fr"></i>
+      <input type="text" value="2017-12-12" class="am-text-sm am-margin-bottom-0 am-text-center am-fr" readonly/>
+    </div>
+    <span class="am-u-sm-2 am-text-center zhi">至</span>
+    <div class="am-u-sm-5 am-am-cf am-text-left">
+      <input type="text" value="2017-12-12" class="am-text-sm am-margin-bottom-0 am-text-center am-fl" readonly/>
+      <i class="am-icon-caret-down am-fl"></i>
+    </div>
+  </div>
+  <!-- /时间筛选 -->
+</nav>
+  <!-- 申请提现列表 -->
+  <div class="am-container auditList">
+    <!-- 待审核 -->
+    <div class="am-g audit2">
+      <ul class="am-list">
+        <li class="am-text-sm am-margin-top-sm">
+          <div class="am-padding-vertical-sm am-cf">
+            <span class="am-fl am-margin-left">王大锤</span>
+            <span class="am-fr am-margin-right monery"><i class="am-icon-rmb"></i><span class="am-fr">100.00</span></span>
+            <span class="am-fr tagleft1"></span>
+            <span class="am-fr am-text-center floor1">一层</span>
+          </div>
+          <div class="am-cf am-padding-vertical-xs">
+            <span class="time am-margin-left am-fl" style="color:#999;">2017-12-12 12:00:00</span>
+            <span class="am-fr am-text-warning am-margin-right">待审核</span>
+          </div>
+          <div class="btnGroup am-text-center">
+            <ul class="am-avg-sm-3 am-padding">
+              <li> <a href="CW_withdrawalList.html"><button class="am-btn am-btn-xs am-radius withdrawalHisBtn">提现记录</button></a> </li>
+              <li> <button class="am-btn am-btn-xs am-radius withdrawalFaileBtn" data-am-modal="{target: '#cw_noagree'}">不通过审核</button> </li>
+              <li> <button class="am-btn am-btn-xs am-radius withdrawalsuccessBtn" data-am-modal="{target: '#cw_agree'}">通过审核</button> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="am-text-sm am-margin-top-sm">
+          <div class="am-padding-vertical-sm am-cf">
+            <span class="am-fl am-margin-left">王大锤</span>
+            <span class="am-fr am-margin-right monery"><i class="am-icon-rmb"></i><span class="am-fr">2000.00</span></span>
+            <span class="am-fr tagleft2"></span>
+            <span class="am-fr am-text-center floor2">二层</span>
+          </div>
+          <div class="am-cf am-padding-vertical-xs">
+            <span class="time am-margin-left am-fl" style="color:#999;">2017-12-12 12:00:00</span>
+            <span class="am-fr am-text-warning am-margin-right">待审核</span>
+          </div>
+          <div class="btnGroup am-text-center">
+            <ul class="am-avg-sm-3 am-padding">
+              <li> <a href="CW_withdrawalList.html"><button class="am-btn am-btn-xs am-radius withdrawalHisBtn">提现记录</button></a> </li>
+              <li> <button class="am-btn am-btn-xs am-radius withdrawalFaileBtn" data-am-modal="{target: '#cw_noagree'}">不通过审核</button> </li>
+              <li> <button class="am-btn am-btn-xs am-radius withdrawalsuccessBtn" data-am-modal="{target: '#cw_agree'}">通过审核</button> </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="am-text-sm am-margin-top-sm">
+          <div class="am-padding-vertical-sm am-cf">
+            <span class="am-fl am-margin-left">王大锤</span>
+            <span class="am-fr am-margin-right monery"><i class="am-icon-rmb"></i><span class="am-fr">20.00</span></span>
+            <span class="am-fr tagleft0"></span>
+            <span class="am-fr am-text-center floor0"></span>
+          </div>
+          <div class="am-cf am-padding-vertical-xs">
+            <span class="time am-margin-left am-fl" style="color:#999;">2017-12-12 12:00:00</span>
+            <span class="am-fr am-text-warning am-margin-right">待审核</span>
+          </div>
+          <div class="btnGroup am-text-center">
+            <ul class="am-avg-sm-3 am-padding">
+              <li> <a href="CW_withdrawalList.html"><button class="am-btn am-btn-xs am-radius withdrawalHisBtn">提现记录</button></a> </li>
+              <li> <button class="am-btn am-btn-xs am-radius withdrawalFaileBtn" data-am-modal="{target: '#cw_noagree'}">不通过审核</button> </li>
+              <li> <button class="am-btn am-btn-xs am-radius withdrawalsuccessBtn" data-am-modal="{target: '#cw_agree'}">通过审核</button> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- /待审核 -->
+
+     <!-- 已审核 -->
+    <div class="am-g am-margin-vertical-sm audit3">
+      <ul class="am-list">
+        <li class="am-text-sm">
+          <div class="am-padding-vertical-sm am-cf">
+            <span class="am-fl am-margin-left">王大锤</span>
+            <span class="am-fr am-margin-right monery"><i class="am-icon-rmb"></i><span class="am-fr">100.00</span></span>
+            <span class="am-fr tagleft1"></span>
+            <span class="am-fr am-text-center am-text-xs floor1">一层</span>
+          </div>
+          <div class="am-cf am-padding-vertical-xs">
+            <span class="time am-margin-left am-fl" style="color:#999;">2017-12-12 12:00:00</span>
+            <span class="am-fr am-text-success am-margin-right">已审核</span>
+          </div>
+        </li>
+        <li class="am-text-sm">
+          <div class="am-padding-vertical-sm am-cf">
+            <span class="am-fl am-margin-left">王大锤</span>
+            <span class="am-fr am-margin-right monery"><i class="am-icon-rmb"></i><span class="am-fr">5000.00</span></span>
+            <span class="am-fr tagleft3"></span>
+            <span class="am-fr am-text-center floor3">三层</span>
+          </div>
+          <div class="am-cf am-padding-vertical-xs">
+            <span class="time am-margin-left am-fl" style="color:#999;">2017-12-12 12:00:00</span>
+            <span class="am-fr am-text-success am-margin-right">已审核</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- /已审核 -->
+    <!-- 审核未通过 -->
+    <div class="am-g am-margin-vertical-sm audit1">
+      <ul class="am-list">   
+        <li class="am-text-sm">
+          <div class="am-padding-vertical-sm am-cf">
+            <span class="am-fl am-margin-left">王大锤</span>
+            <span class="am-fr am-margin-right monery"><i class="am-icon-rmb"></i><span class="am-fr">500.00</span></span>
+            <span class="am-fr tagleft2"></span>
+            <span class="am-fr am-text-center floor2">二层</span>
+          </div>
+          <div class="am-cf am-padding-vertical-xs">
+            <span class="time am-margin-left am-fl" style="color:#999;">2017-12-12 12:00:00</span>
+            <span class="am-fr am-text-danger am-margin-right">审核未通过</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- /审核未通过 -->
+  <!-- /申请提现列表 -->
+
+  <!-- 财务modal框 -->
+  <div class="am-modal am-modal-confirm am-text-sm" tabindex="-1" id="cw_agree">
+    <div class="am-modal-dialog am-padding-lg">
+      <div class="am-cf am-text-left">
+        <span>确认通过审核用户 <strong>王大锤</strong> 的</span><br>
+        <span>提现申请 <strong>300.00</strong> 元</span>
+      </div>
+      <div class="am-margin-top am-cf">
+        <span class="am-fr am-text-success" id="cw_agreeBtn" data-am-modal-confirm>确认</span>
+        <span class="am-margin-right-lg am-fr cancel" data-am-modal-cancel>取消</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="am-modal am-modal-confirm am-text-sm" tabindex="-1" id="cw_noagree">
+    <div class="am-modal-dialog am-padding-lg">
+      <div class="am-cf am-text-left">
+        <span>不同意用户 <strong>王大锤</strong> 的</span><br>
+        <span>提现申请 <strong>300.00</strong> 元</span>
+      </div>
+      <div class="am-margin-top am-cf">
+        <span class="am-fr am-text-success" id="cw_noagreeBtn" data-am-modal-confirm>确认</span>
+        <span class="am-margin-right-lg am-fr cancel" data-am-modal-cancel>取消</span>
+      </div>
+    </div>
+  </div>
+  <!-- /财务modal框 -->
+  <!-- dialog -->
+  <div class="dialog am-padding-horizontal-sm am-text-xs am-radius">
+    同一用户15秒内不能进行进行重复操作
+  </div>
+  <!-- /dialog -->
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/amazeui.min.js"></script>
+<script src="../js/mui.min.js"></script>
+<script src="../js/mui.picker.min.js"></script>
+<script>
+  function FormatDate () {
+    var date = new Date();
+    var m = date.getMonth()+1;
+    var d = date.getDate();
+    if(m<9 || d<10){
+      return date.getFullYear()+"-"+ "0" +(date.getMonth()+1) +"-"+"0"+date.getDate();
+    }else{
+      return date.getFullYear()+"-"+(date.getMonth()+1) +"-"+date.getDate();
+    }
+  }
+
+  /**
+  * 页签切换
+  */
+  $(".tabs>ul>li").on('click',function(){
+    $(this).addClass("active").siblings().removeClass("active");
+    var val = $(this).val();
+    $(".audit"+val).show().siblings().hide();
+    if(val==1){
+      $(".auditList>div.audit1,.auditList>div.audit2,.auditList>div.audit3").show();
+    }
+    if(val==3){
+      $("#batchRreview").hide();
+    }else{
+      $("#batchRreview").show();
+    }
+  });
+
+  // modal
+  $(".cancel,#cw_agreeBtn,#cw_noagreeBtn").on("click",function(){
+    $("#cw_agree,#cw_noagree").modal('close');
+  });
+
+  $(".withdrawalsuccessBtn").on('click',function(){
+    dialog();
+  });
+
+  // dialog
+  function dialog(){
+    $(".dialog").show();
+    setTimeout(function(){  
+      $(".dialog").hide();
+    },1200);
+  }
+
+  /**
+    * 时间帅选
+  */
+  (function($) { 
+      $.init();
+      var dateContents = $('.timeFilter div');
+      dateContents.each(function(i, dateContent) {
+        dateContent.addEventListener('tap', function() {
+          var input = this.getElementsByTagName("input")[0];
+          var id = this.getAttribute('id');
+          var options = {
+                          type: "date",beginDate: new Date(2016, 09, 01),endDate: new Date(2200, 01, 01),labels: ['Year', 'Mon', 'Day', 'Hour', 'min'],labels: ""
+                        };
+          var picker = new $.DtPicker(options); 
+          picker.show(function(rs) {
+            input.setAttribute("value",rs.text);       
+            picker.dispose();
+          });
+        });
+      }, false);
+    })(mui);
+</script>
+</body>
+</html>

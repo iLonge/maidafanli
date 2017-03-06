@@ -1,0 +1,209 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="description" content="买单返-消费即返利，单单返红包"/>
+  <meta name="keywords" content="maidanfan,买单返"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit"/>
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png"/>
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../../css/amazeui.css"/>
+  <link rel="stylesheet" href="nearbyShops.css"/>
+</head>
+<body class="no-js">
+<!-- 头部 -->
+  <header class="am-header am-text-center am-vertical-align">
+    <span class="am-text-lg am-vertical-align-middle">附近商家</span>
+  </header>
+<!--分类导航 -->
+  <nav class="scrollspy-nav" data-am-scrollspynav="{offsetTop:40}" data-am-sticky>
+    <ul class="am-avg-sm-3 am-text-center am-text-sm am-padding-sm" style="background-color:#fff;">
+      <li class="allKinds">全部分类<span class="am-icon-sort-down am-margin-left-xs"></span></li>
+      <li class="allCity">全城<span class="am-icon-sort-down am-margin-left-xs"></span></li>
+      <li class="smartOrder">智能排序<span class="am-icon-sort-down am-margin-left-xs"></span></li>
+    </ul>
+  <!-- 遮罩层 -->
+    <div class="am-collapse" id="all">
+    </div>
+    <div class="am-collapse" id="all-city">
+    </div>
+    <div class="am-collapse" id="smart-order">
+    </div>
+  <!-- 一级菜单 -->
+    <!-- 全部分类 -->
+    <div class="all-list">
+      <ul class="am-list am-text-center am-text-sm">
+        <li class="am-padding-sm am-vertical-align meishi">
+          <img src="../../images/icon-meishi.png" width=18 height=18 class="am-img-responsive am-vertical-align-middle am-fl am-margin-left-sm"/><span class="am-text-sm am-fl am-margin-left-sm">美食</span>
+        </li>
+        <li class="am-padding-sm am-vertical-align shopping">
+          <img src="../../images/icon-shop.png" width=18 height=18 class="am-img-responsive am-vertical-align-middle am-fl am-margin-left-sm"/><span class="am-text-sm am-fl am-margin-left-sm">购物</span>
+        </li>
+        <li class="am-padding-sm am-vertical-align fun">
+          <img src="../../images/icon-fun.png" width=18 height=18 class="am-img-responsive am-vertical-align-middle am-fl am-margin-left-sm"/><span class="am-text-sm am-fl am-margin-left-sm">娱乐</span>
+        </li>
+        <li class="am-padding-sm am-vertical-align hotel">
+          <img src="../../images/icon-meishi.png" width=18 height=18 class="am-img-responsive am-vertical-align-middle am-fl am-margin-left-sm"/><span class="am-text-sm am-fl am-margin-left-sm">酒店</span>
+        </li>
+        <li class="am-padding-sm am-vertical-align live">
+          <img src="../../images/icon-car.png" width=18 height=18 class="am-img-responsive am-vertical-align-middle am-fl am-margin-left-sm"/><span class="am-text-sm am-fl am-margin-left-sm">生活服务</span>
+        </li>
+        <li class="am-padding-sm am-vertical-align education">
+          <img src="../../images/icon-study1.png" width=18 height=18 class="am-img-responsive am-vertical-align-middle am-fl am-margin-left-sm"/><span class="am-text-sm am-fl am-margin-left-sm">教育培训</span>
+        </li>
+        <li class="am-padding-sm am-vertical-align trip">
+          <img src="../../images/icon-trip.png" width=18 height=18 class="am-img-responsive am-vertical-align-middle am-fl am-margin-left-sm"/><span class="am-text-sm am-fl am-margin-left-sm">旅游</span>
+        </li>
+      </ul>
+    </div>
+    <!-- 二级菜单 -->
+      <!--美食-->
+      <div class="meishi-list-item sub-list-item">
+        <ul class="am-list am-text-sm">
+          <li class="am-text-sm am-padding-sm am-padding-left-xl active">全部</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">特色小吃</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">山西美食</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">小六汤包</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">岐山臊子面</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">老陕咥面</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">大排档</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">美味食府</li>
+        </ul>
+      </div>
+      <!-- 购物 -->
+      <div class="shopping-list sub-list-item">
+        <ul class="am-list">
+          <li class="am-text-sm am-padding-sm am-padding-left-xl active">全部</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">建材</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">家电</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">鞋服</li>
+        </ul>
+      </div>
+      <!--娱乐-->
+      <div class="fun-list sub-list-item">
+        <ul class="am-list">
+          <li class="am-text-sm am-padding-sm am-padding-left-xl active">全部</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">K歌</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">游乐园</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">亲子乐</li>
+        </ul>
+      </div>
+      <!--酒店-->
+      <div class="hotel-list sub-list-item">
+        <ul class="am-list">
+          <li class="am-text-sm am-padding-sm am-padding-left-xl active">全部</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">五星</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">四星</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">三星</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">青旅</li>
+        </ul>
+      </div>
+      <!--生活服务-->
+      <div class="live-list sub-list-item">
+        <ul class="am-list">
+          <li class="am-text-sm am-padding-sm am-padding-left-xl active">全部</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">家政</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">快递</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">打车</li>
+        </ul>
+      </div>
+      <!--教育培训-->
+      <div class="education-list sub-list-item">
+        <ul class="am-list">
+          <li class="am-text-sm am-padding-sm am-padding-left-xl active">全部</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">培训班</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">夜大</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">成人培训</li>
+        </ul>
+      </div>
+      <!--旅游-->
+      <div class="trip-list sub-list-item">
+        <ul class="am-list">
+          <li class="am-text-sm am-padding-sm am-padding-left-xl active">全部</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">国内游</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">海外游</li>
+          <li class="am-text-sm am-padding-sm am-padding-left-xl">周边游</li>
+        </ul>
+      </div>
+    <!-- 全城 -->
+    <div class="city-list">
+      <ul class="am-list am-text-sm">
+        <li class="am-padding-sm am-padding-left-lg active">全城</li>
+        <li class="am-padding-sm am-padding-left-lg">500m</li>
+        <li class="am-padding-sm am-padding-left-lg">1km</li>
+        <li class="am-padding-sm am-padding-left-lg">2km</li>
+        <li class="am-padding-sm am-padding-left-lg">3km</li>
+      </ul>
+    </div>
+     <!-- 智能排序 -->
+    <div class="smart-order-list">
+      <ul class="am-list am-text-sm">
+        <li class="am-padding-sm am-padding-left-lg active">智能排序</li>
+        <li class="am-padding-sm am-padding-left-lg">返现最多</li>
+        <li class="am-padding-sm am-padding-left-lg">离我最近</li>
+        <li class="am-padding-sm am-padding-left-lg">人气最高</li>
+      </ul>
+    </div>
+  </nav>
+  <!-- 404 -->
+  <div class="am-container errContent">
+    <div class="err-img"></div>
+    <div class="am-text-center am-margin-top-xl">
+      <p><span class="err-txt">木有加载出来，刷新试试</span></p>
+      <a href="#" class="am-btn am-btn-lg am-text-danger am-margin-top-xl am-padding-horizontal-lg refresh-btn am-radius">点我刷新</a>
+    </div>
+  </div>
+<!--底部 -->
+  <div data-am-widget="navbar" class="am-navbar am-cf am-no-layout">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+      <li>
+        <a href="index.html">
+          <span class="am-icon-home"></span>
+          <span class="am-navbar-label">首页</span>
+        </a>
+      </li>
+     
+      <li>
+        <a href="###">
+          <span class="am-icon-compass"></span>
+          <span class="am-navbar-label">附近</span>
+        </a>
+      </li>
+      <li>
+        <a href="personalCenter.html">
+          <span class="am-icon-user"></span>
+          <span class="am-navbar-label">个人中心</span>
+        </a>
+      </li>
+       <li>
+        <a href="businessRecommend.html">
+          <span class="am-icon-bookmark"></span>
+          <span class="am-navbar-label">商家推荐</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+  <script src="../../js/jquery.min.js"></script>  
+  <script src="../../js/amazeui.min.js"></script>
+  <script src="../../js/echo.js"></script>
+  <script src="nearbyShops.js"></script>
+</body>
+</html>

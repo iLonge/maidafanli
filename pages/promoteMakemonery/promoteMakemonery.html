@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    #mask{
+      position: absolute;
+      z-index: 1111;
+      background-color: #000;
+      top: 0;
+      opacity: .75;
+   }
+   #maskContet{
+      position: absolute;
+      z-index: 9999;
+      top: 0;
+      padding-left: 20px;
+   }
+  </style>
+</head>
+<body>
+<!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container">
+      <div class="am-u-sm-4 am-margin-top-xs">
+        <a href="personalCenter.html" onclick="history.back(-1);" class="am-icon-angle-left am-text-xxl am-fl" style="color:#333;">
+        </a>
+      </div>
+      <div class="am-u-sm-8 am-center am-margin-top-xs">
+        <span class="am-text-lg am-padding-left-sm">推广赚钱</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="am-container am-text-center am-padding-vertical-sm">
+    <span class="am-text-sm">一次邀请，永久收益！</span>
+  </div> 
+
+  <div class="am-g am-padding-lg" style="width:90%;">
+    <div class="am-container am-text-center">
+      <img src="../../images/personal-code.png">
+    </div>
+    <div class="am-container am-text-center am-margin-vertical-xl">
+      <button class="am-btn am-btn-default am-padding-horizontal-xl am-radius am-btn-danger" id="scanCode">立刻邀请好友</button>
+    </div>
+  </div>
+
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="../../js/jquery.min.js"></script>
+  <!--<![endif]-->
+  <script src="../../js/amazeui.min.js"></script>
+  <script src="promoteMakemonery.js"></script>
+</body>
+</html>

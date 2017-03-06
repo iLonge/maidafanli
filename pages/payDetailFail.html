@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="format-detection" content="telephone=no" />
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    *{
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent; 
+    }
+    .pay-no{
+      width:100%;
+      height:60px;
+      text-align:center;
+      background: url(../images/icon-pay-no.png) no-repeat transparent;
+      background-position: 50%;
+      background-size: 60px;
+    }
+
+    .pay-no-text,
+    .collectMerchant,
+    .payTime{
+      color:#999;
+    }
+
+    .payAgain{
+      background-color:#ffffff;
+      border:1px solid #ddd;
+      outline:none;
+    }
+
+    .payAgain:hover{
+      color:#F49309;
+      outline:none;
+      box-shadow: none;
+    }
+
+  </style>
+</head>
+<body>
+<!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container am-text-center">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl" style="color:#333;">
+      </a>
+      <span class="am-text-lg" style="margin-left:-15px;">支付详情</span>
+    </div> 
+  </header>
+
+<!--内容-->
+  <!-- <div class="am-g am-padding-vertical-lg am-text-center">
+    <i class="am-text-xl am-icon-warning am-text-warning"></i>
+    <span class="am-text-lg am-padding-sm">支付失败！</span><br>
+  </div>
+  <div class="am-g am-margin-top-sm">
+    <div class="am-container am-padding-sm">
+      <span class="am-padding-sm">订单编号:</span><span>FT0025246</span><br>
+      <span class="am-padding-sm">手机号码:</span><span>182000999000</span>
+    </div>
+  </div> -->
+
+  <div class="am-g am-padding-vertical-lg am-text-center">
+    <p class="pay-no"></p>
+    <span class="am-text pay-no-text">支付失败！</span>
+  </div>
+
+  <div class="am-g am-margin-top-sm">
+    <!-- <div class="am-container am-padding-sm">
+      <span class="am-padding-sm">订单编号:</span><span>FT0025246</span><br>
+      <span class="am-padding-sm">手机号码:</span><span>182000999000</span>
+    </div> -->
+
+    <ul class="am-list am-padding-left am-padding-vertical-sm">
+      <li>
+        <span class="collectMerchant">收款商家:</span>
+        <span class="am-margin-left-sm">云数金服信息有限公司</span> 
+      </li>
+      <li>
+        <span class="payTime">下单时间:</span>
+        <span class="am-margin-left-sm">2017-02-05 12:00:00</span>
+      </li>
+    </ul>
+
+  </div>
+
+<!-- btn -->
+  <div class="am-container am-margin-top-lg">
+    <button class="am-btn am-btn-block am-radius am-text-warning payAgain">重新支付</button>
+  </div> 
+</body>
+</html>

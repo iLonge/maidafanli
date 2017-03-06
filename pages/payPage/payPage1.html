@@ -1,0 +1,219 @@
+ <!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="买单就返利,单单返红包">
+  <meta name="keywords" content="买单返">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <title>买单返</title>
+ 
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+ 
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.   com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <link rel="stylesheet" href="../../css/color.min.css">
+  <link rel="stylesheet" href="payPage1.css"> 
+  <link rel="stylesheet" href="jianpan.css">
+  <script src="storage.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+</head>
+<body>
+<!-- 头部 -->  
+  <header class="header am-margin-vertical">
+    <a href="javascript:" onclick="window.location.href=document.referrer;" class="storeIcon"></a>
+  </header>
+<!-- 头部end -->
+  <form method="get" action="/Wechat/wechatPay">
+    <span class="storeName am-margin-left-sm">北屯老地方火锅</span>
+
+      <!-- 金额输入框 --> 
+      <div class="am-margin-sm inputBox am-radius">
+          
+          <input type="text" id="payMonery" placeholder="请输入支付金额" value="" />
+          <!-- <div class="am-container am-text-center am-text-danger am-margin-top-xs errMassage" id="errMessage">您的输入有误,请重新输入</div> -->
+          <span class="rmb">￥</span>         
+           
+      </div>
+      <!-- 金额输入框end -->
+      <hr>
+      <!-- 余额支付 -->
+      <div class="am-container am-cf am-padding-bottom-sm am-vertical-align" style="height:55px;line-height: 55px;background-color:#fff;border-bottom:1px solid #ededed;">
+        <div class="am-vertical-align-middle am-padding-left-sm" style="width:75%;">
+          <span class="am-fl">余额支付</span>
+          <input class="am-fr am-text-danger balanceContent" id="balance" readOnly/>
+          <input type="hidden" id="number" value="100"/>
+        </div>
+        <div class="color-switch am-fr">
+          <label>
+            <input type="checkbox" class="ios-switch bigswitch green" id="switchBtn"/>
+            <div class="am-margin-right-0">
+              <div>
+               
+              </div>
+            </div>
+          </label> 
+        </div>
+      </div>
+      <!-- 余额支付end -->
+
+    <!-- 不参与打折金额 -->
+    <div class="am-container" style="background-color:#fff;height:55px;line-height: 55px;padinng-left:32px;">
+      <i id="isJoin" class="bg1"></i>
+      <label for="isJoin">
+        <span class="am-text-sm" id="isJoin-txt">不参与打折金额</span>
+        <i class="iconq" data-am-modal="{target: '#modal-nojoin', closeViaDimmer: 0, width: 280}"></i>
+      </label>
+    </div>
+
+    <div class="am-g am-cf am-padding-sm am-padding-top-0  nojoin">
+      <div class="am-container am-padding-sm am-padding-right-0 am-radius nojoinContent">
+        <span class="am-fl nojoinTxt">不参与优惠金额</span> 
+        <input type="text" value="" class="am-text-right am-text-sm am-fr" placeholder="输入不打折金额" id="nojoinMonery" />
+      </div>
+    </div>
+    <!-- 不参与打折金额end --> 
+
+    <!-- 平台信息 -->
+    <div class="am-container am-text-center am-text-xs pt_info">
+      <p>
+        <a href="tel://4000998433"><span class="am-padding-sm telphoneNumber">4000-998-433</span></a>
+      </p>
+      <div class="am=margin-top-lg">
+        <span class="thanks am-text-xs">感谢使用买单返平台</span>
+      </div>
+      <span class="agreeText am-margin-top-sm am-text-xs am-text-center">默认情况下您将同意<a href="xieyi.html" class="xieyi">平台使用协议</a></span>
+    </div>
+    <!-- 平台信息end -->
+    </form>
+    
+    <footer class="am-navbar am-cf am-no-layout" data-am-widget="navbar">
+      <div class="numb_box"> 
+        <ul class="am-cf am-avg-sm-5">
+          <li class="am-text-left am-padding-left-lg" id="returnMonery">
+
+            <span class="returnBox1" id="returnBox1">返现
+              <input id="returnNumber" size="6" class="am-margin-left-sm" value="3.33%" style="background:#f5f5f5;" readOnly/>
+            </span>
+
+            <span class="am-text-danger am-text-lg returnBox2" id="returnBox2">
+              <span class="am-text-sm">返现</span>
+              <i class="am-icon-rmb am-text-danger am-padding-left-sm"></i> 
+              <input type="text" id="return" value="" style="background:#f5f5f5;" readOnly/>
+            </span>
+
+          </li>
+          <li class="am-text-center">
+            <!-- <button id="pay" class="am-btn" disabled>确认支付</button> -->
+            <input type="submit" id="pay" class="am-btn" value="确认支付" disabled>
+          </li>
+        </ul>
+
+        <!-- 键盘 -->
+        <div id="keyboard">
+          <div style="height:30px;line-height:30px;width:100%;" class="xiaq_tb" id="xiaq_tb"> <img src="images/jftc_14.jpg" height="10" style="margin-bottom:10px;">
+          </div>
+          <div class="am-container am-text-center" style="background-color:#a8a8a8;color:#fff;line-height:3.0rem;"><i class="am-icon-keyboard-o am-text-lg am-padding-right-xs"></i>您正在使用买单返安全键盘</div>
+          <ul class="nub_ggg">
+            <li><input type="submit" name="button" id="btn1" value="1" /></li>
+            <li><input type="submit" name="button" id="btn2" value="2" /></li>
+            <li><input type="submit" name="button" id="btn3" value="3" /></li>
+            <li><input type="submit" name="button" id="btn4" value="4" /></li>
+            <li><input type="submit" name="button" id="btn5" value="5" /></li>
+            <li><input type="submit" name="button" id="btn6" value="6" /></li>
+            <li><input type="submit" name="button" id="btn7" value="7" /></li>
+            <li><input type="submit" name="button" id="btn8" value="8" /></li>
+            <li><input type="submit" name="button" id="btn9" value="9" /></li>
+            <li><input type="submit" name="button" id="btn0" value="0" /></li>
+            <li><input type="submit" name="button" id="btn10" value="." /></li>
+            <li><span id="back"><img src="images/jftc_18.jpg" width="45" height="20"></span></li>
+          </ul>
+        </div>
+        <!-- /键盘 -->
+      </div>
+    </footer>
+
+    <!-- 不参与打折商品模态框 -->
+    <div class="am-modal am-modal-alert" tabindex="-1" id="modal-nojoin">
+      <div class="am-modal-dialog am-text-left am-box-shadow">
+        <div class="am-modal-hd" style="padding-left:30px;">不参与打折商品
+          <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+        </div>
+        <div class="am-modal-bd am-margin-top" style="padding-left:30px;">
+          <ul class="am-text-left" style="font-size:1.4rem;color:#999;">
+            <li>酒水，饮料</li>
+            <li>香辣虾，咖喱饭</li>
+          </ul>
+        </div>
+        <div class="am-modal-footer">
+          <span class="am-modal-btn am-fr am-text-sm  am-margin-right" style="color:#333;">知道了</span>
+        </div>
+      </div>
+    </div>
+    <!-- /不参与打折商品模态框 -->
+    <!-- 输入错误提示modal -->
+   <!--  <div class="am-modal am-modal-alert" tabindex="-1" id="errModal" style="display:block;">
+      <div class="am-modal-dialog am-text-left am-box-shadow">
+        <div class="am-modal-hd">
+          <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+        </div>
+        <div class="am-modal-bd am-margin-top am-text-danger">
+            您的输入有误，请重新填写金额。
+        </div>
+        <div class="am-modal-footer">
+          <span class="am-modal-btn am-fr am-text-sm am-margin-right" style="color:#333;">知道了</span>
+        </div>
+      </div> 
+    </div> -->
+    <!-- /输入错误提示modal -->
+
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/amazeui.min.js"></script>
+  <script src="../../js/color.min.js"></script>
+  <script src="fastclick.js"></script>
+  <script src="payPage1.js"></script>
+  <script src="storage.js"></script>
+</body>
+</html>
+  
+<!-- JS版本
+-----------------金额验证-------------------
+alert(/^(\d+(?:[.]\d{1,2})|[1-9]\d*)$/.test("1.23"));//缺点0.0与0.00也能匹配 
+alert(/^(0(?:[.](?:[1-9]\d?|0[1-9]))|[1-9]\d*(?:[.]\d{1,2}|$))$/.test("0.00"));//完全满足问题要求 
+
+思路:以0打头的则后面必须接小数点且小数点后面必然为01-99,
+以大于0的数打头则小数可为1至2位任意数字或无小数部分.
+
+  $(document).ready(function(){
+
+         //修复ios输入框获取焦点时不支持fixed的bug
+
+         var isIOS=(/iphone|ipad/gi).test(navigator.appVersion);
+
+         if(isIOS){
+
+          $('.js_wrap').on('focus','input',function(){        //js_wrap是中间含有文本框的区域 
+            $('header').css("position","relative");
+            $('footer').css("position","relative");                                 
+          }).on('focusout','input',function(){
+            $('header').css("position","fixed");
+            $('footer').css("position","fixed");
+         });
+
+         }                
+
+});
+
+</script
+
+ -->

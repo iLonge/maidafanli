@@ -1,0 +1,1300 @@
+﻿
+
+@import url("base.css");
+
+/******loading特效******/
+
+.wrap{display: none}
+
+.loading-background{position: fixed;width: 100%;height: 100%;background-color: #fff;top: 0px;}
+.loading-background.loading-opacity{background-color:rgba(255, 255, 255, 0.5);}
+.spinner{
+
+    width: 30px;height: 30px;
+
+    position: absolute;
+
+    left: 50%;
+
+    margin-left: -15px;
+
+    top:30%;
+
+}
+
+.double-bounce1, .double-bounce2{width: 100%;height: 100%;border-radius: 50%;background-color:#f6722a;opacity: 0.6;position: absolute;top: 0;left: 0;
+
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+
+    animation: bounce 2.0s infinite ease-in-out;}
+
+.double-bounce2 {
+
+    -webkit-animation-delay: -1.0s;
+
+    animation-delay: -1.0s;
+
+}
+
+@-webkit-keyframes bounce {
+
+    0%, 100% { -webkit-transform: scale(0.0) }
+
+    50% { -webkit-transform: scale(1.0) }
+
+}
+
+
+
+@keyframes bounce {
+
+    0%, 100% {
+
+        transform: scale(0.0);
+
+        -webkit-transform: scale(0.0);
+
+    }
+
+    50% {
+
+        transform: scale(1.0);
+
+        -webkit-transform: scale(1.0);
+
+    }
+
+}
+
+/******loading特效******/
+
+
+
+
+
+
+
+.bkh-wrap{width:100%;max-width:750px;margin:0 auto;}
+
+.font-18{font-size: 18px}
+
+.font-16{font-size: 16px}
+
+.font-14{font-size: 14px}
+
+.font-12{font-size: 12px}
+
+.font-10{font-size: 10px}
+
+.fontColor-333{color: #333;}
+
+.fontColor-999{color: #999;}
+
+.fontColor-d00{color: #d0021b;}
+
+.fontColor-ff5{color: #ff5f37;}
+
+.fontColor-fff{color: #FFFFFF;}
+
+.fontColor-f66{color: #F66a45;}
+
+.bgColor-body{background-color: #f5f5f9;}
+
+.bgColor-box{
+    background-color: #FFFFFF;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.lineColor-line{color: #efeff4;}
+
+
+
+.body_hidden{overflow: hidden;}
+
+
+
+
+
+/* 轮播banner -------------------------------------- */
+
+.bkh-focus{ width:100%;   margin:0 auto; position:relative; overflow:hidden;   }
+
+.bkh-focus .bkh-hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:25px; text-align:right;  }
+
+.bkh-focus .bkh-hd ul{ display:inline-block; height:5px; padding:3px 5px;
+
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:0; vertical-align:top;
+
+}
+
+.bkh-focus .bkh-hd ul li{ display:inline-block; width:10px; height:10px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:rgba(0,0,0,0);border: 1px solid #fff; margin:0 5px;  vertical-align:top; overflow:hidden;   }
+
+.bkh-focus .bkh-hd ul .on{ background:#fff;  }
+
+
+
+.bkh-focus .bkh-bd{ position:relative; z-index:0; }
+
+.bkh-focus .bkh-bd li img{ width:100%; }
+
+.bkh-focus .bkh-bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
+
+@media screen and (min-width: 370px) and (max-width: 479px) {
+
+    .bkh-focus .bkh-hd{bottom: 32px;}
+
+}
+
+/* 轮播banner -------------------------------------- */
+
+
+
+
+
+
+
+/***首页头部****/
+
+
+
+.bk-head{
+
+    background-color: #fff;
+
+    height: 44px;
+
+    line-height: 40px;
+
+    position: relative;
+
+}
+
+.bk-goback{
+
+    float: left;
+
+    width: 40px;
+
+    height: 40px;
+
+    padding: 3px 0 0 10px;
+
+}
+
+.bk-goback img{
+
+    width: 8px;
+
+}
+
+.bk-cityposition{
+
+    margin-left: 20px;
+    float: left;
+
+}
+
+.bk-cityposition img{
+
+    width: 10px;
+
+    vertical-align: middle;
+
+}
+
+.bk-head-title{
+
+    text-align: center;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    margin-left: -80px;
+
+    width: 160px;
+
+    height: 40px;
+
+    line-height: 40px;
+
+}
+
+/***首页头部****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-model-title{padding: 10px 20px;}
+
+/*热门信用卡*/
+
+.bkh-hotbank-listItems{float: left;width: 50%;border-right: 1px solid #EFEFF4;border-top: 1px solid #EFEFF4;position: relative;}
+
+.bkh-bankLogo{width: 45%;float: left;}
+
+.bkh-hotbank-sign{background-size: 100% 100%;background-repeat: no-repeat;width:50px;display:block;text-align:center;padding:1px 0px 5px;position: absolute;top: -1px;right: 2px;}
+
+.bkh-hotbank-sign img{width: 35px;}
+
+/*.bkh-hotbank-sign{background-image: url(../images/sign.png);background-size: 100% 100%;background-repeat: no-repeat;width:50px;display:block;text-align:center;padding:1px 0px 5px;position: absolute;top: 0px;right: 10px;}*/
+
+.bkh-hotbank-bankIntroBox{position: relative;top: 20px;}
+
+.bkh-more{text-align: left;}
+
+.bkh-more-box{line-height:80px;text-align: center;}
+
+.bkh-more img{width: 23%;vertical-align: middle;margin-right: 20px;}
+
+/*热门信用卡*/
+
+/*浦发上门办卡和进度查询*/
+
+.bkh-ad-zhanwei{margin: 10px auto;}
+
+.bkh-ad-zhanwei img{width: 50%;float: left;}
+
+.bkh-ad-zhanwei img.bkh-jindu-1{width: 100%;}
+
+/*浦发上门办卡和进度查询*/
+
+/*特色卡*/
+
+.bkh-teCards-box{border-top: 1px solid #efeff4;padding: 10px;}
+
+.bkh-teCards-box ul li{float: left;width: 25%;text-align: center;}
+
+.bkh-teCards-box ul li img{display: block;width: 40px;margin: 0 auto;}
+
+/*特色卡*/
+
+/*办卡服务*/
+
+.bkh-service{margin: 10px auto;}
+
+.bkh-service-item{width: 50%;float: left;height: 110px;border-top: 1px solid #efeff4;}
+
+.bkh-service-item:nth-child(1){border-right: 1px solid #efeff4;}
+
+.bkh-service-left{width: 70%;float: left;padding-left: 5px;}
+
+.bkh-service-item >.bkh-service-left{position: relative;top: 32px;left: 20px;}
+
+.bkh-service-item > img{position: relative;top: 32px;right: 15px;}
+
+.bkh-service-item img{width: 40px;float: right;}
+
+.bkh-service-xinshou{border-bottom: 1px solid #efeff4;}
+
+.bkh-service-xinshou,.bkh-service-youhui{height: 55px;padding: 5px;position: relative;top:3px}
+
+/*办卡服务*/
+
+/*热门信用卡*/
+
+.bkh-hotCard .bkL_info{
+
+    padding: 10px 10px 15px;
+
+    background-color: #fff;
+
+    border-top: 1px solid #efeff4;
+
+    border-bottom: 0px solid #efeff4;
+
+}
+
+.bkh-moreCard{border-top: 1px solid #efeff4;text-align: center;padding: 10px;height: 60px;line-height: 40px}
+
+/*基本信息相关费用开始*/
+
+.bk_info_cost{margin-top: 12px;}
+
+.bk_info_cost li{
+
+    float: left;
+
+    width: 50%;
+
+    height: 50px;
+
+    line-height: 50px;
+
+    border-bottom: 1px solid #efeff4;
+
+    text-align: center;
+
+    background-color: #fff;
+
+}
+
+.bk_info_cost_color{
+
+    color: #ff5f37;
+
+    border-bottom: 2px solid #ff5f37!important;
+
+}
+
+.bk_info_cost_Con{
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background-color: #fff;
+
+    padding:0 0 20px 0;
+
+}
+
+.bk_info_cost_Con ul{
+
+    width: 200%;
+
+}
+
+.bk_info_cost_Con li{
+
+    float: left;
+
+    width: 50%;
+
+    padding: 15px;
+
+}
+
+.bk_info_list{
+
+    padding-bottom: 15px;
+
+    font-size: 12px;
+
+}
+
+.bk_info_list .left{
+
+    color: #999;float:left;width: 20%;
+
+}
+
+.bk_info_list .right{
+
+    color: #333;float:left;width: 80%;
+
+    text-align: justify;
+
+}
+
+.bk_info_list .right table{
+    width: 100%!important;
+    text-align: center;
+    margin: 0!important;
+}
+.bk_info_list .right table tr{
+    height: 30px!important;
+}
+
+.bk_info_list .right table tr p{
+    text-align: center;
+}
+.bk_fenqi_table{
+
+    margin-left: 0;
+
+    width: 100%;
+
+    border-left: 1px solid #efeff4;
+
+    border-top: 1px solid #efeff4;
+
+}
+
+.bk_fenqi_table li{
+
+    float: left;
+
+    width: 33.33%;
+
+    padding: 0;
+
+}
+
+.bk_fenqi_table div{
+
+    height: 30px;
+
+    line-height: 30px;
+
+    text-align: center;
+
+    border-right: 1px solid #efeff4;
+
+    border-bottom: 1px solid #efeff4;
+
+}
+
+.bk_fenqi_table li>div:first-of-type{
+
+    background-color: #f5f5f9;
+
+}
+
+.shenqingBtn{
+
+    position: fixed;
+
+    width: 100%;
+
+    height: 60px;
+
+    background-color: #fff;
+
+    bottom: 0;
+
+    left: 0;
+
+    padding:10px;
+
+}
+
+.shenqingBtn a{
+
+    display: block;
+
+    width: 100%;
+
+    height: 40px;
+
+    line-height: 40px;
+
+    text-align: center;
+
+    color: #fff;
+
+    background-color: #ff5f37;
+
+    border-radius: 4px;
+
+}
+
+.bk_hotCard_bottom{
+
+    margin-top: 12px;
+
+}
+
+.bk_hotCard_titl{
+
+    height: 36px;
+
+    line-height: 36px;
+
+    padding-left: 10px;
+
+    font-weight: normal;
+
+}
+
+.bk_hotCard_bottom .bkd-cardSign span{
+
+    border: 0;
+
+    border-radius: 0;
+
+    border-left: 1px solid #ff5f37;
+
+}
+
+
+
+/****办卡列表页开始****/
+
+.bkL_head_ol{
+
+    height: 50px;
+
+    border-top: 1px solid #E6E6E6;
+
+    padding-top: 7px;
+
+    margin-bottom: 12px;
+
+    background-color: #fff;
+
+}
+
+.bkL_head_ol li{
+    float: left;
+    width: 33.33%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    position: relative;
+    color: #333;
+}
+
+.bkL_head_ol li span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70%;
+    display: inline-block;
+}
+
+
+
+.bg_white{
+
+    background-color: #fff;
+
+}
+
+
+
+
+
+
+
+.bkL_head_ol li:nth-of-type(2){
+
+    border-right: 1px solid #E6E6E6;
+
+    border-left: 1px solid #E6E6E6;
+
+}
+
+.bkL_head_ol img{
+
+    position: absolute;
+
+    top: 16px;
+
+    right: 10%;
+
+    width: 10px;
+
+    transition: all 0.3s;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+
+    .bkL_head_ol img{right: 6%;}
+
+}
+
+.bk_arrowRotate{
+
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+
+}
+
+.bk_bankMask,.bk_useMask,.bk_gradeMask{
+
+    position: absolute;
+
+    left: 0;
+
+    width: 100%;
+
+    height: calc(100% - 94px);
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: 99;
+
+    display: none;
+
+}
+
+
+
+.bk_allbank,.bk_alluse,.bk_allgrade{
+
+    height: 401px;
+
+    overflow-y: scroll;
+
+    background-color: #f4f4f4;
+
+    border-top: 1px solid #E6E6E6;
+
+}
+
+.bk_allgrade{height:201px;}
+
+.bk_allbank_ol,.bk_allbank_ul,.bk_alluse_ol,.bk_alluse_ul,.bk_allgrade_ol,.bk_allgrade_ul{
+
+    float: left;
+
+    width: 40%;
+
+}
+
+.bk_allbank_ol li,.bk_allbank_ul li,.bk_alluse_ol li,.bk_alluse_ul li,.bk_allgrade_ol li,.bk_allgrade_ul li{
+
+    height: 50px;
+
+    line-height: 50px;
+
+    border-bottom: 1px solid #E6E6E6;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    color: #333;
+
+}
+
+.bk_allbank_ul,.bk_alluse_ul,.bk_allgrade_ul{
+
+    width: 60%;
+
+}
+
+.bk_allbank_ul li,.bk_alluse_ul li,.bk_allgrade_ul li{
+
+    text-align: left;
+
+    font-size: 12px;
+
+    color: #999;
+
+    padding: 0 12px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.bkL_info{
+
+    padding: 10px 10px 15px;
+
+    background-color: #fff;
+
+    border-bottom: 1px solid #efeff4;
+
+}
+
+.bkd-intro ul li{
+
+    clear: both;
+    height: 30px;
+    font-size: 14px;
+
+    margin: 12px 0px;
+
+}
+
+.bkd-intro ul li:before {
+
+    content:"";
+
+    background:url(../images/bkd-icon.png);
+
+    width: 30px;
+
+    height: 30px;
+
+    margin-top: -7px;
+    -webkit-background-size: 100%;
+
+    background-size: 100%;
+
+    vertical-align: middle;
+
+    margin-right: 10px;
+
+    display: block;
+    float: left;
+
+}
+
+.bkL_info>div{
+
+    float: left;
+
+    width: 50%;
+
+}
+
+.bkL_info_L img{
+
+    width: 85%;
+
+}
+
+.bkL_info_L p{
+
+    width: 85%;
+
+    text-align: right;
+
+}
+
+.bkL_info_R h2{
+
+    height: 24px;
+
+    color: #000;
+
+    font-weight: normal;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+}
+
+
+
+
+
+.bkL_info_R p{ height: 28px; text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    overflow: hidden;}
+
+.bkL_info_R li{
+    height: 20px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    list-style: disc;
+
+    list-style-position: inside;
+
+
+
+}
+
+.bkL_info_R li a{
+
+    display: inline-block;
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 4px;
+
+    background-color: #989898;
+
+    vertical-align: middle;
+
+    margin: -2px 5px 0 0;
+
+}
+
+.applyBtn{
+
+    display: block;
+
+    width: 110px;
+
+    height: 30px;
+
+    line-height: 30px;
+
+    border-radius: 4px;
+
+    border: 1px solid #FF5F37;
+
+    color: #FF5F37;
+
+    text-align: center;
+
+    margin-top: 10px;
+
+}
+
+.bkL_moreCardBtn,.strategy_loadMore{
+
+    display: block;
+
+    width: 100%;
+
+    height: 60px;
+
+    line-height: 60px;
+
+    text-align: center;
+
+    background-color: #fff;
+
+}
+
+/****办卡列表页结束****/
+
+
+
+/***新手办卡开始****/
+
+.newhandBanner img{
+
+    display: block;
+
+}
+
+.recommendCard li{
+
+    padding: 5px 15px;
+
+    margin: 12px 0 0 0;
+
+    background-color: #fff;
+
+}
+
+.recommend_L{
+
+    float: left;
+
+    width: 125px;
+
+}
+
+.recommend_R{
+
+    margin-left: 125px;
+
+    padding-left: 5px;
+
+}
+
+.card_num{
+
+    font-weight: bold;
+
+    font-style: italic;
+
+    display: block;
+
+    padding-bottom: 5px;
+
+}
+
+.recommend_R p{
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.recommend_R div{
+
+    color: #fc9f00;
+
+    padding: 10px 0 0 0;
+
+}
+
+/***新手办卡结束****/
+
+
+
+/***攻略须知开始***/
+
+.bkStrategy li{
+
+    border-top: 1px solid #E6E6E6;
+
+    padding: 15px;
+
+    position: relative;
+
+}
+
+.bkStrategy li:last-of-type{
+
+    border-bottom: 1px solid #E6E6E6;
+
+}
+
+.bkStrategy h2{
+
+    padding-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.bkStrategy li a{
+
+    display: block;
+
+}
+
+.bkStrategy_L{
+
+    float: left;
+
+    width: 84px;
+
+}
+
+.bkStrategy_R{
+
+    margin-left: 84px;
+
+    padding: 0 0 0 8px;
+
+}
+
+.bkStrategy_R p{
+
+    height: 84px;
+
+    line-height: 22px;
+
+    display: -webkit-box;
+
+    text-overflow: ellipsis;
+
+    overflow : hidden;
+
+    -webkit-line-clamp: 4;
+
+    -webkit-box-orient: vertical;
+
+    text-align: justify;
+}
+
+.bkStrategy_label{
+
+    padding: 5px 0 5px 0;
+
+}
+
+.bkStrategy_headPic{
+
+    width: 22px;
+
+    display: inline-block;
+
+    vertical-align: middle;
+
+    margin: -2px 5px 0 0;
+
+}
+
+.bkStrategy_label span{
+
+    display: inline-block;
+
+    padding: 0 4px;
+
+}
+
+.bkStrategy_label span:nth-of-type(2){
+
+    border-left: 1px solid #999;
+
+}
+
+.bkStrategy_pinglun{
+
+    float: right;
+
+}
+
+.bkStrategy_pinglun img{
+
+    width: 12px;
+
+    vertical-align: middle;
+    margin: -2px 0 0 0;
+}
+
+.tuijianPic{
+
+    position: absolute;
+
+    top: -1px;
+
+    right: 20px;
+
+    width: 40px;
+
+}
+
+.bkStrategy_loadMore{
+
+    display: block;
+
+    width: 100%;
+
+}
+
+/***攻略须知结束***/
+
+/***选择城市开始****/
+
+.citysPosition{
+
+    /*padding: 15px 35px 0 15px;*/
+
+}
+
+.citysPosition p{
+
+    padding-bottom: 15px;
+
+}
+
+.GPSCity{
+
+    display: block;
+
+    width: 31%;
+
+    height: 40px;
+
+    line-height: 40px;
+
+    background-color: #fff;
+
+    border: 1px solid #CFCFCF;
+
+    border-radius: 3px;
+
+    text-align: center;
+
+    color: #333;
+
+    margin-bottom: 15px;
+
+}
+
+.citysPosition li{
+
+    float: left;
+
+    width: 31%;
+
+    height: 40px;
+
+    line-height: 40px;
+
+    background-color: #fff;
+
+    border: 1px solid #CFCFCF;
+
+    border-radius: 3px;
+
+    text-align: center;
+
+    margin-bottom: 12px;
+
+}
+
+.citysPosition li:nth-of-type(3n+2){
+
+    margin: 0 3.5% 12px;
+
+}
+
+.citysPosition li a{
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    color: #333;
+
+    font-size: 16px;
+
+}
+
+.citysPosition ul{
+
+    position: relative;
+
+}
+
+.initial{
+
+    position: absolute;
+
+    top: -30px;
+
+    left: -4px;
+
+}
+
+.right_initial{
+
+    position: fixed;
+
+    top: 30px;
+
+    right: 3px;
+
+    width: 24px;
+
+    word-wrap:break-word;
+
+}
+
+.right_initial a{
+
+    font-size: 12px;
+
+    color: #F66a45;
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    line-height: 18px;
+
+}
+
+.right_initial a:nth-of-type(2){
+
+    margin-bottom: 10px;
+
+}
+
+.right_initial_bg{
+
+    background: rgba(0,0,0,0.2);
+
+    border-radius: 4px;
+
+}
+
+
+
+/***选择城市结束****/
+
+/*返回顶部*/
+.bk-gotop{
+    width: 46px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: none;
+}
+
+/*无数据图片*/
+.nodataPic{
+    width: 35%;
+    display: block;
+    margin: 100px auto 10px;
+}
+
+@media screen and (min-width: 320px) and (max-height: 480px) {
+    .bk_allbank,.bk_alluse,.bk_allgrade{height: 250px;}
+}
+
+.bkL_info_L{max-width: 250px;}
+
+@media screen and (min-width: 340px) {
+    .bkh-service-xinshou, .bkh-service-youhui{padding-right: 10px;}
+}
+
+
+/* 跳转银行gif动画弹窗 start*/
+.bk-load{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    text-align: center;
+}
+.bk-load-con{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 200px;
+    margin: -120px 0 0 -50%;
+}
+.bk-load-pic{
+    width: 100px;
+    height: 100px;
+}
+.bk-load p{
+    font-size: 14px;
+    color: #999;
+    padding-top: 20px;
+}
+/* 跳转银行gif动画弹窗 end*/
+
+
+/* 热门信用卡申请 */
+/* .hotshenqing{
+    background-color: #fff;
+}
+.hotsq-titl{
+    padding: 10px 20px;
+    color: #333;
+}
+.hotshenqing-con{
+    border-top: 1px solid #efeff4;
+    padding: 10px 15px;
+}
+.hotshenqing-con a{
+    float: left;
+    font-size: 14px;
+    line-height: 26px;
+    color: #999;
+    width: 32%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hotshenqing-con a:nth-of-type(3n+2){
+    margin: 0 2%;
+} */
+/* 热门信用卡申请  end*/
+
+
+

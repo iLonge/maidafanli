@@ -1,0 +1,81 @@
+.left-side-line,
+.right-side-line{
+  width:8%;
+  height:1px;
+  position:absolute;
+  background-color:#ddd;
+}
+.left-side-line{
+  top:64%;
+  left:36%;
+}
+.right-side-line{
+  top:64%;
+  right:36%;
+}
+
+.no-discount{
+  position:relative;
+  height:35px;
+}
+.inputCount{
+  height:40px;
+  width:100%;
+  border:none;
+  outline:none;
+  padding-left:50%;
+}
+
+#isJoin{
+  display:inline-block;
+  width:30px;
+  height:30px;
+  position: absolute;
+  text-align:center;
+  line-height:30px;
+  background-size: cover;
+}
+#noJoin{
+  width:95%; 
+  display:none;
+}
+#noJoin>div{
+  position:relative;
+}
+#nijoin span{
+  position:absolute;
+  z-index:111;
+}
+#isJoin-txt{
+  line-height: 35px;
+}
+.noJoin-preferential{
+  height:40px;
+  width:100%;
+  border:none;
+  outline:none;
+}
+.pay-count,
+.invit-code{
+  position:absolute;
+  z-index:111;
+}
+
+.check-circle{
+  display:none;
+}
+.balance{
+  width:55px;
+  height:25px;
+  border:none;
+  outline:none;
+}
+.bg1{background:url('../../style/images/icon-pay-sale-nor.png');}
+.bg2{background:url('../../style/images/icon-pay-sale-sel.png');}
+.choose-input{
+  width:100%;
+  height:40px;
+  border:none;
+  outline:none;
+  padding-left:50%;
+}

@@ -1,0 +1,189 @@
+3<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>Amaze UI Examples</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    .user-leve2{ 
+      border-bottom:2px solid transparent;
+    }
+    .user-leve-active{
+      color:#E60827;
+      border-bottom:2px solid #E60827;
+    }
+    .pay-table2{display: none;}
+  </style>
+</head>
+<body>
+<!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container am-text-center">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl" style="color:#333;">
+      </a>
+      <span class="am-text-lg" style="margin-left:-15px;">我的推荐</span>
+    </div> 
+  </header>
+<!-- 表单 -->
+  <div class="am-g am-margin-vertical-sm">
+    <ul class="am-avg-sm-2 am-text-center am-padding-horizontal-sm">
+      <li class="user-leve1 am-padding-xs user-leve-active">一级用户<span>(20)</span></li>
+      <li class="user-leve2 am-padding-xs">二级用户<span>(15)</span></li>
+    </ul>
+  </div>
+<!--一级用户 -->
+  <div class="am-g pay-table1">
+    <table class="am-table am-table-hover am-text-center am-text-xs">
+      <colgroup>
+        <col width="15%">
+        <col width="20%">
+        <col width="25%">
+        <col width="40%">
+      </colgroup>
+      <thead style="background-color:#f7f7f7;">
+        <tr><i class="cut-line"></i>
+          <th class="am-text-center">序号</th>
+          <th class="am-text-center">用户</th>
+          <th class="am-text-center">返利金额</th>
+          <th class="am-text-center">时间</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>汪槑槑</td>
+          <td class="am-text-warning">
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-fl am-margin-left-xs"></i>
+            <span >3.13</span>
+          </td>
+          <td>2012-10-01 05:45</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>盼盼</td>
+          <td class="am-text-warning">
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-fl am-margin-left-xs"></i>
+            <span>113.13</span>
+          </td>
+          <td>2013-10-01 05:45</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>樊志颖</td>
+          <td class="am-text-warning">
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-margin-left-xs am-fl"></i>
+            <span>15000</span>
+          </td>
+          <td>2015-10-01 09:45</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<!-- 二级用户 -->
+   <div class="am-g pay-table2">
+    <table class="am-table am-table-hover am-text-center am-text-xs">
+      <colgroup>
+        <col width="15%">
+        <col width="20%">
+        <col width="25%">
+        <col width="40%">
+      </colgroup>
+      <thead style="background-color:#f7f7f7;">
+        <tr><i class="cut-line"></i>
+          <th class="am-text-center">序号</th>
+          <th class="am-text-center">用户</th>
+          <th class="am-text-center">返利金额</th>
+          <th class="am-text-center">时间</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>汪槑槑</td>
+          <td class="am-text-warning">
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-fl am-margin-left-xs"></i>
+            <span >13.13</span>
+          </td>
+          <td>2012-10-01 05:45</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>盼盼</td>
+          <td class="am-text-warning">
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-fl am-margin-left-xs"></i>
+            <span>113.13</span>
+          </td>
+          <td>2013-10-01 05:45</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>樊志颖</td>
+          <td class="am-text-warning">
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-margin-left-xs am-fl"></i>
+            <span>15000</span>
+          </td>
+          <td>2015-10-01 09:45</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>陈芳强</td>
+          <td class="am-text-warning">
+            <i class="am-fl">+</i>
+            <i class="am-icon-rmb am-margin-left-xs am-fl"></i>
+            <span>1500</span>
+          </td>
+          <td>2015-10-01 09:45</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="../../js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".user-leve1").click(function(){
+          $(".pay-table2").hide();
+          $(".pay-table1").show();
+          $(".user-leve2").removeClass("user-leve-active");
+          $(".user-leve1").addClass("user-leve-active");
+        });
+
+      $(".user-leve2").click(function(){
+          $(".pay-table1").hide();
+          $(".user-leve1").removeClass("user-leve-active");
+          $(".pay-table2").show();
+          $(".user-leve2").addClass("user-leve-active");
+        });
+    });
+  </script>
+</body>
+</html>

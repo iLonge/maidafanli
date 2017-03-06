@@ -1,0 +1,88 @@
+ul,li{
+  list-style: none;
+}
+
+.star1,
+.star2,
+.star3,
+.star4,
+.star5{
+  color:#ccc;
+}
+
+.server-kinds>li>button{
+  background-color: #fff;
+  border:1px solid #ddd;
+}
+
+.server-kinds>li>button:hover{
+  background-color: #eaa1a1;
+  border:1px solid #E60827;
+  color:#E60827;
+}
+
+.server-evaluation{
+  padding:0;
+  margin:0;
+}
+
+.server-evaluation>li>input{ 
+  border:1px solid #ddd;
+  outline:none;
+  display:inline-block;
+}
+
+.server-evaluation>li>input:focus,
+.server-evaluation>li>input:active
+{
+  outline:#E60827;
+  color:#fff;
+}
+
+.current{
+  background-color:#E60827;
+  color:#fff;
+}
+
+ul,li{list-style: none;}
+.server-evaluation{
+  padding:0;
+  margin:0;
+}
+.server-evaluation>li>button{
+  background-color: #fff;
+  border:1px solid #ddd;
+  outline:none;
+}
+.server-evaluation>li>button:hover{
+  background-color: #eaa1a1;
+  border:1px solid #E60827;
+  color:#E60827;
+}
+.user-evaluat-star>i{
+  color:rgb(245, 230, 31)
+}
+.user-info{overflow:hidden;height:4.0rem;line-height: 1.0;}
+.user-photo{width:4.0rem;}
+.user-name{color:#333;margin-top:0;line-height:2.0rem;}
+.user-evaluat-date{color:#999;margin-bottom:0;line-height:2.0rem;}
+.user-evaluat-star{line-height:4.0rem;}
+.reply{background-color:#f7f7f7;}
+.user-eval-img{width:6.0rem;height:6.0rem;}
+
+.inputContent{border-bottom:1px solid #ededed;}  
+/*添加图片*/
+.icon-addpic{background: url("../../images/icon-img.png") no-repeat center center; background-size:60px auto;}
+.addpic{ height: 60px; width: 60px; overflow: hidden;}
+  .inputImage{ position: absolute; top:50%;left: 50%; margin-left: -25px; margin-top: -25px;  width: 50px; height: 50px;overflow: hidden; opacity: 0;}
+.lineheight_60{ line-height: 60px;}
+#image_preview_box{ width: 100%;}
+.image_show{width: 60px;height: 60px;background-color:#EBEEEF; position: relative;  margin-right: 10px ; float: left; margin-top: 8px;}
+.icon-delete{background: url("../../images/icon-batn-delete.png") no-repeat center center; background-size:22px auto;}
+.delete-img{position: absolute; left:-8px; top: -8px; width: 22px; height: 22px; text-indent: -999em; overflow: hidden;  z-index: 99;}
+.images{ display: table-cell;vertical-align:middle;    width: 60px;  height: 60px;}
+.images img{ vertical-align:middle;}
+/* 定义清除浮动的样式 */
+.clearfix:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+#back .am-modal-dialog{border-radius:0.5rem;}

@@ -1,0 +1,332 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="买单返-消费即返利，单单返红包">
+  <meta name="keywords" content="买单返，maidanfan">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/logo.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes"> 
+  <link rel="icon" sizes="192x192" href="../../i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/logo.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/logo.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <link rel="stylesheet" href="detail.css">
+</head>
+<body class="no-js">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<!-- 顶部 -->
+
+<!-- 主体 -->
+<!-- 商家图片 -->
+  <div class="merchants-detail">
+    <div class="merchants-img">
+
+      <a href="../merchantsAlbum/merchantsAlbum.html">
+        <div class="am-slider am-slider-default am-margin-bottom-0" data-am-flexslider="{playAfterPaused: 8000}">
+          <ul class="am-slides slides">
+            <li><img src="../../images/p2679-l.jpg" width="100%" height="250"/></li>
+            <li><img src="../../images/p0281-l.jpg" width="100%" height="250"/></li>
+            <li><img src="../../images/p7933-l.jpg" width="100%" height="250"/></li>
+          </ul>
+        </div>
+
+        <!-- <img src="../../images/p7933-l.jpg" class="am-img-responsive" width=100% height=250/> -->
+        <div class="header-icon am-container">
+          <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-icon-btn am-text-md"></a>
+          <span class="collect am-icon-heart-o am-icon-btn am-fr am-text-sm"></span>
+          <span class="collected am-icon-heart am-icon-btn am-fr am-text-sm"></span>
+          <span class="collected-success am-text-info"></span>
+          <a class="am-icon-share am-icon-btn am-fr am-text-sm share" id="share"></a>
+        </div>
+        <div class="album am-radius">
+          <a href="../merchantsAlbum/merchantsAlbum.html">
+            <i class="am-icon-file-image-o am-text-sm"></i>
+            <span class="am-text-xs"> <span class="am-text-danger num">1 </span>/ <span id="sliderslen">12</span></span>
+          </a>
+        </div>
+      </a>
+
+    </div>
+  </div>
+<!--描述 --> 
+  <div class="am-g">
+    <div class="am-container am-padding-vertical-xs">
+      <span class="businessName">泰熙家 韩国紫菜包饭</span><br>
+      <span class="am-text-xs businessDes">
+        <i class="am-icon-fire am-padding-right-xs"></i>人气<span class="hot">500</span>
+        <span class="rmbIcon am-margin-left-sm am-margin-top-xs am-text-center">￥</span>人均<i class="am-icon-rmb"></i><span class="price">15</span>
+      </span> 
+    </div>
+  </div>  
+<!-- 返现 -->
+  <div class="scrollspy-nav am-padding-sm" data-am-sticky>
+    <div class="am-container">
+      <div class="am-fl am-text-danger">
+        <small class="am-text-danger am-padding-right-xs">返</small>
+        <span class="am-text-xl">20</span>
+        <small>%</small>
+      </div>
+      <div class="am-fr">
+        <a href="../payPage/payPage.html"><button class="am-btn am-btn-lg am-btn-danger am-radius am-fr">去买单</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="am-list-news">
+    <ul class="am-list am-list-static">
+      <li>
+        <div class="am-container">
+         <i class="am-icon-question-circle am-fl icon-color"></i>
+         <span class="am-text-md am-fl icon-color"> 全时段返现</span>
+         <span class="am-fr am-text-danger">20%</span>
+        </div>      
+      </li>
+      <li>
+        <div class="am-container">
+          <i class="am-icon-clock-o am-fl"></i>
+          <span class="am-text-md am-fl"> 营业时间：周一至周日</span>
+          <span class="am-fr am-text-danger">09:00-23:20</span>
+        </div>  
+      </li>
+      <li>
+        <div class="am-g">
+          <div class="am-u-sm-10 am-container">
+            <span class="am-text-md">泰熙家 韩国紫菜包饭</span>
+            <div class="am-padding-top-sm am-text-xs">
+              <a href="../addressMap.html">
+                <span class="am-margin-right-xs"><i class="am-icon-map-pin am-text-danger"></i></span>
+                <span>西安市.长安区.朱雀大街华城泊郡108号</span>
+                <span class="am-fr am-text-sm">300m</span>
+              </a>
+            </div>
+          </div>
+          <div class="am-u-sm-2 am-vertical-align am-text-center am-padding-right-0 phoneDiv">
+            <i class="am-icon-phone am-text-xxl am-vertical-align-middle am-text-danger" data-am-modal="{target: '#storPhone'}"></i>    
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+     
+
+<!-- 更多信息 -->
+  <div class="am-list-news am-list-news-default am-no-layout">
+    <div class="am-container">
+    <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
+      <h2 class="am-titlebar-title">
+          更多信息
+      </h2>
+      <nav class="am-titlebar-nav">
+          <a href="#more" class="am-text-sm">更多 »</a>
+      </nav>
+    </div>
+    <div class="am-g">
+      <ul class="am-list am-list-static" style="margin-bottom:0;">
+        <li>
+          <p>免费WIFI</p>
+          <p class="am-list-item-text">上网休闲大包间</p> 
+        </li>
+        <li>
+          <div class="am-g"> 
+            <span id="star-count">
+              <i class="am-icon-star"></i>
+              <i class="am-icon-star"></i>
+              <i class="am-icon-star"></i>
+              <i class="am-icon-star"></i>
+              <i class="am-icon-star"></i>
+            </span>
+            <input type="hidden" name="star" value="4" id="inputNumber"/>
+            <span class="am-fr" style="color:#333;">评价></span>
+          </div>
+        </li>
+      </ul>     
+    </div>    
+    </div>
+  </div>
+<!-- 推荐商家 -->
+  <div data-am-widget="list_news" class="am-list-news am-list-news-default am-no-layout">
+    <div class="am-container">
+      <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
+        <h2 class="am-titlebar-title">
+            推荐商家
+        </h2>
+        <nav class="am-titlebar-nav">
+            <a href="#more" class="am-text-sm">更多 »</a>
+        </nav>
+      </div>
+      <div class="am-list-news-bd">
+        <ul class="am-list">
+          <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+            <div class="am-u-sm-4 am-list-thumb am-list-main">
+              <div class="am-u-sm-12">
+                <a href="#">
+                  <img src="../../images/p2679-l.jpg">
+                </a>
+                </div>
+              </div>
+            <div class="am-u-sm-5 am-list-main">
+              <div class="am-u-sm-12">        
+                  <h6 class="am-list-item-hd">
+                    <a href="#">泰熙家韩国紫菜包饭</a>
+                  </h6>
+                  <div class="am-list-item-text">
+                    <p>
+                      <i class="am-icon-paper-plane"></i>
+                        西安市.长安区.朱雀大街
+                        华城泊郡108号
+                    </p>
+                  </div>
+                  <div class="am-u-sm-12">   
+                    <span class="am-text-danger">
+                        <strong class="am-text-lg">8</strong><small>.5</small>折
+                    </span>
+                  </div>
+              </div>
+            </div>
+
+            <div class="am-u-sm-3 am-list-main" style="padding-right:0;">
+              <div class="am-u-sm-12">
+                  <span class="am-list-item-text am-text-right">300m</span>
+                  <sapn class="am-list-item-text am-text-right" style="margin-top:50px;"><i class="am-icon-fire am-text-danger"></i>人气200</apsn>       
+              </div>
+            </div>
+
+          </li>
+
+          <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+            <div class="am-u-sm-4 am-list-thumb am-list-main">
+              <div class="am-u-sm-12">
+                <a href="#/">
+                  <img src="../../images/p7933-l.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="am-u-sm-5 am-list-main">
+              <div class="am-u-sm-12">        
+                  <h5 class="am-list-item-hd">
+                    <a href="#">泰熙家韩国紫菜包饭</a>
+                  </h5>
+                  <div class="am-list-item-text">
+                    <span>
+                      <i class="am-icon-paper-plane"></i>
+                        西安市.长安区.朱雀大街
+                        华城泊郡108号
+                    </sapn>     
+                  </div>
+                  <div class="am-u-sm-12">   
+                    <span class="am-text-danger">
+                        <strong class="am-text-lg">8</strong><small>.5</small>折
+                    </span>
+                  </div>
+              </div>
+            </div>
+
+            <div class="am-u-sm-3 am-list-main" style="padding-right:0;">
+              <div class="am-u-sm-12">
+                  <span class="am-list-item-text am-text-right">300m</span>
+                  <span class="am-list-item-text am-text-right" style="margin-top:70px;"><i class="am-icon-fire am-text-danger"></i> 人气200</sapn>       
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- 更多 -->
+  <div class="am-list-news-ft am-cf"><h3><a class="am-list-news-more" href="#">更多></a></h3>
+  </div>
+<!--底部 -->
+  <div data-am-widget="navbar" class="am-navbar am-text-center">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+      <li>
+        <a href="../home/home.html">
+          <span class="am-icon-home"></span>
+          <span class="am-navbar-label">首页</span>
+        </a>
+      </li>
+     
+      <li>
+        <a href="../positionPage/positionPage.html">
+          <span class="am-icon-compass"></span>
+          <span class="am-navbar-label">附近</span>
+        </a>
+      </li>
+      <li>
+        <a href="../../index.html">
+          <span class="am-icon-user"></span>
+          <span class="am-navbar-label">个人中心</span>
+        </a>
+      </li>
+       <li>
+        <a href="../businessRecommend/businessRecommend.html">
+          <span class="am-icon-bookmark"></span>
+          <span class="am-navbar-label">商家推荐</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 拨打电话modal -->
+  <div class="am-modal-actions" id="storPhone">
+    <div class="am-modal-actions-group">
+      <ul class="am-list" style="color:#333;">
+        <li class="am-modal-actions-header"><i class="am-icon-phone am-padding-right"></i>拨打电话</li>
+        <li>
+          <a href="tel://0291234567"><span class="am-icon-phone-square am-padding-right-sm"></span>0291234567</a>
+        </li>
+        <li>
+          <a href="tel://13999999999"><i class="am-icon-mobile-phone am-padding-right-xs am-text-lg"></i>13999999999</a>
+        </li>
+      </ul>
+    </div>
+    <div class="am-modal-actions-group">
+      <button class="am-btn am-btn-block" data-am-modal-close>取消</button>
+    </div>
+  </div>
+  <!-- /拨打电话modal -->
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../../js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="../../js/amazeui.min.js"></script>
+<script src="detail.js"></script>
+</body>
+</html>

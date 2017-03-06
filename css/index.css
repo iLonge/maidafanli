@@ -1,0 +1,139 @@
+
+.top{
+  border-bottom:1px solid #f7f7f7;
+}
+.top-logo{
+  width:80%;
+}
+.top-tel{
+  width:10%;
+  padding-top:5px;
+}
+
+.am-list > li > a{padding:0;}
+#mask1{
+  position: absolute;
+  z-index: 1111;
+  background-color: #000;
+  top: 0;
+  opacity: .75;
+}
+#maskContet1{
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left:0;
+}
+
+.personal-info1{
+  padding:5% 2%;
+  background-color:#ffffff;
+}
+
+.personal-code1{
+	background-color: #fff;
+	padding:10%;
+	border-radius:8px;
+	box-sizing: border-box;
+	vertical-align: middle;
+	border: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+}
+
+.personal-img{
+    width:80px;
+    height:80px;
+}
+
+.personal-code-title1{
+	color:#333;
+	text-align: center;
+}
+
+#scanCode{  
+
+	color:#ddd;
+}
+
+.phone-number{
+	color:#E60827;
+}
+
+.cut-line{
+  border-right:1px solid #999;
+}
+
+.zhye{
+	height:40px;
+	line-height:40px;
+}
+
+i.am-icon-angle-right{color:#999;}
+i.am-icon-angle-right:hover,i.am-icon-angle-right:active{color:#999;}
+
+.list-item img{
+    max-width:24px;
+}
+
+.list-item span{
+	line-height:40px;
+	color:#333333;
+}
+
+.list-item-right{
+  height:40px;
+  line-height: 40px;
+  padding-right:0;
+  text-align: right;
+  color:#333;
+}
+
+.withdrawal-btn{
+  border:1px solid #F37B1D;
+  border-radius:6px;
+  margin-top:4px;
+}
+
+.list-txt{
+  line-height:40px;
+  color:#333333;
+}
+
+.wining,span.fastTrack{line-height:40px;color:#999;}
+
+.scrollContent{
+  position:absolute;
+  top:0;
+  left:0;
+  background-color:rgba(0,0,0,0.7);
+  width:100%;
+  height:46px;;
+  overflow:hidden;
+  color:#fff;
+  line-height:46px;
+}
+
+.bulletin{
+  width:2.5rem;
+  height:2.5rem;
+}
+
+.am-list .listItem{
+  border:none;background-color:rgba(0,0,0,0);
+}
+
+#delet{
+  width:20px;
+  height:20px;
+  margin-top:-5px;
+}
+.leftLine{
+  border-left:1px solid #a9a9a9;
+}
+.money{display:inline-block;width: 2.0rem;height:2.0rem;background:url(../images/personal-icon.png) no-repeat 0 -20px;background-size: cover;}

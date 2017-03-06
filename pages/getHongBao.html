@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    .hongbao-content{
+      border-radius:3%;
+      position:relative;
+      background:transparent;
+    }
+    .hongbao-cintent-head{
+      position:absolute;
+      top:0;
+      left:0;
+    }
+    .hongbao-tittle{
+      color:#999;
+    }
+    .getHongBao-success{
+      position:absolute;
+      top:66%;
+      left:0;
+      color:#ffc107;
+    }
+    /*.tellFriends-btn{
+      width:70%;
+      background-color:#ffc107;
+      border-radius:10px;
+    }
+    .tellFriends-btn:hover{
+      color:#fff;
+    }*/
+  </style>
+  </head>
+  <body>
+    <div class="am-modal am-modal-alert" tabindex="-1" id="apartHongBao">
+      <div class="am-modal-dialog hongbao-content">
+        <img src="../images/hongbao-sel.png" class="am-img-responsive"/>
+        <div class="am-container am-text-center hongbao-cintent-head">
+          <p class="am-text-xxxl am-margin-top-lg am-margin-bottom-xs">12.00<span class="am-text-xs am-padding-left-sm">元</span></p>
+          <span class="am-text-xs hongbao-tittle">魏家凉皮的红包</span>
+        </div>
+        <div class="am-container am-text-center getHongBao-success">
+          <p class="am-text-lg">领取成功</p>
+          <span class="am-text-xs">已存入零钱可通过个人中心查看</span>
+         <!--  <a href="#" class="am-btn am-margin-top-xl am-text-lg am-padding-sm tellFriends-btn">告知好友</a> -->
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/amazeui.min.js"></script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+      $("#apartHongBao").modal();     
+    });
+  </script>
+  </body>
+</html>

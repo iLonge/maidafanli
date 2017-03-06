@@ -1,0 +1,540 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="买单返-消费即返利，单单返红包">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="dropload.css">
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/amazeui.min.js"></script>
+</head>
+
+<body class="no-js">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，平台 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<!-- 顶部 -->
+  <nav class="scrollspy-nav" data-am-scrollspynav="{offsetTop: 45}" data-am-sticky>
+    <header class="am-header am-header-default am-no-layout" style="display:flex;justify-content:center;">
+      <div id="city" style="width:104px;margin-right:0;float:left;">
+        <a href="#" style="width:100%;dispaly:block;">
+          鄂尔多斯<span class="am-icon-caret-down"></span>
+        </a>
+      </div>
+       <div style="width:100%;">
+        <form class="am-form am-form-inline">
+          <div class="am-form-icon">
+            <i class="am-icon-search"></i>
+            <input type="text" class="am-form-field am-round" id="search-keyword" placeholder="搜索关键字"  onclick="window.location.href='searchContent.html'"/> 
+          </div>
+        </form>
+      </div>
+    </header> 
+  </nav>
+
+<!-- 主体 -->
+  <!-- 广告 -->
+  <div data-am-widget="slider" class="am-slider" data-am-slider='{&quot;directionNav&quot;:false}' style="height:160px;">
+      <ul class="am-slides">
+        <li>
+            <img src="../../images/p6611-l.jpg" class="am-img-responsive" data-echo="../../images/p6611-l.jpg" style="height:160px;">
+           
+        </li>
+        <li>
+            <img src="../../images/p9138-l.jpg" class="am-img-responsive"  data-echo="../../images/p9138-l.jpg" style="height:160px;">
+        </li>
+        <li>
+            <a href="detail.html">
+              <img src="../../images/p7933-l.jpg" class="am-img-responsive"  data-echo="../../images/p7933-l.jpg" style="height:160px;">
+            </a>
+        </li>
+      </ul>
+  </div>
+
+  <div class="am-g am-cf am-padding-top-sm">
+    <ul class="kinds am-padding-left-0">
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon meishi"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon move"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon shop"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon fun"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon photo"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon hotel"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon women"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon jiazhuang"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon other"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <dl>
+            <dt>
+              <span class="kindIcon other"></span>
+              <dd class="am-text-center am-text-sm">美食</dd>
+          </dl>  
+        </a>
+      </li>
+      
+
+    </ul>
+  </div>
+
+  <!-- 积分入口 -->
+  <div class="am-g am-cf integralContent">
+    <ul class="am-avg-sm-2 am-text-center">
+      <li class="am-padding-vertical-0 am-text-left am-cf">
+        <a href="#">
+          <ul class="am-avg-sm-2">
+            <li class="activeItem am-cf">
+              <h4 class="am-text-danger am-margin-bottom-0 am-margin-top">
+                兑换商城
+              </h4>
+              <span class="am-text-xs am-margin-vertical-0 activeTitle">爆款商品免费抢</span>
+            </li>
+            <li class="am-text-center"><img src="../../images/new.png"  width="64" height="64"/></li>
+          </ul>
+        </a>
+      </li>
+      <li class="am-padding-vertical-0 am-text-left am-cf">
+        <a href="#">
+          <ul class="am-avg-sm-2">
+            <li class="activeItem am-cf">
+              <h4 class="am-text-danger am-margin-bottom-0 am-margin-top">
+                0元抽大奖
+              </h4>
+              <span class="am-text-xs am-margin-vertical-0 activeTitle">iphone7手机</span>
+            </li>
+            <li class="am-text-center"><img src="../../images/lucky.png"  width="64" height="64"/></li>
+          </ul>
+        </a>
+      </li>
+    </ul>
+    <ul class="am-avg-sm-2 am-text-center">
+      <li class="am-padding-vertical-0 am-text-left am-cf">
+        <a href="#">
+          <ul class="am-avg-sm-2">
+            <li class="activeItem">
+              <h4 class="am-text-danger am-margin-bottom-0 am-margin-top">
+                秒批办卡
+              </h4>
+              <span class="am-text-xs am-margin-vertical-0 activeTitle">买单返用户特享 </span>
+            </li>
+            <li class="am-text-center"><img src="../../images/card.png"  width="64" height="64"/></li>
+          </ul>
+        </a>
+      </li>
+      <li class="am-padding-vertical-0 am-text-left am-cf">
+        <a href="#">
+          <ul class="am-avg-sm-2">
+            <li class="activeItem">
+              <h4 class="am-text-danger am-margin-bottom-0 am-margin-top">
+                免费领券
+              </h4>
+              <span class="am-text-xs am-margin-vertical-0 activeTitle">购物优惠券</span>
+            </li>
+            <li class="am-text-center"><img src="../../images/woucher.png"  width="64" height="64"/></li>
+          </ul>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- /积分入口 -->
+
+<!-- 新店入驻 -->
+<div class="am-g">
+  <div class="am-container">
+    <div data-am-widget="list_news" class="am-list-news am-list-news-default am-no-layout new-store">
+      <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default new-store-content">
+        <h2 >
+            <span class="titlebar">新店入驻</span>
+        </h2>
+        <nav class="am-titlebar-nav">
+            <a href="#" class="am-text-sm">更多 <i class="am-icon-chevron-right"></i></a>
+        </nav>
+      </div>
+      <ul class="am-avg-sm-3 am-thumbnails am-text-center">
+        <li> 
+          <a href="../detail/detail.html">
+            <div style="position:relative;">
+              <img src="../../images/p9138-l.jpg" data-echo="../../images/p9138-l.jpg" class="am-img-responsive new-store-img" />
+              <div class="cover am-text-sm am-text-truncate am-padding-horizontal-sm">和东风科技和法国风格</div>
+            </div>
+            <div>
+              <i class="am-icon-tag am-text-danger"></i>
+              <span class="am-text-danger">8折</span>
+            </div>
+          </a> 
+        </li> 
+        <li>
+          <a href="../detail/detail.html">
+            <div style="position:relative;">
+              <img src="../../images/p9138-l.jpg" data-echo="../../images/p9138-l.jpg" class="am-img-responsive new-store-img" />
+              <div class="cover am-text-sm am-text-truncate am-padding-horizontal-sm">和东风科技和法国风格</div>
+            </div>
+            <div>
+              <i class="am-icon-tag am-text-danger"></i>
+              <span class="am-text-danger">8折</span>
+            </div>
+          </a> 
+        </li>
+        <li>
+          <a href="../detail/detail.html">
+            <div style="position:relative;">
+              <img src="../../images/p9138-l.jpg" data-echo="../../images/p9138-l.jpg" class="am-img-responsive new-store-img" />
+              <div class="cover am-text-sm am-text-truncate am-padding-horizontal-sm">和东风科技和法国风格</div>
+            </div>
+            <div>
+              <i class="am-icon-tag am-text-danger"></i>
+              <span class="am-text-danger">8折</span>
+            </div>
+          </a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 人气商家 -->
+<div class="am-list-news-default am-no-layout am-margin-bottom-0">
+  <div class="am-container">
+    <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default new-store-content">
+      <h2>
+        <span class="titlebar">人气商家</span>
+      </h2>
+      <nav class="am-titlebar-nav">
+        <a href="#" class="am-text-sm">更多 <i class="am-icon-chevron-right"></i></a>
+      </nav>
+    </div>
+
+    <ul class="am-list am-margin-top-0 hotLists">
+      <li>
+        <a class="item opacity" href="#1">
+          <div class="img_placeholder">
+            <img class="am-radius" src="../../images/p7933.jpg" alt="">
+          </div>
+          <div class="am-text-truncate products_title">
+            <span>北屯老地方火锅</span>
+            <span class="am-text-left am-text-xs am-text-wrap products_address">
+              陕西省西安市碑林区长安南路108号
+            </span>
+            <span class="am-text-xs am-text-danger products_fan">
+              返<strong class="am-text-lg am-padding-horizontal-xs">25</strong>%
+            </span>
+          </div>
+          <div class="am-text-right" style="position:relative;display:flex;width:20%;;height:7.0rem;color:#999;">
+            <span class="am-text-xs products_distance">25000 km</span>
+            <span class="am-text-xs products_hot"><i class="am-icon-fire"></i>人气20007</span>
+          </div>
+        </a>
+      </li> 
+
+      <li>
+        <a class="item opacity" href="#1">
+          <div class="img_placeholder">
+            <img class="am-radius" src="../../images/p7933.jpg" alt="">
+          </div>
+          <div class="am-text-truncate products_title">
+            <span>北屯老地方火锅</span>
+            <span class="am-text-left am-text-xs am-text-wrap products_address">
+              陕西省西安市碑林区长安南路108号
+            </span>
+            <span class="am-text-xs am-text-danger products_fan">
+              返<strong class="am-text-lg am-padding-horizontal-xs">25</strong>%
+            </span>
+          </div>
+          <div class="am-text-right" style="position:relative;display:flex;width:20%;;height:7.0rem;color:#999;">
+            <span class="am-text-xs products_distance">25000 km</span>
+            <span class="am-text-xs products_hot"><i class="am-icon-fire"></i>人气20007</span>
+          </div>
+        </a>
+      </li> 
+
+      <li>
+        <a class="item opacity" href="#1">
+          <div class="img_placeholder">
+            <img class="am-radius" src="" alt="">
+          </div>
+          <div class="am-text-truncate products_title">
+            <span>北屯老地方火锅</span>
+            <span class="am-text-left am-text-xs am-text-wrap products_address">
+              陕西省西安市碑林区长安南路108号
+            </span>
+            <span class="am-text-xs am-text-danger products_fan">
+              返<strong class="am-text-lg am-padding-horizontal-xs">25</strong>%
+            </span>
+          </div>
+          <div class="am-text-right" style="position:relative;display:flex;width:20%;;height:7.0rem;color:#999;">
+            <span class="am-text-xs products_distance">25000 km</span>
+            <span class="am-text-xs products_hot"><i class="am-icon-fire"></i>人气20007</span>
+          </div>
+        </a>
+      </li> 
+    </ul>
+  </div>
+  <!-- 更多 -->
+  <div class="am-container am-padding-sm am-text-center am-cf">
+    <span id="tj_more">加载更多</span> <i class="am-icon-angle-right"></i>
+  </div>
+</div>
+<!-- /人气商家 -->
+
+<!-- 推荐商家 -->
+<div class="am-list-news-default am-no-layout am-margin-bottom-0">
+  <div class="am-container">
+    <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default new-store-content">
+      <h2>
+          <span class="titlebar">推荐商家</span>
+      </h2>
+      <nav class="am-titlebar-nav">
+          <a href="#" class="am-text-sm">更多 <i class="am-icon-chevron-right"></i></a>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="lists">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--底部 -->
+ 
+ <div data-am-widget="navbar" class="am-navbar am-text-center">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+      <li>
+        <a href="../home/home.html" style="color:#E60827;">
+          <span class="am-icon-home"></span>
+          <span class="am-navbar-label">首页</span>
+        </a>
+      </li>
+     
+      <li>
+        <a href="../nearbyShops/nearbyShops.html">
+          <span class="am-icon-compass"></span>
+          <span class="am-navbar-label">附近</span>
+        </a>
+      </li>
+      <li>
+        <a href="../../index.html">
+          <span class="am-icon-user"></span>
+          <span class="am-navbar-label">个人中心</span>
+        </a>
+      </li>
+       <li>
+        <a href="../businessRecommend/businessRecommend.html">
+          <span class="am-icon-bookmark"></span>
+          <span class="am-navbar-label">商家推荐</span>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+<script src="../../js/echo.js"></script>
+<script src="../../js/dropload.min.js"></script>
+<script type="text/javascript">
+  /*
+  * 拉下加载
+  */
+  $(function(){
+    var itemIndex = 0;
+    var tab1LoadEnd = false;
+    var tab2LoadEnd = false;
+    
+    var counter = 0;
+    // 每页展示4个
+    var num = 4;
+    var pageStart = 0,pageEnd = 0;
+
+    // dropload
+    var dropload = $('.content').dropload({
+        scrollArea : window,
+        loadDownFn : function(me){
+          $.ajax({
+              type: 'GET',
+              url: 'json/more.json',
+              dataType: 'json',
+              success: function(data){
+                  console.log(data);
+                  var result = '';
+                  counter++;
+                  pageEnd = num * counter;
+                  pageStart = pageEnd - num;
+
+                  if(pageStart <= data.lists.length){
+                      for(var i = pageStart; i < pageEnd; i++){
+
+                          result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+                                          +'<div class="img_placeholder">' 
+                                            +'<img class="am-radius" src="'+data.lists[i].pic+'" alt="">'
+                                          +'</div>'
+                                          +'<div class="am-text-truncate products_title">'
+                                            +'<span>'+data.lists[i].title+'</span>'
+                                            +'<span class="am-text-left am-text-xs am-text-wrap products_address">'+data.lists[i].addr+'</span>'
+                                            +'<span class="am-text-xs am-text-danger products_fan">'+'返'+'<strong class="am-text-lg am-padding-horizontal-xs">'+'25'+'</strong>'+'%'+'</span>'
+                                          +'</div>'
+                                          +'<div class="am-text-right products_right">'
+                                            +'<span class="am-text-xs products_distance">'+data.lists[i].distance+' km'+'</span>'
+                                            +'<span class="am-text-xs products_hot">'+'<i class="am-icon-fire"></i>'+'人气'+data.lists[i].hot+'</span>'
+                                          +'</div>'
+                                      +'</a>';
+
+                          if((i + 1) >= data.lists.length){
+                              // 数据加载完
+                              tab1LoadEnd = true;
+                              // 锁定
+                              me.lock();
+                              // 无数据
+                              me.noData();
+                              break;
+                          }
+                      }
+                      // 为了测试，延迟1秒加载
+                      setTimeout(function(){
+                          $('.lists').eq(itemIndex).append(result);
+                          // 每次数据加载完，必须重置
+                          me.resetload();
+                      },1000);
+                  }
+              },
+              error: function(xhr, type){
+                  alert('Ajax error!');
+                  // 即使加载出错，也得重置
+                  me.resetload();
+              }
+          });
+        }
+    });
+
+    /* 加载更多 */
+   /* $('#tj_more').click(function(){
+      var lilength = $(".hotLists>li").length;
+      var URL = "http://fanli.ree9.com/Index/all?len="+lilength;
+      $.get(URL,function(res){
+
+        var result = "";
+        if(lilength=<res.length){
+
+
+        }
+          for(var i=0;i<res.length;i++){
+            result += '<li class="am-cf">'
+                        +'<a href="#" class="all-stores">'
+                          +'<div class="am-fl am-text-center img_placeholder">'
+                            +'<img src="'+res[i].img+'" class="am-radius" width=100% height=100% data-echo="'+res[i].img+'"/>'
+                          +'</div>'
+                          +'<div class="products_info am-fr">'
+                            +'<div class="am-text-truncate">'
+                              +'<span class="am-text-truncate am-fl products_name">'+ res[i].title +'</span>'
+                              +'<span class="am-text-xs am-fr">'+ res[i].distance +'</span>'
+                            +'</div>'
+                            +'<div class="am-text-left am-text-xs am-text-wrap products_address"><i class="am-icon-paper-plane"></i>'+ res[i].address+'</div>'
+                            +'<div class="products_hot am-text-sm">'
+                              +'<span class="am-text-danger am-text-xs am-fl">'+'返'+'<strong class="am-text-lg">'+ +'%'+'</span>'
+                              +'<span class="am-text-xs am-fr">'
+                                 +'<i class="am-icon-fire am-text-danger"></i>'+'人气'+ res[i].renqi
+                              +'</span>'
+                            +'</div>'
+                          +'</div>'
+                        +'</a>'
+                      +'</li>';
+          }
+      });
+    });*/
+
+/*
+* img懒加载
+*/
+    echo.init({
+      offset: 100,
+      throttle: 250,
+      unload: false,
+    });
+});
+</script>
+</body>
+</html>

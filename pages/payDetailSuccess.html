@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]--> 
+
+  <style type="text/css">
+    .bottom-line{
+      border-bottom: 1px solid #eee;
+    }
+
+    .pay-ok{
+      width:100%;
+      height:70px;
+      background: url(../images/icon-pay-ok.png) no-repeat transparent;
+      background-size: 70px;
+      background-position:50%;
+    }
+
+    .payDefault{
+      color:#999; 
+    }
+    .orderDetail{border-top: 1px solid #eee;line-height: 3.0;}
+    .orderDetailContent{display:none;}
+    .recommendText:hover{color:#F37B1D;}
+    .am-list > li > a{background-color: #f7f7f7;padding:0;}
+    .am-list > li > a:hover{color:#F37B1D;}
+  </style>
+</head>
+<body>
+<!-- 头部 -->
+  <header class="am-header bottom-line" data-am-widget="header">
+    <div class="am-container am-text-center">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl" style="color:#333;">
+      </a>
+      <span class="am-text-lg" style="margin-left:-15px;">支付订单成功</span>
+    </div> 
+  </header>
+
+<!--内容-->
+  <div class="am-g am-padding-vertical am-text-center">
+    <!-- <i class="am-icon-check-circle am-text-xl am-text-success"></i>
+    <span class="am-text-lg am-padding-sm">支付成功！</span><br>
+    <span class="am-text-sm am-text-danger">返现<i class="am-icon-rmb"></i>30</span> -->
+    <p class="pay-ok"></p>
+    <div>
+      <span class="am-text-danger pay-ok-text">
+        <span>获得返现 <span>30</span> 元</span>
+      </span>
+    </div>
+    <div class="am-text-xl">
+      <i class="am-icon-rmb"></i>
+      <span>500</span>
+    </div>
+  </div>
+  <div class="am-g am-margin-top-sm">
+    <div class="am-container am-padding-sm am-text-truncate">
+      <span class="am-padding-sm payDefault">收款商家:</span><span class="am-padding-left-lg">云数金服信息有限公司</span><br>
+      <span class="am-padding-sm payDefault">下单时间:</span><span class="am-padding-left-lg am-text-truncate">2017-02-07 15:00:00</span>
+    </div>
+    <div class="am-text-sm am-text-center am-text-danger orderDetail">
+      <span id="orderDetail">订单详情 <i class="am-icon-angle-down"></i></span>
+    </div>
+  </div>
+
+  <div class="am-g am-margin-top-sm orderDetailContent">
+    <div class="am-container am-padding-sm">
+      <!-- <span class="am-padding-sm">商户名称:</span><span class="am-padding-lg">北城老火锅</span><br>
+      <span class="am-padding-sm">消费金额:</span><span class="am-padding-lg"><i class="am-icon-rmb"></i>120</span><br>
+      <span class="am-padding-sm">不参与返现:</span><span class="am-padding-sm"><i class="am-icon-rmb"></i>12.15</span><br>
+      <span class="am-padding-sm">支付金额:</span><span class="am-padding-lg"><i class="am-icon-rmb"></i>120</span><br>
+      <span class="am-padding-sm">获得返现:</span><span class="am-padding-lg"><i class="am-icon-rmb"></i>12.0</span><br>
+      <span class="am-padding-sm">下单时间:</span><span class="am-padding-lg">2016-10-01 07:58:59</span> -->
+
+      <span class="am-padding-sm payDefault">订单编号:</span><span class="am-padding-lg">123456789</span><br>
+      <span class="am-padding-sm payDefault">实付金额:</span><span class="am-text-warning am-padding-lg"><i class="am-icon-rmb"></i> 120</span><br>
+      <span class="am-padding-sm payDefault">不参与返现:</span><span class="am-padding-sm"><i class="am-icon-rmb"></i> 12.15</span><br>
+      <span class="am-padding-sm payDefault">支付方式:</span><span class="am-padding-lg">微信 + 余额</span><br>
+    </div>
+  </div>
+<!-- btn -->
+  <div class="am-container am-padding-vertical-lg">  
+    <button class="am-btn am-btn-danger am-btn-block am-radius">去评价</button>
+  </div> 
+  <div class="am-container am-margin-top">
+    <ul class="am-list am-text-lg">
+      <li class="am-text-center"><a href="#" class="am-text-warning">商家给你返利</a></li><!-- 个人中心 -->
+      <li class="am-text-center"><a href="#" class="am-text-warning">推荐好友消费</a></li><!-- 推广赚钱 -->
+    </ul>
+  </div>
+  <!-- <div class="am-navbar am-text-warning am-text-center am-text-sm am-cf">
+    dfghjksdh
+  </div> -->
+  <script type="text/javascript">
+    window.onload=function(){
+      var orderDetail = document.getElementById("orderDetail");
+      var orderDetailContent = document.getElementsByClassName("orderDetailContent")[0];
+      orderDetail.onclick=function(){
+        this.style.display="none";
+        orderDetailContent.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

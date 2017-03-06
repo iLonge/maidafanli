@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    .am-modal-dialog{
+      border-radius:3%;
+      position:relative;
+      background:transparent;
+    }
+    .apartHongBao-content{
+      position:absolute;
+      width:100%;
+      height:100%;
+      z-index:1111;
+      top:0;
+      left:0;
+    }
+    .business-img{
+      position:absolute;
+      top: 10%;
+      left: 51%;
+      transform: translate(-50%);
+    }
+    .business-content{
+      top:25%;
+      position:absolute;
+    }
+    .return-monery{
+      color:#e2b314;
+    }
+    .apart-box{
+      bottom:12%;
+      height:25%;
+      position:absolute;
+    }
+    
+    .apart-btn{
+      width:70px;
+      height:70px;
+      line-height:70px;
+      background-color:#e2b314;
+    }
+    .apart-btn:hover{
+      background-color:#e2b314;
+      animation: myfirst 0.3s;
+      -webkit-animation:myfirst 1s;
+    }
+
+    @keyframes myfirst {
+      from  {
+          transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+      }
+      to  {
+          transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+      }
+    }
+
+    #product_hot_bottom>ul>li img:hover{
+      animation: myfirst 0.3s;
+      -webkit-animation:myfirst 0.3s;
+    }
+
+    .apart-txt{
+      color:#E60827;
+    }
+    a,
+    a:hover{
+      color:#fff;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="am-modal am-modal-alert" tabindex="-1" id="apartHongBao">
+      <div class="am-modal-dialog">
+        <img src="../images/hongbao-nol.png" class="am-img-responsive"/>
+        <div class="am-text-center am-horizontal-align-middle apartHongBao-content" style="">
+          <img src="../images/javascript.jpg" class="am-circle am-img-responsive business-img" width=20%>
+          <div class="am-container business-content">
+             <a href="#" class="am=text-center am-text-lg">
+              魏家凉皮<br>
+              <span class="am-text-xs">发了一个红包</span>  
+             </a>
+             <p class="am-text-lg am-margin-top-lg am-text-warning return-monery">
+              <span>消费即返利<br>单单返红包</span>
+             </p>
+          </div>
+          <div class="am-container am-text-center apart-box am-vertical-align">
+           <a href="##" class="am-icon-btn am-text-danger am-round am-vertical-align-middle apart-btn"><span class="am-text-xl apart-txt">拆</span></a><br>
+           <a href="##" class="am-text-xs">买单返现红包</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/amazeui.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#apartHongBao").modal();
+    });
+  </script>
+  </body>
+</html>

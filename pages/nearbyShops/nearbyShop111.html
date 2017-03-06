@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js">
+<head> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="description" content="买单返-消费即返利，单单返红包"/>
+  <meta name="keywords" content="maidanfan,买单返"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit"/>
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png"/>
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <link rel="stylesheet" href="../../css/amazeui.css"/>
+  <link rel="stylesheet" href="nearbyShops.css"/>
+  <style type="text/css">
+    .allKind{
+      width: 40%;
+      height:50%;
+      z-index: 1111;
+      position: fixed;
+      top: 95px;
+      left:0;
+      padding-left:15px;
+      background-color: #fff;
+      margin-top: -1px;
+      overflow: hidden;
+      overflow-y: scroll;
+      margin-left:0;
+      padding-left:0;
+      display:none;
+    }
+
+    .all-city{
+      border: 1px solid #ddd;
+      border-bottom: 0;
+      border-top: 0
+    }
+
+    .allKind li{
+      height:30px;
+      line-height: 1.6;
+      text-align:left;
+      padding-left:2.0rem;
+    }
+
+    .two{
+        width: 100%;
+      z-index: 11112;
+      position: absolute;
+      top: 95px;
+      background-color: #fff;
+      display:block;
+      margin-top: -1px;
+    }
+
+    .two li{
+      width:100%;
+      height:30px;
+      line-height: 1.6;
+      text-align:left;
+    }
+
+  </style>
+</head> 
+<body class="no-js"> 
+<!-- 头部 -->
+  <header class="am-header am-text-center am-vertical-align">
+      <span class="am-text-lg am-vertical-align-middle">附近商家</span>
+  </header>
+  <!--分类导航 -->
+  <nav>
+    <ul class="am-avg-sm-3 am-text-center am-text-sm am-padding-sm" style="background-color:#fff;">
+      <li class="one">
+        <span>全部分类</span>
+        <i class="am-icon-sort-down am-margin-left-xs"></i>
+        <ul class="allKind am-list">
+          <li>
+            <img src="../../images/icon-meishi.png" width=18 height=18 class="am-vertical-align-middle"/><span class="am-text-middle am-padding-left-sm">美食</span>
+          </li>
+          <li>
+            <img src="../../images/icon-shop.png" width=18 height=18 class="am-vertical-align-middle"/><span class="am-text-middle am-padding-left-sm">购物</span>
+          </li>
+          <li>
+            <img src="../../images/icon-fun.png" width=18 height=18 class="am-vertical-align-middle"/><span class="am-text-middle am-padding-left-sm">娱乐</span>
+          </li>
+        </ul>
+      </li>
+      <li class="one all-city">
+        <span>全城</span>
+        <i class="am-icon-sort-down am-margin-left-xs"></i>
+        <ul class="two am-list">
+          <li>20 km</li>
+          <li>50 km</li>
+          <li>100 km</li>
+        </ul>
+      </li>
+      <li class="one">
+        <span>智能排序</span>
+        <i class="am-icon-sort-down am-margin-left-xs"></i>
+        <ul class="two am-list">
+          <li>离我近</li>
+          <li>返现多</li>
+          <li>人气王</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+  <script src="../../js/jquery.min.js"></script>  
+  <script src="../../js/amazeui.min.js"></script>
+  <script type="text/javascript">
+    
+  </script>
+</body>
+</html>

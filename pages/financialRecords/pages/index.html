@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="confirm.js"></script>
+	<script type="text/javascript" src="compage.js"></script>
+</head>
+<body onselectstart="return false">
+
+	<div class="pagebox">1111</div>
+	</br>
+	</br>
+	</br>
+	</br>
+	<div class="pagebox2"></div>
+	</br>
+	</br>
+	</br>
+	</br>
+	<script type="text/javascript">
+		$(function(){
+			$('.pagebox').initPage({totalBranch:15,nowPage:5,totalPage:12});//,totalPage:3
+			$('.pagebox2').initPage({totalPage:4});//,totalPage:3
+		})
+	</script>
+</body>
+</html>

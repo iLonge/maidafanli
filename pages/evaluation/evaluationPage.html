@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  --> 
+
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <link rel="stylesheet" href="evaluation.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- 头部 -->
+  <header class="am-header" data-am-widget="header">
+    <div class="am-container am-text-center">
+      <a href="#" onclick="history.back(-1);" id="goBack" class="am-icon-angle-left am-text-xl am-fl" data-am-modal="{target: '#back'}" style="color:#333;">
+      </a>
+      <span class="am-text-lg" style="margin-left:-15px;">评价</span>
+      <span class="am-fr am-text-danger" id="release">发布</span>
+    </div>
+  </header>
+  <!-- 客户评价 -->
+  <div class="am-container am-text-center am-padding-vertical-sm">
+    <span class="star1 am-icon-star am-padding-horizontal-xs am-text-xxl" value="1"></span>
+    <span class="star2 am-icon-star am-padding-horizontal-xs am-text-xxl" value="2"></span>
+    <span class="star3 am-icon-star am-padding-horizontal-xs am-text-xxl" value="3"></span>
+    <span class="star4 am-icon-star am-padding-horizontal-xs am-text-xxl" value="4"></span>
+    <span class="star5 am-icon-star am-padding-horizontal-xs am-text-xxl" value="5"></span><br>
+    <input type="text" name="" id="getNumber" style="display:none;"/>
+    <span class="am-text-sm star-txt">客户评价</span>
+  </div> 
+  <div class="am-g am-margin-top-sm">
+    <div class="am-container am-padding-sm">
+      <ul class="am-text-left am-text-xs server-evaluation am-fl">
+        <li class="am-fl am-margin-right-sm">
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn current" value="服务好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服务好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服务好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服务好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服务fnfgd好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服务好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服务fgdhfdf好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服fdnfgn务好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服务nfgng好"/>
+          <input type="button" class="am-text-xs am-padding-xs am-margin-top-xs am-radius am-btn" value="服nfgngf务好"/>
+          <input type="text" value="" id="getContent" style="display:none;"/>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- /客户评价 -->
+
+  <!--输入内容 --> 
+  <div class="am-g inputContent">
+    <div class="am-container">
+      <form class="am-form" data-am-validator>
+      <textarea rows="5" id="area" cols="10" minlength="5" required wrap="hard" placeholder="请输入评价内容" style="resize:none;border:none;box-shadow:none;"></textarea>
+      </form>
+    </div>
+  </div>
+  <!-- /输入内容 --> 
+
+  <!-- 图片上传 -->
+  <div class="am-container am-padding-vertical-xs" style="background-color:#fff;">
+    <div class="control-field_w clearfix">
+      <div id="image_preview_box" class="clearfix" style="float: left;">
+          <div style="width: 60px;position: relative;height: 60px;float: left;margin-top: 8px;">
+              <div class="icon-addpic addpic"></div>
+              <input type="file" id="inputImage" class="inputImage" multiple>
+          </div>
+      </div>
+    </div>
+    <div id="image-list-data" style="display: none"></div>
+  </div>
+  <!-- /图片上传 -->
+  <!-- btn -->
+  <div class="am-container am-margin-top-lg">
+    <button class="am-btn am-btn-danger am-btn-block am-radius">完成</button>
+  </div>
+
+  <!-- 返回modal框 -->
+  <div class="am-modal am-modal-confirm" tabindex="-1" id="back">
+    <div class="am-modal-dialog am-padding-lg">
+      <p class="am-text-left"> <strong>提示</strong></p>
+      <div class="am-cf am-text-left">
+        下次点评
+      </div>
+      <div class="am-margin-top am-cf">
+        <span class="am-text-danger am-fr" id="cancel" data-am-modal-cancel>取消</span>
+        <span class="am-margin-right-lg am-fr" id="confirm" data-am-modal-confirm>确定</span>
+      </div>
+    </div>
+  </div>
+  <!-- /返回modal框 -->
+
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/amazeui.min.js"></script>
+  <script src="evaluation.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      /**
+       * 图片上传
+       */
+      var uploadImg = new UploadImg({
+        imgInputId: "inputImage",           // 图片选择框ID
+        imgName: "base64ImgList",           // 后台接收图片名称
+        imgSize: 600,                       // 压缩图片大小
+        maxQty:9,
+        previewDivId: "image_preview_box",  // 图片预览div的ID
+        base64DataId: "image-list-data",    // 存放图片base64数据隐藏域ID
+        addCallback:function(input){
+          console.info('添加图片成功','数据框ID='+input.id);
+        },
+        delCallback:function(id){
+          console.info('删除图片成功','数据ID='+id);
+        },
+        fullCallback:function(currentQty,maxQty){
+         alert("单次最多上传"+ maxQty +"张图片")
+        }
+      });
+      
+      $('#rateForm').submit(function(e){
+        e.preventDefault(e);
+        var inputList = $('#image-list-data input');
+        $.each(inputList,function(index,input){
+          console.info(input.value);
+        })
+      });
+
+      $("#goBack").on("click",function(){
+        var textlen = $("#area").val().length;alert(textlen)
+        if(textlen < 9){
+          $("#back").modal('close');
+        }else{
+          $("#back").modal('open');
+        }
+      });
+      
+      // modal
+      $("#cancel").on("click",function(){
+        $("#back").modal('close');
+      });
+
+      $("#confirm").on("click",function(){
+        $("#back").modal('close');
+        window.history.back(-1);
+      });
+    });
+  </script>
+</body>
+</html>

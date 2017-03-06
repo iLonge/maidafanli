@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+ 
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <link rel="stylesheet" href="businessRecommend.css">
+</head>
+<body class="no-js">  
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<!-- 顶部 -->
+  <div class="am-g am-padding-xs border-bottom">
+    <div class="am-u-sm-12 am-padding-right-0">
+      <div class="am-u-sm-5 am-fl">
+        <img src="../../images/logo.png" class="am-img-responsive am-fl topImg">
+      </div>
+       <div class="am-u-sm-7 am-vertical-align am-padding-right-0">
+        <span class="am-text-danger am-text-lg am-padding-left-xs am-fr phone-number">4000-998-433</span>
+        <img src="../../images/icon-tel.png" class="am-img-responsive am-fr am-text-middle icon-tel">
+       </div>
+    </div>
+  </div>
+
+<!-- 主体内容 -->
+  <div class="am-g am-padding-lg">
+  <!--步骤-->
+    <div class="am-container am-center step">
+      <ul class="am-avg-sm-3">
+        <li class="step1">
+          <div class="am-container am-round">
+            <div class="am-text-center am-text-lg am-round">1</div>
+          </div>
+        </li>
+        <li class="step2">
+          <div class="am-container am-round">
+            <div class="step2 am-round am-text-center am-text-lg">2</div>
+          </div>
+        </li>
+        <li class="step3">
+          <div class="am-container am-round">
+            <div class="step3 am-text-lg am-text-center am-round"><i class="am-icon-check"></i></div>
+          </div>
+        </li>
+        <div class="am-vertical-align-middle stepBar">  
+        </div>
+        <div class="progress1 am-progress-bar am-progress-bar-success"></div>
+        <div class="progress2 am-progress-bar"></div>
+      </ul>
+    </div>
+  <!--这是扫码内容-->
+    <div class="scanCode">
+      <div class="am-container am-text-center am-padding-sm">
+        <div class="am-text-lg am-margin-vertical-sm">商家扫描二维码</div>
+        <img src="../../images/personal-code.png">
+        <p>扫一扫，开始赚钱</p>
+      </div>
+      <div class="am-container am-text-center">
+        <span class="am-text-sm"> 
+          确认让商家扫描你的二维码，成为你的粉丝后,该商家通过平台的营业额，你将能得到返利
+        </span>
+      </div>
+      <div class="am-container am-text-center am-margin-vertical-lg">
+        <button class="nextStep am-btn am-btn-block am-padding-vertical-sm am-radius am-btn-danger">下一步</button>
+      </div>
+    </div>
+  </div>
+<!--商家资料填写内容-->
+  <div class="businessInformation">
+    <div class="am-g am-padding-lg am-text-center">
+      <span class="am-text-lg">商家填写资料</span>
+    </div>
+ 
+    <div class="am-g">
+      <div class="am-container">
+        <form class="am-form">
+          <div class="form-group am-text-sm addressChoose">   
+            <span class="am-padding-xs">选择区域</span>
+            <div class="am-dropdown left">
+              <span class="am-text-sm am-dropdown-toggle chooseProvince">
+                <span id="province">选择省</span>
+                <i class="am-icon-caret-down am-margin-left-xs"></i>
+              </span>
+              <ul class="am-dropdown-content" id="provinceList">
+                <li class="am-dropdown-header">--省份--</li>
+                <li><a href="#">北京</a></li>
+                <li><a href="#">上海</a></li>
+                <li><a href="#">陕西省</a></li>
+                <li><a href="#">天津</a></li>
+                <li><a href="#">广东省</a></li>
+              </ul>
+            </div>
+            <div class="am-dropdown am-margin-left">
+              <span class="am-dropdown-toggle chooseCity">
+                <span id="city">选择市/区</span>
+                <i class="am-icon-caret-down am-margin-left-xs"></i>
+              </span>
+              <ul class="am-dropdown-content" id="cityList">
+                <li class="am-dropdown-header">--市/区--</li>
+                <li><a href="#">碑林区</a></li>
+                <li><a href="#">东城区</a></li>
+                <li><a href="#">雁塔区</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="form-group am-text-sm am-margin-top-sm businessItem">
+            <label class="am-padding-xs">商家店名</label>
+            <input type="text" placeholder="请输入商家店名" class="am-text-left am-text-xs"/>
+          </div>
+
+          <div class="form-group am-text-sm am-margin-top-sm businessItem">
+            <label class="am-padding-xs">商家地址</label>
+            <input type="text" placeholder="请输入商家地址" class="am-text-left am-text-xs"/>
+          </div>
+          <div class="form-group am-text-sm am-margin-top-sm businessItem">
+            <label class="am-padding-xs">商家姓名</label>
+            <input type="text" placeholder="请输入商家姓名" class="am-text-left am-text-xs"/>
+          </div>
+          <div class="form-group am-text-sm am-margin-top-sm businessItem">
+            <label class="am-padding-xs">商家电话</label>
+            <input type="text" placeholder="请输入商家电话" class="am-text-left am-text-xs"/>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="am-container am-text-center am-margin-vertical-lg am-padding-lg">
+      <button class="finished-btn am-btn am-btn-block am-btn-danger am-radius">完成</button>
+    </div>
+  </div>
+
+
+<!--恭喜赚钱-->
+  <div class="makeMonery am-container">
+    <div class="am-g am-text-center am-padding-lg">
+      <span class="am-text-lg">恭喜您！可以开始赚钱了</span>
+    </div>
+  </div>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/amazeui.min.js"></script>
+<script src="businessRecommend.js"></script>
+<!--<![endif]-->
+</body>
+</html>

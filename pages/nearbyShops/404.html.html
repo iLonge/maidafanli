@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="description" content="买单返-消费即返利，单单返红包"/>
+  <meta name="keywords" content="maidanfan,买单返"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
+  <title>买单返</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit"/>
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../../i/favicon.png"/>
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="../../css/amazeui.css"/>
+  <link rel="stylesheet" href="nearbyShops.css"/>
+  <style type="text/css">
+    span{
+          display: inline-block;
+          margin: 5px;
+          padding: 20px;
+          position: relative;
+        }
+    span i[class*="icono"]{
+        color: #c3c3c3;
+        transition: all 0.2s;
+    }
+
+    [class*="iconoo-"], [class*="iconoo-"] * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .iconoo-smile, .iconoo-frown, .iconoo-meh {
+        border-radius: 50%;
+        border: 2px solid;
+        height: 1.5em;
+        width: 1.5em;
+      }
+
+
+    [class*="iconoo-"] {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        color: #ddd;
+        font-size: 10rem;
+        font-style: normal;
+        text-align: left;
+        text-indent: -9999px;
+        direction: ltr;
+    }
+
+    .iconoo-smile:before, .iconoo-frown:before, .iconoo-meh:before {
+        border-radius: 50%;
+        -webkit-box-shadow: 0.5em 0 0 0, 0 0 0 1em inset;
+        box-shadow: 0.5em 0 0 0, 0 0 0 1em inset;
+        height: 0.2em;
+        width: 0.2em;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        -webkit-transform: translate(-0.25em, 0.35em);
+        -ms-transform: translate(-0.25em, 0.35em);
+        transform: translate(-0.25em, 0.35em);
+    }
+
+    [class*="iconoo-"]:before, [class*="iconoo-"]:after {
+        content: '';
+        pointer-events: none;
+    }
+
+    [class*="iconoo-"]:before, [class*="iconoo-"]:after {
+        content: '';
+        pointer-events: none;
+    }
+    .iconoo-frown:after {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        -webkit-transform-origin: center 85%;
+        -ms-transform-origin: center 85%;
+        transform-origin: center 85%;
+    }
+
+    .iconoo-smile:after, .iconoo-frown:after, .iconoo-meh:after {
+        border-radius: 50%;
+        border: 2px solid;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        height: 0.8em;
+        width: 0.8em;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+  </style>
+</head>
+<body class="no-js">
+<!-- 头部 -->
+  <!-- <header class="am-header am-text-center am-vertical-align">
+    <span class="am-text-lg am-vertical-align-middle">附近商家</span>
+  </header> -->
+  <!-- 404 -->
+  <div class="am-container errContent">
+    <div class="am-text-center am-margin-top-xl">
+      <span><i class="iconoo-frown"></i></span>
+      <p class="err-txt">亲，页面走丢了...</p>
+    </div>
+  </div>  
+<!--底部 -->
+  <div data-am-widget="navbar" class="am-navbar am-cf am-no-layout">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+      <li>
+        <a href="index.html">
+          <span class="am-icon-home"></span>
+          <span class="am-navbar-label">首页</span>
+        </a>
+      </li>
+     
+      <li>
+        <a href="###">
+          <span class="am-icon-compass"></span>
+          <span class="am-navbar-label">附近</span>
+        </a>
+      </li>
+      <li>
+        <a href="personalCenter.html">
+          <span class="am-icon-user"></span>
+          <span class="am-navbar-label">个人中心</span>
+        </a>
+      </li>
+       <li>
+        <a href="businessRecommend.html">
+          <span class="am-icon-bookmark"></span>
+          <span class="am-navbar-label">商家推荐</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+  <script src="../../js/jquery.min.js"></script>  
+  <script src="../../js/amazeui.min.js"></script>
+  <script src="../../js/echo.js"></script>
+  <script src="nearbyShops.js"></script>
+</body>
+</html>

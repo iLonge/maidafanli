@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的分页</title>
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <a href="#">hell world</a>
+    <span>dgdf</span>
+    <div></div>
+    <i></i>
+<script type="text/javascript">
+    $.extend({
+        date:function(){
+            var now = new Date(),y=now.getFullYear(),m=now.getMonth()+1,d=now.getDate(),n=now.getHours(),min=now.getMinutes(),s=now.getSeconds(),
+                time=y+'-'+m+'-'+d+' '+n+':'+min+':'+s;
+                window.document.write(time);
+        }
+    });
+    $.date();
+    $.fn.changeColor=function(){
+        this.css("color","#e4393c");
+        return this.each(function(){
+             $(this).append(' ' + $(this).attr('href'));
+        });
+    }
+    $('span').changeColor();
+</script>
+</body>
+</html>
+
+

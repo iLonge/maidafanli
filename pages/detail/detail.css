@@ -1,0 +1,111 @@
+.header-icon{
+  position:absolute;
+  top:10px;
+  color:#fff;
+}
+
+.header-icon .am-icon-btn {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: .5;
+  filter: alpha(opacity=75);
+  color: #fff;
+}
+
+.collected{
+  display:none;
+}
+
+.collected-success{
+  position: absolute;
+  right:5px;
+  top:30px;
+}
+
+.merchants-img{
+  position: relative;
+}
+
+.businessDes{
+  color:#999;
+}
+
+.rmbIcon{
+  display: inline-block;
+  color:#fff;
+  width:12px;
+  height:12px;
+  line-height: 12px;
+  border-radius: 50%;
+  background-color:#999;
+}
+
+.return{
+  margin-top:0;
+  border-top:1px solid #fafafa;
+  background-color:#fff;
+}
+
+.album{
+  position:absolute;
+  right:8%;
+  top:85%;
+  padding:2px 5px;
+  background-color:#000;
+  opacity: .5; 
+  color:#fff;
+}
+
+.des-txt{
+  position:absolute;
+  top:80%;
+  color:#fff;
+}
+
+.am-list-news-more{
+  color:#333;
+}
+
+.am-icon-star{
+  color:#e8e8e8;
+}
+
+.starColor{
+  color:yellow;
+}
+
+#mask{
+  position: absolute;
+  z-index: 1111;
+  background-color: #000;
+  top: 0;
+  opacity: .75;
+}
+#maskContet{
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  padding-left: 20px;
+}
+
+.phoneDiv{
+  border-left:1px solid #ddd;
+}
+
+.icon-color{
+  color:#999;
+}
+
+#storPhone li a,
+#storPhone li {
+  color:#333;
+}
+
+#storPhone button{
+  background-color:#fff;
+}
+
+.am-control-nav{display:none;}
