@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="买单就返利,单单返红包">
+  <meta name="keywords" content="买单返">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <title>买单返</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="../../i/favicon.png">
+  <link rel="stylesheet" href="../../css/amazeui.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <style>
+    .basicInformation{
+      color:#c3c3c3;
+      background-color: #f7f7f7;
+    }
+    #auditForm input{border:none;outline:none;box-shadow:none;}
+    .am-form-label{line-height:20px;}
+    .goAuthorizat{color:#5BABF0;margin-right:10px;}
+    .goAuthorizat:hover{color:#5BABF0;}
+    .audit-Btn{background-color: #29C8E8;color:#fff;}
+    .audit-Btn:hover{color:#fff;}
+  </style>
+</head>
+<body>
+    <!-- <div class="am-cg">
+    <div class="am-u-sm-4">基本信息</div>
+    <div class="am-u-sm-8 am-text-sm" style="vertical-align:middle;line-height:16px;"><span>基本信息的有效性决定您能否激活白条，以及最终可获得的额度</span></div>
+      </div> -->
+
+    <div class="am-g am-padding-sm basicInformation">
+      <div class="am-u-sm-3">基本信息</div>
+      <div class="am-u-sm-9 am-text-xs">基本信息的有效性决定您能否激活白条，以及最终可获得的额度</div>
+    </div>
+    <div class="am-g">
+      <div class="am-container">
+        <form class="am-form am-form-horizontal" id="auditForm" data-am-validator action="">
+          <ul class="am-list am-text-sm">
+            <li>
+              <div class="am-form-group am-margin-bottom-0 am-padding-vertical-xs">
+                <label class="am-u-sm-3 am-form-label">姓名</label>
+                <div class="am-u-sm-9">
+                  <input type="text" id="uName" placeholder="输入您的姓名" minlength="3"  required/>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="am-form-group am-margin-bottom-0 am-padding-vertical-xs">
+                <label class="am-u-sm-3 am-form-label">身份证号</label>
+                <div class="am-u-sm-9">
+                  <input type="number" id="userInfo-input" placeholder="输入您的身份证号" pattern="^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$" required />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="am-form-group am-margin-bottom-0 am-padding-vertical-xs">
+                <label class="am-u-sm-3 am-form-label">QQ号</label>
+                <div class="am-u-sm-9">
+                  <input type="number" id="userInfo-input" placeholder="输入您的QQ" pattern="^[1-9][0-9]{4,9}$" required />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="am-form-group am-margin-bottom-0 am-padding-vertical-xs">
+                <label class="am-u-sm-3 am-form-label">联系电话</label>
+                <div class="am-u-sm-9">
+                  <input type="number" placeholder="输入您的电话" pattern="^\d{11}$" required />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="am-form-group am-margin-bottom-0 am-padding-vertical-xs">
+                <label class="am-u-sm-3 am-form-label">所在地区</label>
+                <div class="am-u-sm-9">
+                  <input type="text" id="userInfo-input" placeholder="如：陕西省西安市碑林区" required />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="am-form-group am-margin-bottom-0 am-padding-vertical-xs">
+                <label class="am-u-sm-3 am-form-label">详细地址</label>
+                <div class="am-u-sm-9">
+                  <input type="text" id="userInfo-input" placeholder="如：长安路高速大厦4楼401" required/>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- 审核 -->
+          <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
+            id="">
+            <div class="am-container">
+              <button class="am-btn am-btn-block audit-Btn" type="submit">审核材料</button>  
+            </div>
+          </div>
+          <!-- / 审核 -->
+        </form>
+      </div>
+    </div>
+    <!-- 授权 -->
+    <div class="am-container">
+      <p class="am-margin-bottom-xs am-margin-top-sm basicInformation">授权</p>
+      <div class="am-g am-padding-sm" style="border-top:1px solid #ddd;">
+        <div class="am-u-sm-7 am-text-sm">
+          <img src="../../images/icon-authorization.png" alt="" style="height:40px;width:40px;">
+          <span class="am-text-middle am-margin-left-xs">芝麻信用授权</span>
+        </div>
+        <div class="am-u-sm-5 am-text-right am-vertical-align" style="height:40px;">
+          <a href="#" class="goAuthorizat am-text-sm am-vertical-align-middle">去授权</a>
+          <i class="am-icon-angle-right am-vertical-align-middle am-text-lg" style="color:#999;"></i>
+        </div>
+      </div>
+    </div>
+    <!-- / 授权-->
+  
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/amazeui.min.js"></script>
+</body>
+</html>
