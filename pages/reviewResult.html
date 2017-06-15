@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="买单返,maodanfan">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>买单返</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="../i/favicon.png">
+  <link rel="stylesheet" href="withdrawal/withdrawal.css"/>
+  <link rel="stylesheet" href="../css/amazeui.css"> 
+</head>
+<style>
+  header{box-shadow: 1px 0 1px #ccc;}
+  a{color:#333;}
+  a:hover{color:#333;}
+  .am-header{background-color: #fff;}
+  .circle-default{display:inline-block;width:25px;height:25px;border-radius:50%;background-color:#ccc;}
+  .circle{display:inline-block;width:25px;height:25px;border-radius:50%;background-color:#E60827;}
+  .circle:before,.circle-border:before,.circle-default:before{content:"";position:absolute;bottom:5px;margin-left:11px;display:block;height:35px;margin-bottom:20px;border-left:2px dashed #E60837;}
+  .circle-border{display:inline-block;width:25px;height:25px;border-radius:50%;background-color:#E60827;margin:1px; box-shadow: 0 0 3px 2px #5eb95e;}
+  .am-g>div{height:50px;}
+  .wait{color:#999;}
+</style>
+<body>
+  <header class="am-header am-header-default" data-am-widget="header">
+    <div class="am-u-sm-5">
+      <a href="javascript:" onclick="history.back(-1);" class="am-icon-angle-left am-text-xl am-fl">
+      </a>
+    </div>
+    <div class="am-u-sm-7 am-center">
+      <span class="am-text-default am-margin-left-xxl">审核结果</span>
+    </div>
+  </header>
+
+  <div class="am-g">
+    <ul class="am-comments-list am-text-center" style="overflow:hidden;">
+      <li>
+        <div class="am-g">
+          <div class="am-u-sm-5 am-text-right am-vertical-align">
+            <span class="am-vertical-align-bottom circle">
+            </span> 
+          </div>
+          <div class="am-u-sm-7 am-text-left am-vertical-align">
+            <span class="am-text-sm am-vertical-align-bottom">实名认证</span> 
+            <span class="am-icon-check am-text-lg am-vertical-align-bottom am-text-success"></span> 
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="am-g">
+          <div class="am-u-sm-5 am-text-right am-vertical-align">
+            <span class="am-vertical-align-bottom circle">
+            </span> 
+          </div>
+          <div class="am-u-sm-7 am-text-left am-vertical-align">
+            <span class="am-text-sm am-vertical-align-bottom">资料填写</span> 
+            <span class="am-icon-check am-text-lg am-vertical-align-bottom am-text-success"></span> 
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="am-g">
+          <div class="am-u-sm-5 am-text-right am-vertical-align">
+            <span class="am-vertical-align-bottom circle" style="display:inline-block;width:25px;height:25px;border-radius:50%;background-color:#E60827;">
+            </span> 
+          </div>
+          <div class="am-u-sm-7 am-text-left am-vertical-align">
+            <span class="am-text-sm am-vertical-align-bottom">信息授权</span> 
+            <span class="am-icon-check am-text-lg am-vertical-align-bottom am-text-success"></span> 
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="am-g">
+          <div class="am-u-sm-5 am-text-right am-vertical-align">
+            <span class="am-icon-refresh am-text-lg am-vertical-align-bottom am-margin-right-sm am-text-bottom am-text-danger"></span>
+            <span class="am-vertical-align-bottom circle-border">
+            </span>
+          </div>
+          <div class="am-u-sm-7 am-text-left am-vertical-align">
+            <span class="am-text-sm am-vertical-align-bottom">申请评估中</span> 
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="am-g">
+          <div class="am-u-sm-5 am-text-right am-vertical-align">
+            <span class="am-vertical-align-bottom circle-default">
+            </span> 
+          </div>
+          <div class="am-u-sm-7 am-text-left am-vertical-align">
+            <span class="am-text-sm am-vertical-align-bottom wait
+            ">等待放款</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- <div data-am-widget="navbar" class="am-navbar am-cf am-no-layout am-text-center">
+    <span class="am-text-sm" style="color:#999;">请您耐心等待···</span>
+  </div> -->
+</body>
+</html>
